@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 export const xxx = 10
-//Baris 4-6 adalah JSX (gabungan antara HTML dan Javascript)
+
 const Counter = (props: any) => {
 	const [currentValue, setCurrentValue] = useState(props.defaultValue);
 
