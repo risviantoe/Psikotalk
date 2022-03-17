@@ -1,13 +1,18 @@
 import React, { useState } from "react"
 
-export const xxx = 10
+interface CounterProps {
+	defaultValue?: number
+	title: string
+}
 
-const Counter = (props: any) => {
-	const [currentValue, setCurrentValue] = useState(props.defaultValue);
+export const xxx: number = 10
 
+const Counter: React.FC<CounterProps> = (props) => {
+	const [currentValue, setCurrentValue] = useState<number>(props.defaultValue || 0);
+	
 	const increase = () => setCurrentValue(currentValue + 1)
 	const decrease = () => setCurrentValue(currentValue - 1)
-	const reset = () => setCurrentValue(props.defaultValue)
+	const reset = () => setCurrentValue(props.defaultValue || 0)
 
 	return (
 		<div>
