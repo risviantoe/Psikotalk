@@ -1,5 +1,4 @@
 import React from "react";
-import AuthLayout from "../../../components/layouts/authLayout/AuthLayout";
 
 export const Forgot: React.FC = () => {
     return (

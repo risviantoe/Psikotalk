@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AuthLayout from "../../../components/layouts/authLayout/AuthLayout";
 
 export const Register: React.FC = () => {
     return (

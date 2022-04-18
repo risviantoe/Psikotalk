@@ -18,7 +18,7 @@ export const Hero: React.FC = (props) => {
                 </div>
             </div>
             <div className="hero-image-wrapper">
-                <img src="/../assets/images/vector.svg" alt="" />
+                <img src="/assets/images/vector.png" alt="" />
             </div>
         </div>
     );
