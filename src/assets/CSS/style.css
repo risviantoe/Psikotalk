@@ -1,0 +1,96 @@
+@font-face {
+    font-family: Nunito;
+    src: url(../Fonts/Nunito.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(../Fonts/Nunito.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(../Fonts/Nunito.ttf);
+    font-weight: 700;
+}
+
+/* Utilities */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Nunito;
+}
+
+a {
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+/* Component */
+.primary-btn {
+    padding: 12px 20px;
+    background: #35858B;
+    border: 1px solid #35858B;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.primary-btn:hover {
+    background: #006161;
+    border: 1px solid #006161;
+}
+
+.secondary-btn {
+    padding: 12px 20px;
+    border: 1px solid #CBD2D9;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: #2B2F50;
+    background: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.secondary-btn:hover {
+    border: 1px solid #35858B;
+    color: #35858B;
+}
+
+.text-link {
+    color: #35858B;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 700;
+}
+
+.text-link:hover {
+    color: #006161;
+}
+
+.icon {
+    width: 16px;
+}

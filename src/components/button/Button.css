@@ -1,0 +1,63 @@
+.button {
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: fit-content;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Button Colors */
+
+.primary {
+    background: #35858B;
+    border: 1px solid #35858B;
+    color: #fff;
+}
+
+.secondary {
+    border: 1px solid #CBD2D9;
+    color: #2B2F50;
+    background: #fff;
+}
+
+/* Button Effects */
+
+.button.primary:hover {
+    background: #006161;
+    border: 1px solid #006161;
+}
+
+.button.secondary:hover {
+    border: 1px solid #35858B;
+    color: #35858B;
+}
+
+/* Button Sizes */
+
+.small {
+    padding: 7px 20px;
+    font-size: 12px;
+}
+
+.medium {
+    padding: 12px 20px;
+}
+
+.large {
+    padding: 24px 30px;
+}
+
+/* Button Style */
+
+.circle {
+    /* padding: 23% 20px; */
+    /* padding: 10px 12px; */
+    border-radius: 50%;
+}
+
+.rounded {
+    border-radius: 16px;
+}

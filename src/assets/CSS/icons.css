@@ -1,0 +1,70 @@
+.icon {
+    --size: 30px;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+}
+
+.icon-dashboard {
+    -webkit-mask-image: url(/public/assets/icons/dashboard.svg);
+    mask-image: url(/public/assets/icons/dashboard.svg);
+}
+
+.icon-people {
+    -webkit-mask-image: url(/public/assets/icons/people.svg);
+    mask-image: url(/public/assets/icons/people.svg);
+}
+
+.icon-chevron-down {
+    -webkit-mask-image: url(/public/assets/icons/chevron-down.svg);
+    mask-image: url(/public/assets/icons/chevron-down.svg);
+}
+
+.icon-list {
+    -webkit-mask-image: url(/public/assets/icons/list.svg);
+    mask-image: url(/public/assets/icons/list.svg);
+}
+
+.icon-data {
+    -webkit-mask-image: url(/public/assets/icons/data.svg);
+    mask-image: url(/public/assets/icons/data.svg);
+}
+
+.icon-articel {
+    -webkit-mask-image: url(/public/assets/icons/articel.svg);
+    mask-image: url(/public/assets/icons/articel.svg);
+}
+
+.icon-write {
+    -webkit-mask-image: url(/public/assets/icons/write.svg);
+    mask-image: url(/public/assets/icons/write.svg);
+}
+
+.icon-payment {
+    -webkit-mask-image: url(/public/assets/icons/payment.svg);
+    mask-image: url(/public/assets/icons/payment.svg);
+}
+
+.icon-schedule01 {
+    background: #fff;
+    -webkit-mask-image: url(/public/assets/icons/schedule.svg);
+    mask-image: url(/public/assets/icons/schedule.svg);
+}
+
+.icon-schedule02 {
+    background: #fff;
+    -webkit-mask-image: url(/public/assets/icons/schedule02.svg);
+    mask-image: url(/public/assets/icons/schedule02.svg);
+}
+
+.icon-chat {
+    background: #fff;
+    -webkit-mask-image: url(/public/assets/icons/chat.svg);
+    mask-image: url(/public/assets/icons/chat.svg);
+}
