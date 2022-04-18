@@ -1,7 +1,5 @@
 import React from "react";
 
-import heroImg from '../../../assets/Images/vector.svg'
-
 export const Hero: React.FC = (props) => {
     return (
         <div className="hero-section-wrapper">
@@ -20,7 +18,7 @@ export const Hero: React.FC = (props) => {
                 </div>
             </div>
             <div className="hero-image-wrapper">
-                <img src={ heroImg } alt="" />
+                <img src="/../assets/images/vector.svg" alt="" />
             </div>
         </div>
     );

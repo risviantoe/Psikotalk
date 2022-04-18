@@ -1,7 +1,4 @@
 import React from "react";
-import AuthLayout from "../../../components/layouts/authLayout/AuthLayout";
-
-import googleLogo from "../../../assets/Images/logo-google.svg"
 import { Link } from "react-router-dom";
 
 export const Login: React.FC = () => {
@@ -52,7 +49,7 @@ export const Login: React.FC = () => {
                             type="submit"
                             className="secondary-btn auth-sosmed-btn"
                         >
-                            <img src={googleLogo} alt="" />
+                            <img src="/public/assets/Images/logo-google.svg" alt="" />
                             <span
                                 style={{
                                     width: "92%",
