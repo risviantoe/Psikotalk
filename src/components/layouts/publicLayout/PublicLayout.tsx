@@ -1,6 +1,6 @@
 import React from "react";
 import './PublicLayout.css'
-import Button from '../../Button'
+import Button from '../../button/Button'
 
 const PublicLayout: React.FC = (props) => {
     return (
@@ -8,11 +8,11 @@ const PublicLayout: React.FC = (props) => {
             <div className="header">
                 <h1>My Website</h1>
                 <p>Resize the browser window to see the effect.</p>
+                {/* <Button>button button</Button>
                 <Button>button button</Button>
                 <Button>button button</Button>
                 <Button>button button</Button>
-                <Button>button button</Button>
-                <Button>button button</Button>
+                <Button>button button</Button> */}
             </div>
 
             <div className="topnav">
