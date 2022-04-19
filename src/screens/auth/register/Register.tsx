@@ -36,7 +36,7 @@ export const Register: React.FC = () => {
                             />
                         </div>
                         <div className="auth-input-group">
-                            <label htmlFor="fullName">Email</label>
+                            <label htmlFor="email">Email</label>
                             <input
                                 type="email"
                                 name="email"

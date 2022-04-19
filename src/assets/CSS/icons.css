@@ -21,6 +21,11 @@
     mask-image: url(/public/assets/icons/people.svg);
 }
 
+.icon-peoples {
+    -webkit-mask-image: url(/public/assets/icons/peoples.svg);
+    mask-image: url(/public/assets/icons/peoples.svg);
+}
+
 .icon-chevron-down {
     -webkit-mask-image: url(/public/assets/icons/chevron-down.svg);
     mask-image: url(/public/assets/icons/chevron-down.svg);
@@ -67,4 +72,10 @@
     background: #fff;
     -webkit-mask-image: url(/public/assets/icons/chat.svg);
     mask-image: url(/public/assets/icons/chat.svg);
+}
+
+.icon-camera {
+    /* background: #fff; */
+    -webkit-mask-image: url(/public/assets/icons/camera.svg);
+    mask-image: url(/public/assets/icons/camera.svg);
 }

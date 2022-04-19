@@ -3,8 +3,9 @@ import './Button.css'
 
 const Button = ({color = 'primary', name = '', size = 'medium', type = 'normal', icon = '', style = {}}) => {
   return (
-    <button className={`button ${color} ${size} ${type}`} style={style}>{name} {icon ? <i className={`icon ${icon}`}/> : ''}</button>
+    <button className={`button ${color} ${size} ${type}`} style={style}>{icon !== '' ? <i className={`icon ${icon}`} /> : name}</button>
   )
 }
 
 export default Button
+

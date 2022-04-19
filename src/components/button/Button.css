@@ -9,6 +9,10 @@
     transition: 0.3s;
 }
 
+.button .icon {
+    background: #fff;
+}
+
 /* Button Colors */
 
 .primary {
@@ -54,7 +58,7 @@
 
 .circle {
     /* padding: 23% 20px; */
-    /* padding: 10px 12px; */
+    padding: 10px 12px;
     border-radius: 50%;
 }
 

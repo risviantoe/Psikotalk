@@ -12,6 +12,7 @@ import { Forgot } from "./screens/auth/forgot/Forgot";
 
 import { AdminHome } from "./screens/admin/home/AdminHome";
 import { PsikologHome } from "./screens/psikolog/home/PsikologHome";
+import { AdminProfile } from "./screens/admin/profile/AdminProfile";
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
 
 			<Route path="/admin" element={<DashboardAdminLayout />}>
 				<Route path="/admin/dashboard" element={<AdminHome />}></Route>
-				<Route path="/admin/profile" element={<AdminHome />}></Route>
+				<Route path="/admin/profile" element={<AdminProfile />}></Route>
 			</Route>
 
 			<Route path="/psikolog" element={<DashboardPsikologLayout />}>

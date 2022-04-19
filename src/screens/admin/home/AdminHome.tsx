@@ -6,18 +6,18 @@ import './AdminHome.css'
 
 export const AdminHome: React.FC = () => {
   return (
-    <div className="dashboard-home-wrapper">
-      <div className="dashboard-home-title">
+    <div className="admin-home-wrapper">
+      <div className="admin-home-title">
         <img src="/assets/icons/dashboard.svg" alt="dashboardIcon" />
         <h1>Dashboard</h1>
       </div>
-      <div className="dashboard-home-content-wrapper">
-        <div className="dashboard-home-card-wrapper">
+      <div className="admin-home-content-wrapper">
+        <div className="admin-home-card-wrapper">
 
           <CardHome
             title={"Jumlah klien"}
             total={1280}
-            icon={"icon-people"}
+            icon={"icon-peoples"}
             color={"#00ADAC"}
           />
           <CardHome

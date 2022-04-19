@@ -1,29 +1,36 @@
-.dashboard-home-wrapper {
+.admin-home-wrapper {
     width: 75%;
     margin-left: 28%;
     margin-bottom: 3rem;
 }
 
-.dashboard-home-title {
+.admin-home-title {
     padding: 20px 0 60px 0;
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
 
-.dashboard-home-title h1 {
+.admin-home-title h1 {
     font-size: 48px;
     color: #006161;
 }
 
-.dashboard-home-content-wrapper {
+.admin-home-content-wrapper {
     background: #fff;
     width: 100%;
     border-radius: 10px;
     padding: 80px 50px;
 }
 
-.dashboard-home-search-wrapper {
+.admin-home-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 35px;
+}
+
+/* .dashboard-home-search-wrapper {
     display: flex;
     flex-direction: row;
     gap: 57px;
@@ -92,4 +99,4 @@
 
 #dashboard-home-filter-check:checked + .dashboard-home-filter-items {
     height: 200px;
-}
+} */
