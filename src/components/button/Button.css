@@ -22,8 +22,10 @@
 }
 
 .secondary {
-    border: 1px solid #CBD2D9;
-    color: #2B2F50;
+    /* border: 1px solid #CBD2D9; */
+    /* color: #2B2F50; */
+    border: 1px solid #35858B;
+    color: #35858B;
     background: #fff;
 }
 
@@ -35,8 +37,11 @@
 }
 
 .button.secondary:hover {
-    border: 1px solid #35858B;
-    color: #35858B;
+    /* border: 1px solid #35858B; */
+    /* color: #35858B; */
+    background: #006161;
+    border: 1px solid #006161;
+    color: #fff;
 }
 
 /* Button Sizes */
