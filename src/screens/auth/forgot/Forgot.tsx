@@ -14,9 +14,9 @@ export const Forgot: React.FC = () => {
                     </h5>
                 </div>
             </div>
-            <div className="auth-form">
+            <div className="form auth-form">
                 <form action="">
-                    <div className="auth-input-group">
+                    <div className="form-input-group">
                         <label htmlFor="fullName">Email</label>
                         <input
                             type="text"

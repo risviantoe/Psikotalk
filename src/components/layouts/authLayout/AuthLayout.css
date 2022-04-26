@@ -84,87 +84,8 @@
 }
 
 .auth-form {
-    width: 100%;
+    /* width: 100%; */
     margin-top: 50px;
-}
-
-.auth-input-group {
-    display: flex;
-    flex-direction: column;
-    /* margin-bottom: 20px; */
-}
-
-.auth-input-group label {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 600;
-    color: #555555;
-}
-
-.auth-input-inline {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.auth-input-inline .auth-input-group {
-    width: 49%;
-}
-
-.auth-form input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
-    height: 52px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 15px;
-    color: #7E808B;
-    border: 1px solid #C9C9CF;
-    margin: 15px 0 25px 0;
-}
-
-.auth-form input:focus {
-    border: 1px solid #006161;
-}
-
-.auth-input-inline-radio {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 25px;
-}
-
-.auth-input-group-radio {
-    display: flex;
-    flex-direction: row;
-    margin-top: 15px;
-}
-
-.auth-input-radio {
-    display: flex;
-    flex-direction: row;
-    margin-right: 30px;
-    align-items: center;
-}
-
-.auth-input-radio input[type="radio"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin-right: 10px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 1px solid #1F2933;
-    transition: 0.1s all linear;
-}
-
-.auth-input-radio input[type="radio"]:checked {
-    border: 4px solid #006161;
-    /* background: #006161; */
-}
-
-.auth-input-radio label {
-    cursor: pointer;
-    font-size: 18px;
 }
 
 .auth-forgot {
@@ -200,9 +121,10 @@
 
 .auth-code {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 95%;
-    margin-top: 30px;
+    margin: 50px 0;
+    gap: 20px;
 }
 
 .auth-input-code {

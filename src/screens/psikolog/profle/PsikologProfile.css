@@ -48,7 +48,7 @@
     flex-direction: row;
     width: 100%;
     gap: 50px;
-    padding: 63px
+    padding: 50px 63px 63px;
 }
 
 .psikolog-profile-form-left, .psikolog-profile-form-right {

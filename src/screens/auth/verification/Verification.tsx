@@ -15,10 +15,10 @@ export const Verification: React.FC = () => {
                     </h5>
                 </div>
             </div>
-            <div className="auth-form" style={{ marginTop: 3 }}>
+            <div className="form auth-form" style={{ marginTop: 3 }}>
                 <form action="">
                     <div
-                        className="auth-input-inline"
+                        className="form-input-inline"
                         style={{ justifyContent: "center" }}
                     >
                         <div className="auth-code">
