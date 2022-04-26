@@ -20,7 +20,7 @@ export const PsikologProfile = () => {
       sipp: "",
       password: "",
     },
-  });
+  })
 
   const { isSubmitted, inputs } = state;
   const {

@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useReducer } from "react";
 import Button from "../../../components/button/Button";
 
 import "./AdminProfile.css";
+import reducer from "./AdminProfile.reducer";
 
 export const AdminProfile = () => {
+  const [state, dispatch] = useReducer(reducer, {
+    isSubmitted: false,
+    sending: false,
+    inputs: {
+      fullname: "",
+      username: "",
+      gender: "",
+      email: "",
+      password: "",
+    },
+  });
+
+  const { isSubmitted, inputs } = state;
+  const { fullname, username, gender, email, password } = inputs;
+
+  const onSubmit = () => {
+    dispatch({ name: "SET_IS_SUBMITTED" });
+  };
+
   return (
     <div className="admin-dashboard-wrapper">
       <div className="admin-dashboard-title">
@@ -28,12 +48,46 @@ export const AdminProfile = () => {
           <form className="form">
             <div className="form-input-group">
               <label htmlFor="fullName">Nama lengkap</label>
-              <input type="text" name="name" id="fullName" />
+              <input
+                type="text"
+                name="name"
+                id="fullName"
+                className={isSubmitted && !fullname ? "form-error" : ""}
+                value={state.inputs.fullname}
+                onChange={(e) =>
+                  dispatch({
+                    name: "SET_INPUTS",
+                    payload: { fullname: e.target.value },
+                  })
+                }
+              />
+              <div className="form-error-message">
+                {isSubmitted && !fullname ? (
+                  <span>Nama lengkap wajib diisi!</span>
+                ) : null}
+              </div>
             </div>
 
             <div className="form-input-group">
               <label htmlFor="uname">Username</label>
-              <input type="text" name="username" id="uname" />
+              <input
+                type="text"
+                name="username"
+                id="uname"
+                className={isSubmitted && !username ? "form-error" : ""}
+                value={state.inputs.username}
+                onChange={(e) =>
+                  dispatch({
+                    name: "SET_INPUTS",
+                    payload: { username: e.target.value },
+                  })
+                }
+              />
+              <div className="form-error-message">
+                {isSubmitted && !username ? (
+                  <span>Username wajib diisi!</span>
+                ) : null}
+              </div>
             </div>
 
             <div className="form-input-inline-radio">
@@ -45,16 +99,12 @@ export const AdminProfile = () => {
                       type="radio"
                       name="gender"
                       id="gender-male"
-                      checked
+                      defaultChecked
                     />
                     <label htmlFor="gender-male">Laki - laki</label>
                   </div>
                   <div className="form-input-radio">
-                    <input
-                      type="radio"
-                      name="gender"
-                      id="gender-female"
-                    />
+                    <input type="radio" name="gender" id="gender-female" />
                     <label htmlFor="gender-female">Perempuan</label>
                   </div>
                 </div>
@@ -63,7 +113,22 @@ export const AdminProfile = () => {
 
             <div className="form-input-group">
               <label htmlFor="email">Email</label>
-              <input type="email" name="email" id="email" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className={isSubmitted && !email ? "form-error" : ""}
+                value={state.inputs.email}
+                onChange={(e) =>
+                  dispatch({
+                    name: "SET_INPUTS",
+                    payload: { email: e.target.value },
+                  })
+                }
+              />
+              <div className="form-error-message">
+                {isSubmitted && !email ? <span>Email wajib diisi!</span> : null}
+              </div>
             </div>
 
             <div className="form-input-group">
@@ -74,9 +139,9 @@ export const AdminProfile = () => {
             <Button
               name="Simpan Perubahan"
               color="primary"
-              style={{width: '100%', marginTop: 30, height: 48}}
+              style={{ width: "100%", marginTop: 30, height: 48 }}
+              onClick={() => onSubmit()}
             />
-
           </form>
         </div>
       </div>
