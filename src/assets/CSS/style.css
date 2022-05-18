@@ -229,3 +229,12 @@ a {
     color: #FF4242;
     font-size: 14px;
 }
+
+/* Color */
+.bg-white {
+    background: #fff;
+}
+
+.button.bg-white {
+    color: #555555;
+}

@@ -14,6 +14,7 @@ import { AdminHome } from "./screens/admin/home/AdminHome";
 import { PsikologHome } from "./screens/psikolog/home/PsikologHome";
 import { AdminProfile } from "./screens/admin/profile/AdminProfile";
 import { PsikologProfile } from "./screens/psikolog/profle/PsikologProfile";
+import { PsikologSchedule } from "./screens/psikolog/schedule/PsikologSchedule";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
 			<Route path="/psikolog" element={<DashboardPsikologLayout />}>
 				<Route path="/psikolog/dashboard" element={<PsikologHome />}></Route>
 				<Route path="/psikolog/profile" element={<PsikologProfile />}></Route>
+				<Route path="/psikolog/schedule" element={<PsikologSchedule />}></Route>
 			</Route>
 		</Routes>
 	</BrowserRouter>
