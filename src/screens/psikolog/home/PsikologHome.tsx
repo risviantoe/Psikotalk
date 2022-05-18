@@ -10,7 +10,7 @@ export const PsikologHome: React.FC = () => {
         <i className="icon icon-dashboard" style={{background: '#00ADAC'}}/>
         <h1>Psikolog</h1>
       </div>
-      <div className="psikolog-content-wrapper">
+      <div className="psikolog-home-content-wrapper">
         <div className="psikolog-content-row">
           <div className="psikolog-card-detailprofile">
             <div className="card-detailprofile-info-wrapper">
@@ -70,7 +70,7 @@ export const PsikologHome: React.FC = () => {
                 <span className="psikolog-card-client-total">20</span>
               </div>
               <div className="psikolog-card-client-header-right">
-                <i className="icon icon-people"></i>
+                <i className="icon icon-peoples"></i>
               </div>
               <div className="card-ornament02"></div>
             </div>

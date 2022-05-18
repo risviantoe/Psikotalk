@@ -12,6 +12,10 @@ import { Forgot } from "./screens/auth/forgot/Forgot";
 
 import { AdminHome } from "./screens/admin/home/AdminHome";
 import { PsikologHome } from "./screens/psikolog/home/PsikologHome";
+import { AdminProfile } from "./screens/admin/profile/AdminProfile";
+import { PsikologProfile } from "./screens/psikolog/profle/PsikologProfile";
+import { PsikologSchedule } from "./screens/psikolog/schedule/PsikologSchedule";
+import { PsikologScheduleHistory } from "./screens/psikolog/schedule/PsikologScheduleHistory";
 
 const App = () => {
   return (
@@ -26,11 +30,14 @@ const App = () => {
 
 			<Route path="/admin" element={<DashboardAdminLayout />}>
 				<Route path="/admin/dashboard" element={<AdminHome />}></Route>
-				<Route path="/admin/profile" element={<AdminHome />}></Route>
+				<Route path="/admin/profile" element={<AdminProfile />}></Route>
 			</Route>
 
 			<Route path="/psikolog" element={<DashboardPsikologLayout />}>
 				<Route path="/psikolog/dashboard" element={<PsikologHome />}></Route>
+				<Route path="/psikolog/profile" element={<PsikologProfile />}></Route>
+				<Route path="/psikolog/schedule" element={<PsikologSchedule />}></Route>
+				<Route path="/psikolog/schedule/history" element={<PsikologScheduleHistory />}></Route>
 			</Route>
 		</Routes>
 	</BrowserRouter>

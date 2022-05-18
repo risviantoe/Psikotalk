@@ -22,7 +22,7 @@ const DashboardAdminLayout: React.FC = (props) => {
                 <span>Dashboard</span>
               </Link>
               <Link to="" className="dashboard-sidebar-menu">
-                <img src="/assets/icons/people.svg" alt="peopleIcon" />
+                <img src="/assets/icons/peoples.svg" alt="peoplesIcon" />
                 <span>Data klien</span>
               </Link>
               <Link to="" className="dashboard-sidebar-menu">

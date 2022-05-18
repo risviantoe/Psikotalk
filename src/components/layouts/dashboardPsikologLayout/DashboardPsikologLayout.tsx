@@ -26,7 +26,7 @@ const DashboardPsikologLayout: React.FC = (props) => {
                 <span>Jadwal</span>
               </Link>
               <Link to="" className="psikolog-sidebar-menu">
-                <i className="icon icon-people" style={{background: '#555555'}}/>
+                <i className="icon icon-peoples" style={{background: '#555555'}}/>
                 <span>Klien</span>
               </Link>
               <Link to="" className="psikolog-sidebar-menu">

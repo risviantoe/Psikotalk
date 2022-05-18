@@ -14,9 +14,9 @@ export const Register: React.FC = () => {
                     </h5>
                 </div>
             </div>
-            <div className="auth-form">
+            <div className="form auth-form">
                 <form action="">
-                    <div className="auth-input-group">
+                    <div className="form-input-group">
                         <label htmlFor="fullName">Nama Lengkap</label>
                         <input
                             type="text"
@@ -25,8 +25,8 @@ export const Register: React.FC = () => {
                             placeholder="Masukkan nama lengkapmu"
                         />
                     </div>
-                    <div className="auth-input-inline">
-                        <div className="auth-input-group">
+                    <div className="form-input-inline">
+                        <div className="form-input-group">
                             <label htmlFor="username">Username</label>
                             <input
                                 type="text"
@@ -35,8 +35,8 @@ export const Register: React.FC = () => {
                                 placeholder="Masukkan username"
                             />
                         </div>
-                        <div className="auth-input-group">
-                            <label htmlFor="fullName">Email</label>
+                        <div className="form-input-group">
+                            <label htmlFor="email">Email</label>
                             <input
                                 type="email"
                                 name="email"
@@ -45,11 +45,11 @@ export const Register: React.FC = () => {
                             />
                         </div>
                     </div>
-                    <div className="auth-input-inline-radio">
-                        <div className="auth-input-group">
+                    <div className="form-input-inline-radio">
+                        <div className="form-input-group">
                             <label>Jenis kelamin</label>
-                            <div className="auth-input-group-radio">
-                                <div className="auth-input-radio">
+                            <div className="form-input-group-radio">
+                                <div className="form-input-radio">
                                     <input
                                         type="radio"
                                         name="gender"
@@ -60,7 +60,7 @@ export const Register: React.FC = () => {
                                         Laki - laki
                                     </label>
                                 </div>
-                                <div className="auth-input-radio">
+                                <div className="form-input-radio">
                                     <input
                                         type="radio"
                                         name="gender"
@@ -73,8 +73,8 @@ export const Register: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="auth-input-inline">
-                        <div className="auth-input-group">
+                    <div className="form-input-inline">
+                        <div className="form-input-group">
                             <label htmlFor="password">Password</label>
                             <input
                                 type="password"
@@ -83,7 +83,7 @@ export const Register: React.FC = () => {
                                 placeholder="Masukkan password"
                             />
                         </div>
-                        <div className="auth-input-group">
+                        <div className="form-input-group">
                             <label htmlFor="re-password">Ulangi Password</label>
                             <input
                                 type="password"

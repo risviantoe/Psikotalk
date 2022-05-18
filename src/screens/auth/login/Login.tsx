@@ -12,9 +12,9 @@ export const Login: React.FC = () => {
                     <h5>Selamat Datang di PsikoTalk</h5>
                 </div>
             </div>
-            <div className="auth-form">
+            <div className="form auth-form">
                 <form action="">
-                    <div className="auth-input-group">
+                    <div className="form-input-group">
                         <label htmlFor="emailUsername">Username / Email</label>
                         <input
                             type="text"
@@ -23,7 +23,7 @@ export const Login: React.FC = () => {
                             placeholder="Masukkan email atau username"
                         />
                     </div>
-                    <div className="auth-input-group">
+                    <div className="form-input-group">
                         <label htmlFor="password">Password</label>
                         <input
                             type="password"
