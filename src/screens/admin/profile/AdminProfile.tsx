@@ -133,7 +133,22 @@ export const AdminProfile = () => {
 
             <div className="form-input-group">
               <label htmlFor="password">Password</label>
-              <input type="password" name="password" id="password" />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                className={isSubmitted && !password ? "form-error" : ""}
+                value={state.inputs.password}
+                onChange={(e) =>
+                  dispatch({
+                    name: "SET_INPUTS",
+                    payload: { password: e.target.value },
+                  })
+                }
+              />
+              <div className="form-error-message">
+                {isSubmitted && !password ? <span>Password wajib diisi!</span> : null}
+              </div>
             </div>
 
             <Button
