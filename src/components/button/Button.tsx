@@ -11,7 +11,7 @@ interface ButtonProps {
   onClick?: () => void
 }
 
-const Button: React.FC<ButtonProps> = (
+const Button:  React.FC<ButtonProps> = (
   {
     color = "primary",
     name = "Button",

@@ -5,7 +5,7 @@ import ScheduleList from "../../../components/scheduleList/ScheduleList"
 
 import './PsikologSchedule.css'
 
-export const PsikologSchedule = () => {
+export const PsikologScheduleHistory = () => {
   return (
     <div className="content-wrapper">
         <div className="content-title">
@@ -14,23 +14,23 @@ export const PsikologSchedule = () => {
         </div>
         <div className="psikolog-schedule-wrapper bg-white">
             <div className="psikolog-schedule-menu">
-                <Link to="/psikolog/schedule" className="button bg-white active">Jadwal Terkini</Link>
-                <Link to="/psikolog/schedule/history" className="button bg-white">Riwayat</Link>
+                <Link to="/psikolog/schedule" className="button bg-white">Jadwal Terkini</Link>
+                <Link to="/psikolog/schedule/history" className="button bg-white active">Riwayat</Link>
             </div>
             <div className="psikolog-schedule-content">
                 <ScheduleList
                     day="Rabu"
                     date="18 Mei"
-                    name="Muhammad Chandra Saputra"
+                    name="Muhammad Chandra Saputra Ramadhan"
                     clock="07.00 - 09.00 WITA"
-                    type="schedule"
+                    type="history"
                 />
                 <ScheduleList
                     day="Kamis"
                     date="19 Mei"
                     name="Jacky Rahman"
                     clock="99.99 - 99.99 WITA"
-                    type="schedule"
+                    type="history"
                 />
             </div>
         </div>
