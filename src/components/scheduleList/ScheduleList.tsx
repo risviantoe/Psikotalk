@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../button/Button";
+import Modal from "../modal/Modal"
 
 import "./ScheduleList.css";
 
@@ -18,58 +19,64 @@ const ScheduleList: React.FC<ScheduleListProps> = ({
     clock = "07.00 - 09.00 WITA",
     type = "schedule",
 }) => {
+    const [showModal, setShowModal] = useState(false)
+
     return (
-        <div className="psikolog-schedule-item">
-            <div
-                className="psikolog-item-day"
-                style={
-                    type === "schedule"
-                        ? { background: "#00B29D" }
-                        : type === "history"
-                        ? { background: "#7E808B" }
-                        : { background: "#00B29D" }
-                }
-            >
-                <span className="item-day">{day}</span>
-                <span className="item-date">{date}</span>
+		<React.Fragment>
+			<div className="psikolog-schedule-item">
+				<div
+					className="psikolog-item-day"
+					style={
+						type === 'schedule'
+							? { background: '#00B29D' }
+							: type === 'history'
+							? { background: '#7E808B' }
+							: { background: '#00B29D' }
+					}
+				>
+					<span className="item-day">{day}</span>
+					<span className="item-date">{date}</span>
+				</div>
+				<div className="psikolog-item-main">
+					<span className="item-name">{name}</span>
+					<span className="item-clock">{clock}</span>
+					<div className="item-btn">
+						{type === 'schedule' ? (
+							<>
+								<Button
+									name="Dikonfirmasi"
+									style={{
+										borderRadius: 20,
+										padding: '10px 14px',
+										width: 140,
+									}}
+								/>
+								<Button
+									name="Detail"
+									style={{
+										borderRadius: 20,
+										padding: '10px 14px',
+										width: 140,
+									}}
+								/>
+							</>
+						) : (
+							<Button
+								name="Detail"
+								onClick={() => setShowModal(true)}
+								style={{
+									borderRadius: 20,
+									padding: '10px 14px',
+									width: 140,
+								}}
+							/>
+						)}
+					</div>
+				</div>
             </div>
-            <div className="psikolog-item-main">
-                <span className="item-name">{name}</span>
-                <span className="item-clock">{clock}</span>
-                <div className="item-btn">
-                    {type === "schedule" ? (
-                        <>
-                            <Button
-                                name="Dikonfirmasi"
-                                style={{
-                                    borderRadius: 20,
-                                    padding: "10px 14px",
-                                    width: 140,
-                                }}
-                            />
-                            <Button
-                                name="Detail"
-                                style={{
-                                    borderRadius: 20,
-                                    padding: "10px 14px",
-                                    width: 140,
-                                }}
-                            />
-                        </>
-                    ) :
-                        <Button
-                            name="Detail"
-                            style={{
-                                borderRadius: 20,
-                                padding: "10px 14px",
-                                width: 140,
-                            }}
-                        />
-                    }
-                </div>
-            </div>
-        </div>
-    );
+            <Modal />
+		</React.Fragment>
+	);
 };
 
 export default ScheduleList;
