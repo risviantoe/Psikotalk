@@ -69,13 +69,36 @@
 }
 
 .icon-chat {
-    background: #fff;
     -webkit-mask-image: url(/public/assets/icons/chat.svg);
     mask-image: url(/public/assets/icons/chat.svg);
 }
 
 .icon-camera {
-    /* background: #fff; */
     -webkit-mask-image: url(/public/assets/icons/camera.svg);
     mask-image: url(/public/assets/icons/camera.svg);
+}
+
+.icon-date {
+    -webkit-mask-image: url(/public/assets/icons/date.svg);
+    mask-image: url(/public/assets/icons/date.svg);
+}
+
+.icon-clock {
+    -webkit-mask-image: url(/public/assets/icons/clock.svg);
+    mask-image: url(/public/assets/icons/clock.svg);
+}
+
+.icon-platform {
+    -webkit-mask-image: url(/public/assets/icons/platform.svg);
+    mask-image: url(/public/assets/icons/platform.svg);
+}
+
+.icon-link {
+    -webkit-mask-image: url(/public/assets/icons/link.svg);
+    mask-image: url(/public/assets/icons/link.svg);
+}
+
+.icon-cross {
+    -webkit-mask-image: url(/public/assets/icons/cross.svg);
+    mask-image: url(/public/assets/icons/cross.svg);
 }
