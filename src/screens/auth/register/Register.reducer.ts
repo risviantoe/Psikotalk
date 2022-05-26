@@ -1,33 +1,26 @@
 import React, { Reducer } from 'react';
 
-interface PsychologProfileForm {
-	fullname: string;
+interface RegisterForm {
+	name: string;
 	username: string;
-	gender: string;
 	email: string;
-	about: string;
-	birthDate: string;
-	phone: string;
-	study: string;
-	sipp: string;
+	gender: string;
 	password: string;
+	confirmPassword: string
 }
 
-interface PsychologProfileState {
+interface RegisterState {
 	isSubmitted: boolean;
 	sending: boolean;
-	inputs: PsychologProfileForm;
+	inputs: RegisterForm;
 }
 
-type PsychologProfileAction =
+type RegisterAction =
 	| { name: 'SET_IS_SUBMITTED' }
 	| { name: 'SET_SENDING'; payload: boolean }
-	| { name: 'SET_INPUTS'; payload: Partial<PsychologProfileForm> };
+	| { name: 'SET_INPUTS'; payload: Partial<RegisterForm> };
 
-const reducer: Reducer<PsychologProfileState, PsychologProfileAction> = (
-	state,
-	action
-) => {
+const reducer: Reducer<RegisterState, RegisterAction> = (state, action) => {
 	switch (action.name) {
 		case 'SET_SENDING':
 			return { ...state, sending: action.payload };
@@ -48,4 +41,4 @@ const reducer: Reducer<PsychologProfileState, PsychologProfileAction> = (
 	return state;
 };
 
-export default reducer;
+export default reducer
