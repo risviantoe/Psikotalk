@@ -24,6 +24,7 @@ export const PsikologSchedule = () => {
                     name="Muhammad Chandra Saputra"
                     clock="07.00 - 09.00 WITA"
                     type="schedule"
+                    confirm
                 />
                 <ScheduleList
                     day="Kamis"

@@ -1,0 +1,65 @@
+.modal-content .profile-wrapper {
+	display: flex;
+    flex-direction: row;
+    gap: 40px;
+	margin-bottom: 35px;
+}
+
+.modal-content .profile-picture {
+	width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.modal-content .profile-picture img {
+	width: 130px;
+    height: 130px;
+}
+
+.modal-content .profile-data {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-content .profile-data .profile-name {
+	font-size: 34px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.modal-content .profile-data .profile-gender {
+	font-size: 18px;
+    font-weight: 600;
+    color: #00B29D;
+}
+
+.modal-content .schedule-info {
+	list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content .schedule-info li {
+	display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    background: #F4F4F4;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.modal-content .schedule-info .text-link {
+    color: #00B29D;
+    text-decoration: underline;
+}
+
+.modal-content .schedule-info .icon {
+	width: 40px;
+}
+
+.modal-content .schedule-info span {
+
+}
