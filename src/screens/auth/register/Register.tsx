@@ -1,11 +1,15 @@
-import React, { useReducer } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useReducer, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../../../components/button/Button';
-import { authService } from '../../../services'
+import { Loading } from '../../../components/loading/Loading';
+import { authService } from '../../../services';
+import { TiWarning } from 'react-icons/ti';
 
 import reducer from './Register.reducer';
 
 export const Register: React.FC = () => {
+	const navigation = useNavigate();
+
 	const [state, dispatch] = useReducer(reducer, {
 		isSubmitted: false,
 		sending: false,
@@ -14,30 +18,60 @@ export const Register: React.FC = () => {
 			username: '',
 			email: '',
 			gender: '',
-            password: '',
-            confirmPassword: ''
+			password: '',
+			confirmPassword: '',
 		},
 	});
 
 	const { isSubmitted, inputs } = state;
-    const { name, username, email, gender, password, confirmPassword } = inputs;
-    
-    let isPasswordMatch: boolean = false
-    if (password && confirmPassword && password !== confirmPassword) {
-        isPasswordMatch = false;
-    } else {
-        isPasswordMatch = true;
-    }
+	const { name, username, email, gender, password, confirmPassword } = inputs;
+
+	let isPasswordMatch: boolean = false;
+	if (password && confirmPassword && password !== confirmPassword) {
+		isPasswordMatch = false;
+	} else {
+		isPasswordMatch = true;
+	}
+
+	let passwordLength: boolean = false;
+	if (password.length < 8) {
+		passwordLength = false;
+	} else {
+		passwordLength = true;
+	}
+
+	const [loading, setLoading] = useState<boolean>(false);
+	const [status, setStatus] = useState<number>(0);
 
 	const register = async () => {
-        dispatch({ name: 'SET_IS_SUBMITTED' });
-        
-        try {
-            const res = await authService.register(inputs)
-            console.log("Response ", res);
-        } catch (error) {
-            console.log(error);
-        }
+		dispatch({ name: 'SET_IS_SUBMITTED' });
+
+		if (
+			inputs.email === '' ||
+			inputs.password === '' ||
+			inputs.username === ''  ||
+			inputs.gender === ''  ||
+			!isPasswordMatch ||
+			!passwordLength
+		) return
+		
+		dispatch({ name: 'SET_SENDING', payload: false })
+
+		setLoading(true);
+		setStatus(0);
+
+		console.log('inputs', inputs);
+
+		try {
+			const res = await authService.register(inputs);
+			console.log('Response ', res);
+			setLoading(false);
+			navigation('/auth/verification');
+			setStatus(0);
+		} catch (error: any) {
+			setStatus(error.response.data.statusCode);
+			setLoading(false);
+		}
 	};
 
 	return (
@@ -45,6 +79,7 @@ export const Register: React.FC = () => {
 			<div className="auth-title">
 				<div className="auth-title-heading">
 					<h2>Selamat Datang di PsikoTalk</h2>
+					<Loading />
 				</div>
 				<div className="auth-title-subheading">
 					<h5>
@@ -57,9 +92,7 @@ export const Register: React.FC = () => {
 					<div className="form-input-group">
 						<label htmlFor="name">Nama Lengkap</label>
 						<input
-							className={
-								isSubmitted && !name ? 'form-error' : ''
-							}
+							className={isSubmitted && !name ? 'form-error' : ''}
 							type="text"
 							name="name"
 							id="name"
@@ -134,10 +167,23 @@ export const Register: React.FC = () => {
 							<div className="form-input-group-radio">
 								<div className="form-input-radio">
 									<input
+										className={
+											isSubmitted && !gender
+												? 'form-error'
+												: ''
+										}
 										type="radio"
 										name="gender"
 										id="gender-male"
-										checked
+										value="Laki-laki"
+										onChange={(e) =>
+											dispatch({
+												name: 'SET_INPUTS',
+												payload: {
+													gender: e.target.value,
+												},
+											})
+										}
 									/>
 									<label htmlFor="gender-male">
 										Laki - laki
@@ -145,14 +191,33 @@ export const Register: React.FC = () => {
 								</div>
 								<div className="form-input-radio">
 									<input
+										className={
+											isSubmitted && !gender
+												? 'form-error'
+												: ''
+										}
 										type="radio"
 										name="gender"
 										id="gender-female"
+										value="Perempuan"
+										onChange={(e) =>
+											dispatch({
+												name: 'SET_INPUTS',
+												payload: {
+													gender: e.target.value,
+												},
+											})
+										}
 									/>
 									<label htmlFor="gender-female">
 										Perempuan
 									</label>
 								</div>
+							</div>
+							<div className="form-error-message">
+								{isSubmitted && !gender ? (
+									<span>Gender wajib diisi!</span>
+								) : null}
 							</div>
 						</div>
 					</div>
@@ -178,6 +243,8 @@ export const Register: React.FC = () => {
 							<div className="form-error-message">
 								{isSubmitted && !password ? (
 									<span>Password wajib diisi!</span>
+								) : isSubmitted && !passwordLength ? (
+									<span>Password harus 8 karakter!</span>
 								) : null}
 							</div>
 						</div>
@@ -215,12 +282,20 @@ export const Register: React.FC = () => {
 							</div>
 						</div>
 					</div>
-					<div className="auth-alert">{/* auth alert */}</div>
+
+					{status !== 0 && status === 409 ? (
+						<div className="auth-alert">
+							<TiWarning />
+							<span>Email sudah digunakan!</span>
+						</div>
+					) : null}
+
 					<div className="auth-button">
 						<Button
 							name="Registrasi"
 							color="primary"
 							onClick={() => register()}
+							loading={loading}
 						/>
 					</div>
 				</form>

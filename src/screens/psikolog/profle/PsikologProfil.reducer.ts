@@ -8,7 +8,8 @@ interface PsychologProfileForm {
 	about: string;
 	birthDate: string;
 	phone: string;
-	study: string;
+	educationalStage: string;
+	certificate: string;
 	sipp: string;
 	password: string;
 }

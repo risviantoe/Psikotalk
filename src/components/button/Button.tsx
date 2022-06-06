@@ -1,4 +1,5 @@
 import React from 'react';
+import { Loading } from '../loading/Loading';
 import './Button.css';
 
 interface ButtonProps {
@@ -10,6 +11,7 @@ interface ButtonProps {
 	iconSize?: number;
 	style?: {};
 	onClick?: () => void;
+	loading?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -21,6 +23,7 @@ const Button: React.FC<ButtonProps> = ({
 	iconSize = 30,
 	style = {},
 	onClick,
+	loading
 }) => {
 	return (
 		<button
@@ -29,11 +32,17 @@ const Button: React.FC<ButtonProps> = ({
 			type="button"
 			onClick={onClick}
 		>
-			{icon !== '' ? (
-				<i className={`icon ${icon}`} style={{ width: iconSize }} />
-			) : (
-				name
-			)}
+			{
+				loading ? (
+					<Loading />
+				) : (
+					icon !== '' ? (
+						<i className={`icon ${icon}`} style={{ width: iconSize }} />
+					) : (
+						name
+					)
+				)
+			}
 		</button>
 	);
 };

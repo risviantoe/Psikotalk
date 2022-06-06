@@ -9,10 +9,6 @@ const DashboardAdminLayout: React.FC = (props) => {
     <React.Fragment>
       <Navbar />
       <div className="dashboard-section-wrapper">
-        {/* <div className="dashboard-banner-wrapper">
-          <div className="dashboard-banner-shape"></div>
-        </div> */}
-
         <div className="dashboard-wrapper">
           <div className="dashboard-sidebar-wrapper">
             <div className="dashboard-sidebar-header"></div>

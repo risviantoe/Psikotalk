@@ -129,7 +129,8 @@ input[type='email'],
 input[type='password'],
 input[type='number'],
 input[type='date'],
-input[type='file'] {
+input[type='file'],
+select {
 	height: 48px;
 	padding: 10px 20px;
 	border-radius: 8px;
@@ -175,7 +176,7 @@ input[type='file'] {
 	color: #fff;
 }
 
-.form textarea {
+textarea {
 	/* height: 48px; */
 	padding: 10px 20px;
 	border-radius: 8px;

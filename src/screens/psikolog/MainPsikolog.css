@@ -18,5 +18,30 @@
 
 .content-title h1 {
     font-size: 48px;
-    color: #00ADAC;
+}
+
+.color-psikolog {
+    color: #009595;
+}
+
+.psikolog__content--title {
+	padding: 20px 0 60px 0;
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+}
+
+.psikolog__content--title h1 {
+	font-size: 48px;
+}
+
+.psikolog__content--body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 685px;
+	background: #f4f4f4;
+	padding: 26px 30px;
+	border-radius: 10px;
 }

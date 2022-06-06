@@ -1,7 +1,8 @@
 .admin-home-wrapper {
     width: 75%;
-    margin-left: 28%;
+    margin-left: 23%;
     margin-bottom: 3rem;
+    padding: 50px 80px;
 }
 
 .admin-home-title {
@@ -9,18 +10,19 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .admin-home-title h1 {
     font-size: 48px;
-    color: #006161;
+    color: #00ADAC;
 }
 
 .admin-home-content-wrapper {
     background: #fff;
     width: 100%;
     border-radius: 10px;
-    padding: 80px 50px;
 }
 
 .admin-home-card-wrapper {

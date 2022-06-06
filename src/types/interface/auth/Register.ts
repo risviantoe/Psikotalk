@@ -7,11 +7,11 @@ export interface RegisterRequest {
 	password: string;
 }
 
-export interface Data {
+export interface RegisterData {
 	token: string;
 	user: User;
 }
 
 export interface RegisterResponse {
-	data: Data;
+	data: RegisterData;
 }
