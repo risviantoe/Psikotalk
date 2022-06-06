@@ -14,7 +14,7 @@ export const PsikologClient = () => {
 	return (
 		<React.Fragment>
 			<div className="psikolog__content--title color-psikolog">
-				<BsPeopleFill size={60} color="#006161" />
+				<BsPeopleFill size={60} />
 				<h1>Klien</h1>
 			</div>
 			<div className="psikolog__content--body">

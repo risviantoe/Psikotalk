@@ -46,5 +46,7 @@
     background: #006161;
 }
 
-.sidebar-menus-bottom {
+.sidebar-menu-active {
+    color: #fff;
+    background: #006161;
 }

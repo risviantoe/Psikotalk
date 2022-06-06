@@ -10,7 +10,7 @@ export const PsikologSchedule = () => {
 	return (
 		<React.Fragment>
 			<div className="psikolog__content--title color-psikolog">
-				<AiFillSchedule size={60} color="#006161" />
+				<AiFillSchedule size={60} />
 				<h1>Jadwal Konsultasi</h1>
 			</div>
 			<div className="psikolog__content--body" style={{ marginTop: 50 }}>

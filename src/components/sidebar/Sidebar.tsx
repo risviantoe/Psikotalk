@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import {
 	MdSpaceDashboard,
 	AiFillSchedule,
@@ -20,34 +20,83 @@ export const Sidebar = () => {
 			</div>
 			<div className="sidebar-menus-wrapper">
 				<div className="sidebar-menus-list">
-					<Link to="/psikolog/dashboard" className="sidebar-menu-link">
+					<NavLink
+						to="/psikolog/dashboard"
+						className={({ isActive }) =>
+							isActive
+								? 'sidebar-menu-link sidebar-menu-active'
+								: 'sidebar-menu-link'
+						}
+					>
 						<MdSpaceDashboard size={25} /> Dashboard
-					</Link>
-					<Link to="/psikolog/schedule" className="sidebar-menu-link">
+					</NavLink>
+					<NavLink
+						to="/psikolog/schedule"
+						className={({ isActive }) =>
+							isActive
+								? 'sidebar-menu-link sidebar-menu-active'
+								: 'sidebar-menu-link'
+						}
+					>
 						<AiFillSchedule size={25} />
 						Jadwal
-					</Link>
-					<Link to="/psikolog/client" className="sidebar-menu-link">
+					</NavLink>
+					<NavLink
+						to="/psikolog/client"
+						className={({ isActive }) =>
+							isActive
+								? 'sidebar-menu-link sidebar-menu-active'
+								: 'sidebar-menu-link'
+						}
+					>
 						<BsPeopleFill size={25} />
 						Klien
-					</Link>
-					<Link to="" className="sidebar-menu-link">
+					</NavLink>
+					<NavLink
+						to="/psikolog/income"
+						className={({ isActive }) =>
+							isActive
+								? 'sidebar-menu-link sidebar-menu-active'
+								: 'sidebar-menu-link'
+						}
+					>
 						<FaMoneyCheckAlt size={25} />
 						Pendapatan
-					</Link>
-					<Link to="" className="sidebar-menu-link">
+					</NavLink>
+					<NavLink
+						to="!#"
+						className={({ isActive }) =>
+							isActive
+								? 'sidebar-menu-link sidebar-menu-active'
+								: 'sidebar-menu-link'
+						}
+					>
 						<BsChatDotsFill size={25} />
 						Chat
-					</Link>
+					</NavLink>
 				</div>
 				<div className="sidebar-menus-list">
-					<Link to="" className="sidebar-menu-link">
+					<NavLink
+						to="/psikolog/help"
+						className={({ isActive }) =>
+							isActive
+								? 'sidebar-menu-link sidebar-menu-active'
+								: 'sidebar-menu-link'
+						}
+					>
 						<MdHelp size={25} /> Bantuan
-					</Link>
-					<Link to="" className="sidebar-menu-link">
+					</NavLink>
+					<NavLink
+						to="!#"
+						className={({ isActive }) =>
+							isActive
+								? 'sidebar-menu-link sidebar-menu-active'
+								: 'sidebar-menu-link'
+						}
+					>
 						<MdLogout size={25} />
 						Logout
-					</Link>
+					</NavLink>
 				</div>
 			</div>
 		</div>
