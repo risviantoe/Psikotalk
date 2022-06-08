@@ -6,13 +6,13 @@
 	padding: 10px;
 	background: #fff;
 	border: 1px solid #cbd2d9;
-	color: #00b29d;
+	color: #009595;
 	font-weight: 600;
 	transition: all 0.2s;
 }
 
 .pagination-wrapper a:hover {
-	background: #00b29d;
+	background: #009595;
 	color: #fff;
 }
 
@@ -32,6 +32,6 @@
 }
 
 .pagination-active {
-    background: #00b29d !important;
+    background: #009595 !important;
 	color: #fff !important;
 }

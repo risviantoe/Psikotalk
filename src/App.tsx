@@ -20,6 +20,7 @@ import { PsikologClient } from './screens/psikolog/client/PsikologClient';
 import { DashboardLayout } from './components/layouts/dashboardLayout/DashboardLayout';
 import PsikologHelp from './screens/psikolog/help/PsikologHelp';
 import PsikologIncome from './screens/psikolog/income/PsikologIncome';
+import PsikologNotification from './screens/psikolog/notification/PsikologNotification';
 
 const App = () => {
 	return (
@@ -75,8 +76,11 @@ const App = () => {
 						path="/psikolog/income"
 						element={<PsikologIncome />}
 					></Route>
+					<Route
+						path="/psikolog/notification"
+						element={<PsikologNotification />}
+					></Route>
 				</Route>
-
 			</Routes>
 		</BrowserRouter>
 	);
