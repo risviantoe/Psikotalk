@@ -21,6 +21,7 @@ import { DashboardLayout } from './components/layouts/dashboardLayout/DashboardL
 import PsikologHelp from './screens/psikolog/help/PsikologHelp';
 import PsikologIncome from './screens/psikolog/income/PsikologIncome';
 import PsikologNotification from './screens/psikolog/notification/PsikologNotification';
+import PsikologLogin from './screens/psikolog/auth/PsikologLogin';
 
 const App = () => {
 	return (
@@ -35,6 +36,8 @@ const App = () => {
 						element={<Verification />}
 					/>
 				</Route>
+
+				<Route path="/dashboard/signin" element={<PsikologLogin />}></Route>
 
 				<Route path="/admin" element={<DashboardLayout />}>
 					<Route

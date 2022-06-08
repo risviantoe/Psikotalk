@@ -1,6 +1,6 @@
 import React from 'react';
 import { CgSearch, CgProfile, MdNotifications } from 'react-icons/allIcons';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './NavbarDashboard.css'
 
@@ -25,13 +25,23 @@ export const NavbarDashboard = () => {
 					/>
 				</div>
 			</div>
-			<div className="navbar-actions">
-				<Link to="/psikolog/profile" className="navbar-action-profile">
-					<CgProfile size={60} color="#7E808B" />
-				</Link>
-				<Link to="" className="navbar-action-notification">
-					<MdNotifications size={40} color="#7E808B" />
-				</Link>
+			<div className="navbar-actions-wrapper">
+				<NavLink
+					to="/psikolog/profile"
+					className={({ isActive }) =>
+						isActive ? 'navbar-action-active' : 'navbar-action'
+					}
+				>
+					<CgProfile size={60} />
+				</NavLink>
+				<NavLink
+					to="/psikolog/notification"
+					className={({ isActive }) =>
+						isActive ? 'navbar-action-active' : 'navbar-action'
+					}
+				>
+					<MdNotifications size={40} />
+				</NavLink>
 			</div>
 		</nav>
 	);

@@ -29,18 +29,18 @@
     color: #555;
 }
 
-.navbar-actions {
+.navbar-actions-wrapper {
     display: flex;
     flex-direction: row;
     gap: 40px;
     align-items: center;
 }
 
-.navbar-action-profile {
-
+.navbar-action {
+    color: #7E808B;
 }
 
-.navbar-action-notification {
-
+.navbar-action-active {
+    color: #009595;
 }
 

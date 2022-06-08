@@ -1,0 +1,84 @@
+.auth-wrapper {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	padding: 143px 142px;
+}
+
+.auth__login--ornament-1 {
+	background: url(/public/assets/images/ornament-login01.svg);
+	background-size: cover;
+	height: 350px;
+	width: 350px;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.auth__login--ornament-2 {
+	background: url(/public/assets/images/ornament-login02.svg);
+	background-size: cover;
+	height: 300px;
+	width: 300px;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.auth__login--content-wrapper {
+	background: #fff;
+	box-shadow: 0px 4px 10px 2px rgb(0 0 0 / 25%);
+	padding: 60px 30px 30px;
+	border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.auth__login--left-wrapper {
+    width: 50%;
+}
+
+.auth__login--left-logo {
+    margin-left: 80px;
+    width: 300px;
+}
+
+.auth__login--left-logo img, .auth__login--left-vector img {
+    width: 100%;
+}
+
+.auth__login--left-vector {
+    width: 100%;
+}
+
+.auth__login--right-wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth__login--right-title-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth__login--right-title-wrapper .auth__right-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #00ADAC;
+}
+
+.auth__login--right-title-wrapper .auth__right-subtitle {
+    font-size: 18px;
+    color: #7E808B;
+}
+
+.auth__login--right-form-wrapper {
+    width: 70%;
+}
+
