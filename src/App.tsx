@@ -22,6 +22,7 @@ import PsikologHelp from './screens/psikolog/help/PsikologHelp';
 import PsikologIncome from './screens/psikolog/income/PsikologIncome';
 import PsikologNotification from './screens/psikolog/notification/PsikologNotification';
 import PsikologLogin from './screens/psikolog/auth/PsikologLogin';
+import AdminClient from './screens/admin/client/AdminClient';
 
 const App = () => {
 	return (
@@ -47,6 +48,10 @@ const App = () => {
 					<Route
 						path="/admin/profile"
 						element={<AdminProfile />}
+					></Route>
+					<Route
+						path="/admin/client"
+						element={<AdminClient />}
 					></Route>
 				</Route>
 

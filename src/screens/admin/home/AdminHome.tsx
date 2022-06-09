@@ -2,17 +2,14 @@ import React from 'react';
 import CardHome from '../../../components/cardHome/CardHome';
 import { MdSpaceDashboard } from 'react-icons/allIcons';
 
+import '../MainAdmin.css'
 import './AdminHome.css';
 
 export const AdminHome: React.FC = () => {
 	return (
 		<React.Fragment>
-			<div className="admin-home-title">
-				{/* <i
-					className="icon icon-dashboard"
-					style={{ background: '#00ADAC' }}
-				/> */}
-				<MdSpaceDashboard size={60} color="#00ADAC" />
+			<div className="admin-home-title color-admin">
+				<MdSpaceDashboard size={60} />
 				<h1>Dashboard Admin</h1>
 			</div>
 			<div className="admin-home-content-wrapper">

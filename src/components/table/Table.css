@@ -1,0 +1,43 @@
+.table__wrapper {
+	width: 100%;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.table__heading {
+	background: #d7ede8;
+}
+
+.table__heading th {
+	padding: 23px 22px;
+	text-align: center;
+}
+
+.table__heading td:first-child {
+	width: 1%;
+	white-space: nowrap;
+}
+
+.table__body {
+	background: #fcfcfc;
+}
+
+.table__body td {
+	padding: 10px 22px;
+	text-align: center;
+	max-width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.table__column-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+tr:nth-child(even) {
+	background-color: #f6f5f5;
+}

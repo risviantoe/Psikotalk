@@ -16,10 +16,10 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({
 	color = 'primary',
-	name = 'Button',
+	name,
 	size = 'medium',
 	type = 'normal',
-	icon = '',
+	icon,
 	iconSize = 30,
 	style = {},
 	onClick,
@@ -32,17 +32,15 @@ const Button: React.FC<ButtonProps> = ({
 			type="button"
 			onClick={onClick}
 		>
-			{
-				loading ? (
-					<Loading />
-				) : (
-					icon !== '' ? (
-						<i className={`icon ${icon}`} style={{ width: iconSize }} />
-					) : (
-						name
-					)
-				)
-			}
+			{loading ? (
+				<Loading />
+			) : icon !== '' ? (
+				<div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+					<i className={`icon ${icon}`} style={{ width: iconSize }} /> { name }
+				</div>
+			) : (
+				name
+			)}
 		</button>
 	);
 };

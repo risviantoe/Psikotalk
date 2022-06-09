@@ -3,6 +3,7 @@ import Button from '../../../components/button/Button';
 import reducer from './PsikologProfil.reducer';
 import '../MainPsikolog.css';
 import './PsikologProfile.css';
+import { HiUser } from 'react-icons/allIcons';
 
 export const PsikologProfile = () => {
 	const [state, dispatch] = useReducer(reducer, {
@@ -45,10 +46,7 @@ export const PsikologProfile = () => {
 	return (
 		<React.Fragment>
 			<div className="content-title color-psikolog">
-				<i
-					className="icon icon-people"
-					style={{ background: '#00ADAC' }}
-				/>
+				<HiUser size={60} />
 				<h1>Profil Psikolog</h1>
 			</div>
 			<div className="psikolog__content--body bg-white">
