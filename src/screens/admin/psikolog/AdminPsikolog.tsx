@@ -6,16 +6,16 @@ import Table from '../../../components/table/Table';
 import { titleIconSize } from '../AdminConfig';
 import { theadData, tbodyData } from '../dataDumy/clientData';
 
-import './AdminClient.css';
+import './AdminPsikolog.css';
 
-const AdminClient = () => {
+const AdminPsikolog = () => {
     const [showModalConfirm, setShowModalConfirm] = useState<boolean>(false);
 
 	return (
 		<React.Fragment>
 			<div className="admin__content--title color-admin">
 				<BsPeopleFill size={titleIconSize} />
-				<h1>Data Klien</h1>
+				<h1>Data Psikolog</h1>
 			</div>
 			<div className="admin__content--body">
 				<div className="admin__client--content-wrapper">
@@ -43,4 +43,4 @@ const AdminClient = () => {
 	);
 };
 
-export default AdminClient;
+export default AdminPsikolog;

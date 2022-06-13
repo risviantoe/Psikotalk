@@ -141,6 +141,7 @@ select {
 }
 
 .form input:focus {
+	outline: none;
 	border: 1px solid #006161;
 }
 
@@ -234,6 +235,10 @@ textarea {
 .form-error-message {
 	color: #ff4242;
 	font-size: 14px;
+}
+
+.d-flex {
+	display: flex;
 }
 
 /* Color */

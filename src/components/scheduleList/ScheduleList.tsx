@@ -99,6 +99,7 @@ const ScheduleList: React.FC<ScheduleListProps> = ({
 							: 'Konfirmasi Jadwal Konsultasi dengan Klien'
 					}
 					confirm={confirm}
+					okButtonText="Konfirmasi"
 					onClose={() => setShowModalConfirm(false)}
 				/>
 			</Modal>

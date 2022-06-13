@@ -1,27 +1,39 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import Button from '../button/Button';
 import './Table.css';
 
+interface actionButton extends ButtonHTMLAttributes<HTMLButtonElement> {
+	name?: string;
+	color?: string;
+	icon?: string;
+	onClick?: () => void;
+	buttonConfig?: ButtonHTMLAttributes<HTMLButtonElement>;
+}
 interface TableProps {
 	theadData: string[];
 	tbodyData: any[];
-    actionColumn?: boolean;
-    action1?: {name?: string, color?: string, icon?: string}
-    action2?: {name?: string, color?: string, icon?: string}
+	actionColumn?: boolean;
+	action1?: actionButton;
+	action2?: actionButton;
 }
 
 const Table: React.FC<TableProps> = ({
 	theadData,
 	tbodyData,
-    actionColumn,
-    action1,
-    action2
+	actionColumn,
+	action1,
+	action2,
 }) => {
+	const buttonStyle = {
+		borderRadius: 20,
+		padding: '5px 14px',
+		fontSize: 14,
+	};
 
-    const buttonStyle = {
+	const buttonStyleIcon = {
 		borderRadius: 20,
 		padding: '2px 14px',
-        fontSize: 14
+		fontSize: 14,
 	};
 
 	return (
@@ -53,23 +65,35 @@ const Table: React.FC<TableProps> = ({
 											name={action1?.name}
 											icon={action1?.icon}
 											iconSize={15}
-											style={buttonStyle}
+											style={
+												action2?.icon
+													? buttonStyleIcon
+													: buttonStyle
+											}
+											onClick={action1?.onClick}
+											buttonConfig={action1?.buttonConfig}
 										/>
-										<Button
-											color={action2?.color}
-											name={action2?.name}
-											icon={action2?.icon}
-											iconSize={15}
-											style={buttonStyle}
-										/>
+										{action2 ? (
+											<Button
+												color={action2?.color}
+												name={action2?.name}
+												icon={action2?.icon}
+												iconSize={15}
+												style={
+													action2?.icon
+														? buttonStyleIcon
+														: buttonStyle
+												}
+												onClick={action2?.onClick}
+											/>
+										) : null}
 									</div>
 								</td>
 							) : null}
 						</tr>
 					);
 				})}
-               
-            </tbody>
+			</tbody>
 		</table>
 	);
 };

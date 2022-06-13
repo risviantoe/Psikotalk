@@ -102,3 +102,13 @@
     -webkit-mask-image: url(/public/assets/icons/cross.svg);
     mask-image: url(/public/assets/icons/cross.svg);
 }
+
+.icon-edit {
+    -webkit-mask-image: url(/public/assets/icons/edit.svg);
+    mask-image: url(/public/assets/icons/edit.svg);
+}
+
+.icon-delete {
+    -webkit-mask-image: url(/public/assets/icons/delete.svg);
+    mask-image: url(/public/assets/icons/delete.svg);
+}

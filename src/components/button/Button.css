@@ -37,6 +37,12 @@
     color: #fff;
 }
 
+.disable {
+    background: #C4C4C4;
+    border: 1px solid #C4C4C4;
+    color: #fff;
+}
+
 /* Button Effects */
 
 .button.primary:hover {

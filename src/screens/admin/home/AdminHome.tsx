@@ -4,12 +4,13 @@ import { MdSpaceDashboard } from 'react-icons/allIcons';
 
 import '../MainAdmin.css'
 import './AdminHome.css';
+import { titleIconSize } from '../AdminConfig';
 
 export const AdminHome: React.FC = () => {
 	return (
 		<React.Fragment>
 			<div className="admin-home-title color-admin">
-				<MdSpaceDashboard size={60} />
+				<MdSpaceDashboard size={titleIconSize} />
 				<h1>Dashboard Admin</h1>
 			</div>
 			<div className="admin-home-content-wrapper">

@@ -1,11 +1,30 @@
+tr:nth-child(even) {
+	background: #f6f5f5;
+	transition: all 0.2s;
+}
+
+tr:nth-child(even):hover {
+	background: #f1f0f0;
+}
+
+tr:nth-child(odd) {
+	background: #fcfcfc;
+	transition: all 0.2s;
+}
+
+tr:nth-child(odd):hover {
+	background: #f7f7f7;
+}
+
 .table__wrapper {
 	width: 100%;
 	border-radius: 20px;
 	overflow: hidden;
 }
 
-.table__heading {
-	background: #d7ede8;
+.table__heading tr {
+	background: #d7ede8 !important;
+	font-size: 18px;
 }
 
 .table__heading th {
@@ -20,6 +39,7 @@
 
 .table__body {
 	background: #fcfcfc;
+	font-size: 17px;
 }
 
 .table__body td {
@@ -36,8 +56,4 @@
     flex-direction: row;
     gap: 10px;
     justify-content: center;
-}
-
-tr:nth-child(even) {
-	background-color: #f6f5f5;
 }

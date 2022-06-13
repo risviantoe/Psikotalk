@@ -23,6 +23,10 @@ import PsikologIncome from './screens/psikolog/income/PsikologIncome';
 import PsikologNotification from './screens/psikolog/notification/PsikologNotification';
 import PsikologLogin from './screens/psikolog/auth/PsikologLogin';
 import AdminClient from './screens/admin/client/AdminClient';
+import AdminPsikolog from './screens/admin/psikolog/AdminPsikolog';
+import AdminPayment from './screens/admin/payment/AdminPayment';
+import AdminArticle from './screens/admin/article/AdminArticle';
+import AdminPaymentHistory from './screens/admin/payment/AdminPaymentHistory';
 
 const App = () => {
 	return (
@@ -52,6 +56,22 @@ const App = () => {
 					<Route
 						path="/admin/client"
 						element={<AdminClient />}
+					></Route>
+					<Route
+						path="/admin/psikolog"
+						element={<AdminPsikolog />}
+					></Route>
+					<Route
+						path="/admin/pembayaran"
+						element={<AdminPayment />}
+					></Route>
+					<Route
+						path="/admin/pembayaran/history"
+						element={<AdminPaymentHistory />}
+					></Route>
+					<Route
+						path="/admin/artikel"
+						element={<AdminArticle />}
 					></Route>
 				</Route>
 

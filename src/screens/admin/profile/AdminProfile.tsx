@@ -4,6 +4,7 @@ import { HiUser } from 'react-icons/allIcons';
 
 import './AdminProfile.css';
 import reducer from './AdminProfile.reducer';
+import { titleIconSize } from '../AdminConfig';
 
 export const AdminProfile = () => {
 	const [state, dispatch] = useReducer(reducer, {
@@ -28,7 +29,7 @@ export const AdminProfile = () => {
 	return (
 		<React.Fragment>
 			<div className="admin__content--title color-admin">
-				<HiUser size={60} />
+				<HiUser size={titleIconSize} />
 				<h1>Profil Admin</h1>
 			</div>
 			<div className="admin__content--body">
