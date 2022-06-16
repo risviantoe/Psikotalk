@@ -5,17 +5,23 @@ import {
 	BsPeopleFill,
 	MdEmail,
 } from 'react-icons/allIcons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useOutletContext } from 'react-router-dom';
+import Button from '../../../components/button/Button';
 import Pagination from '../../../components/pagination/Pagination'
+import Search from '../../../components/search/Search';
+import { PageProps } from '../../../types/interface/page/Page';
 
 import './PsikologClient.css'
 
-export const PsikologClient = () => {
+export const PsikologClient: React.FC<PageProps> = ({ pageTitle, icon }) => {
+	const { setTitle, setIcon } = useOutletContext<any>();
+	setTitle(pageTitle);
+	setIcon(icon);
+
 	return (
 		<React.Fragment>
-			<div className="psikolog__content--title color-psikolog">
-				<BsPeopleFill size={60} />
-				<h1>Klien</h1>
+			<div className="content-top-menu">
+				<Search />
 			</div>
 			<div className="psikolog__content--body">
 				<div className="psikolog__list--wrapper">

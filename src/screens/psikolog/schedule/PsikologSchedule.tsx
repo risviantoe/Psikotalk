@@ -1,30 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 import ScheduleList from '../../../components/scheduleList/ScheduleList';
 import { AiFillSchedule } from 'react-icons/allIcons';
 
 import './PsikologSchedule.css';
 import Pagination from '../../../components/pagination/Pagination';
+import { PageProps } from '../../../types/interface/page/Page';
+import Search from '../../../components/search/Search';
+import Button from '../../../components/button/Button';
 
-export const PsikologSchedule = () => {
+export const PsikologSchedule: React.FC<PageProps> = ({ pageTitle, icon }) => {
+	const { setTitle, setIcon } = useOutletContext<any>();
+	setTitle(pageTitle);
+	setIcon(icon);
+
+	const navigate = useNavigate()
+
 	return (
 		<React.Fragment>
-			<div className="psikolog__content--title color-psikolog">
-				<AiFillSchedule size={60} />
-				<h1>Jadwal Konsultasi</h1>
-			</div>
-			<div className="psikolog__content--body" style={{ marginTop: 50 }}>
-				<div className="psikolog-schedule-menu">
-					<Link to="/psikolog/schedule" className="button active">
-						Jadwal Terkini
-					</Link>
-					<Link
-						to="/psikolog/schedule/history"
-						className="button bg-white"
-					>
-						Riwayat
-					</Link>
+			<div className="content-top-menu">
+				<Search />
+				<div className="content-top-menu-action">
+					<Button
+						name="Jadwal Terkini"
+						onClick={() => navigate('/psikolog/schedule')}
+						style={{ borderRadius: 30 }}
+					/>
+					<Button
+						name="Riwayat"
+						color="secondary"
+						onClick={() => navigate('/psikolog/schedule/history')}
+						style={{ borderRadius: 30 }}
+					/>
 				</div>
+			</div>
+			<div className="psikolog__content--body">
 				<div className="psikolog-schedule-content">
 					<ScheduleList
 						day="Rabu"

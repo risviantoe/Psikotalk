@@ -1,16 +1,23 @@
 import React from 'react';
 import { MdNotifications } from 'react-icons/allIcons';
+import { useNavigate, useOutletContext } from 'react-router-dom';
+import Button from '../../../components/button/Button';
 import Notification from '../../../components/notification/Notification';
 import Pagination from '../../../components/pagination/Pagination';
+import Search from '../../../components/search/Search';
+import { PageProps } from '../../../types/interface/page/Page';
 
 import './PsikologNotification.css'
 
-const PsikologNotification = () => {
+const PsikologNotification: React.FC<PageProps> = ({ pageTitle, icon }) => {
+	const { setTitle, setIcon } = useOutletContext<any>();
+	setTitle(pageTitle);
+	setIcon(icon);
+
 	return (
 		<React.Fragment>
-			<div className="psikolog__content--title color-psikolog">
-				<MdNotifications size={60} />
-				<h1>Notifikasi</h1>
+			<div className="content-top-menu">
+				<Search />
 			</div>
 			<div className="psikolog__content--body">
 				<div className="psikolog__notification--content-wrapper">

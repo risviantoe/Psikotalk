@@ -1,79 +1,26 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import {
-	MdSpaceDashboard,
-	AiFillSchedule,
-	BsPeopleFill,
-	BsChatDotsFill,
-	FaMoneyCheckAlt,
-	MdLogout,
-	MdHelp,
-} from 'react-icons/allIcons';
+import { MdLogout, MdHelp } from 'react-icons/allIcons';
 
-import './Sidebar.css'
+// import { sidebarData } from './SidebarData';
+import './Sidebar.css';
+import SubMenu from './SubMenu';
 
-export const Sidebar = () => {
-    return (
+interface sidebarData {
+	data: any[];
+}
+
+export const Sidebar: React.FC<sidebarData> = ({ data }) => {
+	return (
 		<div className="sidebar-wrapper">
 			<div className="sidebar-logo">
 				<img src="/assets/images/logo-sidebar.png" alt="logo-sidebar" />
 			</div>
 			<div className="sidebar-menus-wrapper">
 				<div className="sidebar-menus-list">
-					<NavLink
-						to="/psikolog/dashboard"
-						className={({ isActive }) =>
-							isActive
-								? 'sidebar-menu-link sidebar-menu-active'
-								: 'sidebar-menu-link'
-						}
-					>
-						<MdSpaceDashboard size={25} /> Dashboard
-					</NavLink>
-					<NavLink
-						to="/psikolog/schedule"
-						className={({ isActive }) =>
-							isActive
-								? 'sidebar-menu-link sidebar-menu-active'
-								: 'sidebar-menu-link'
-						}
-					>
-						<AiFillSchedule size={25} />
-						Jadwal
-					</NavLink>
-					<NavLink
-						to="/psikolog/client"
-						className={({ isActive }) =>
-							isActive
-								? 'sidebar-menu-link sidebar-menu-active'
-								: 'sidebar-menu-link'
-						}
-					>
-						<BsPeopleFill size={25} />
-						Klien
-					</NavLink>
-					<NavLink
-						to="/psikolog/income"
-						className={({ isActive }) =>
-							isActive
-								? 'sidebar-menu-link sidebar-menu-active'
-								: 'sidebar-menu-link'
-						}
-					>
-						<FaMoneyCheckAlt size={25} />
-						Pendapatan
-					</NavLink>
-					<NavLink
-						to="!#"
-						className={({ isActive }) =>
-							isActive
-								? 'sidebar-menu-link sidebar-menu-active'
-								: 'sidebar-menu-link'
-						}
-					>
-						<BsChatDotsFill size={25} />
-						Chat
-					</NavLink>
+					{data.map((item, index) => {
+						return <SubMenu item={item} key={index} />;
+					})}
 				</div>
 				<div className="sidebar-menus-list">
 					<NavLink
@@ -84,7 +31,9 @@ export const Sidebar = () => {
 								: 'sidebar-menu-link'
 						}
 					>
-						<MdHelp size={25} /> Bantuan
+						<div className="sidebar-menu-content">
+							<MdHelp size={25} /> Bantuan
+						</div>
 					</NavLink>
 					<NavLink
 						to="!#"
@@ -94,10 +43,13 @@ export const Sidebar = () => {
 								: 'sidebar-menu-link'
 						}
 					>
-						<MdLogout size={25} />
-						Logout
+						<div className="sidebar-menu-content">
+							<MdLogout size={25} />
+							Logout
+						</div>
 					</NavLink>
 				</div>
 			</div>
 		</div>
-	);};
+	);
+};

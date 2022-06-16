@@ -1,19 +1,20 @@
 import React from 'react';
 import { FaMoneyCheckAlt } from 'react-icons/allIcons';
+import { useOutletContext } from 'react-router-dom';
 import LineChart from '../../../components/lineChart/LineChart';
+import { PageProps } from '../../../types/interface/page/Page';
 
 import './PsikologIncome.css';
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 const data = [1000, 200, 300, 100, 250, 50, 60];
 
-const PsikologIncome = () => {
+const PsikologIncome: React.FC<PageProps> = ({ pageTitle, icon }) => {
+	const { setTitle, setIcon } = useOutletContext<any>();
+	setTitle(pageTitle);
+	setIcon(icon);
 	return (
 		<React.Fragment>
-			<div className="psikolog__content--title color-psikolog">
-				<FaMoneyCheckAlt size={60} />
-				<h1>Pendapatan Psikolog</h1>
-			</div>
 			<div className="psikolog__content--body bg-white">
 				<div className="psikolog__income--content-wrapper">
 					<div className="psikolog__income--cards-wrapper">

@@ -2,8 +2,6 @@ import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import AuthLayout from './components/layouts/authLayout/AuthLayout';
-import DashboardAdminLayout from './components/layouts/dashboardAdminLayout/DashboardAdminLayout';
-import DashboardPsikologLayout from './components/layouts/dashboardPsikologLayout/DashboardPsikologLayout';
 
 import { Login } from './screens/auth/login/Login';
 import { Register } from './screens/auth/register/Register';
@@ -27,6 +25,20 @@ import AdminPsikolog from './screens/admin/psikolog/AdminPsikolog';
 import AdminPayment from './screens/admin/payment/AdminPayment';
 import AdminArticle from './screens/admin/article/AdminArticle';
 import AdminPaymentHistory from './screens/admin/payment/AdminPaymentHistory';
+import { titleIconSize } from './screens/admin/AdminConfig';
+import {
+	MdSpaceDashboard,
+	BsPeopleFill,
+	FaUserMd,
+	MdAccessTimeFilled,
+	GoChecklist,
+	IoIosPaper,
+	HiUser,
+	AiFillSchedule,
+	MdHelp,
+	FaMoneyCheckAlt,
+	MdNotifications,
+} from 'react-icons/allIcons';
 
 const App = () => {
 	return (
@@ -42,71 +54,157 @@ const App = () => {
 					/>
 				</Route>
 
-				<Route path="/dashboard/signin" element={<PsikologLogin />}></Route>
+				<Route
+					path="/dashboard/signin"
+					element={<PsikologLogin />}
+				></Route>
 
-				<Route path="/admin" element={<DashboardLayout />}>
+				<Route
+					path="/admin"
+					element={<DashboardLayout pageFor="admin" />}
+				>
 					<Route
 						path="/admin/dashboard"
-						element={<AdminHome />}
+						element={
+							<AdminHome
+								icon={<MdSpaceDashboard size={titleIconSize} />}
+								pageTitle="Dashboard Admin"
+							/>
+						}
 					></Route>
 					<Route
 						path="/admin/profile"
-						element={<AdminProfile />}
+						element={
+							<AdminProfile
+								icon={<HiUser size={titleIconSize} />}
+								pageTitle="Profile"
+							/>
+						}
 					></Route>
 					<Route
 						path="/admin/client"
-						element={<AdminClient />}
+						element={
+							<AdminClient
+								icon={<BsPeopleFill size={titleIconSize} />}
+								pageTitle="Daftar Klien"
+							/>
+						}
 					></Route>
 					<Route
 						path="/admin/psikolog"
-						element={<AdminPsikolog />}
+						element={
+							<AdminPsikolog
+								icon={<FaUserMd size={titleIconSize} />}
+								pageTitle="Daftar Psikolog"
+							/>
+						}
 					></Route>
 					<Route
-						path="/admin/pembayaran"
-						element={<AdminPayment />}
+						path="/admin/payment/confirmation"
+						element={
+							<AdminPayment
+								icon={<GoChecklist size={titleIconSize} />}
+								pageTitle="Konfirmasi Pembayaran"
+							/>
+						}
 					></Route>
 					<Route
-						path="/admin/pembayaran/history"
-						element={<AdminPaymentHistory />}
+						path="/admin/payment/history"
+						element={
+							<AdminPaymentHistory
+								icon={
+									<MdAccessTimeFilled size={titleIconSize} />
+								}
+								pageTitle="Riwayat Pembayaran"
+							/>
+						}
 					></Route>
 					<Route
-						path="/admin/artikel"
-						element={<AdminArticle />}
+						path="/admin/post"
+						element={
+							<AdminArticle
+								icon={<IoIosPaper size={titleIconSize} />}
+								pageTitle="Daftar Postingan"
+							/>
+						}
 					></Route>
 				</Route>
 
-				<Route path="/psikolog" element={<DashboardLayout />}>
+				<Route
+					path="/psikolog"
+					element={<DashboardLayout pageFor="psikolog" />}
+				>
 					<Route
 						path="/psikolog/dashboard"
-						element={<PsikologHome />}
+						element={
+							<PsikologHome
+								icon={<MdSpaceDashboard size={titleIconSize} />}
+								pageTitle="Dashboard Psikolog"
+							/>
+						}
 					></Route>
 					<Route
 						path="/psikolog/profile"
-						element={<PsikologProfile />}
+						element={
+							<PsikologProfile
+								icon={<HiUser size={titleIconSize} />}
+								pageTitle="Profil Psikolog"
+							/>
+						}
 					></Route>
 					<Route
 						path="/psikolog/schedule"
-						element={<PsikologSchedule />}
+						element={
+							<PsikologSchedule
+								icon={<AiFillSchedule size={titleIconSize} />}
+								pageTitle="Jadwal Konsultasi"
+							/>
+						}
 					></Route>
 					<Route
 						path="/psikolog/schedule/history"
-						element={<PsikologScheduleHistory />}
+						element={
+							<PsikologScheduleHistory
+								icon={<AiFillSchedule size={titleIconSize} />}
+								pageTitle="Jadwal Konsultasi"
+							/>
+						}
 					></Route>
 					<Route
 						path="/psikolog/client"
-						element={<PsikologClient />}
+						element={
+							<PsikologClient
+								icon={<BsPeopleFill size={titleIconSize} />}
+								pageTitle="Daftar Klien"
+							/>
+						}
 					></Route>
 					<Route
 						path="/psikolog/help"
-						element={<PsikologHelp />}
+						element={
+							<PsikologHelp
+								icon={<MdHelp size={titleIconSize} />}
+								pageTitle="Bantuan"
+							/>
+						}
 					></Route>
 					<Route
 						path="/psikolog/income"
-						element={<PsikologIncome />}
+						element={
+							<PsikologIncome
+								icon={<FaMoneyCheckAlt size={titleIconSize} />}
+								pageTitle="Pendapatan"
+							/>
+						}
 					></Route>
 					<Route
 						path="/psikolog/notification"
-						element={<PsikologNotification />}
+						element={
+							<PsikologNotification
+								icon={<MdNotifications size={titleIconSize} />}
+								pageTitle="Notifikasi"
+							/>
+						}
 					></Route>
 				</Route>
 			</Routes>

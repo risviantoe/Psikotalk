@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
-import { BsPeopleFill } from 'react-icons/allIcons';
+import { useOutletContext } from 'react-router-dom';
 import Modal from '../../../components/modal/Modal';
 import ModalConfirmation from '../../../components/modalConfirmation/ModalConfirmation';
+import Search from '../../../components/search/Search';
 import Table from '../../../components/table/Table';
-import { titleIconSize } from '../AdminConfig';
+import { PageProps } from '../../../types/interface/page/Page';
 import { theadData, tbodyData } from '../dataDumy/clientData';
 
 import './AdminPsikolog.css';
 
-const AdminPsikolog = () => {
-    const [showModalConfirm, setShowModalConfirm] = useState<boolean>(false);
+const AdminPsikolog: React.FC<PageProps> = ({ pageTitle, icon }) => {
+	const { setTitle, setIcon } = useOutletContext<any>();
+	setTitle(pageTitle);
+	setIcon(icon);
+
+	const [showModalConfirm, setShowModalConfirm] = useState<boolean>(false);
 
 	return (
 		<React.Fragment>
-			<div className="admin__content--title color-admin">
-				<BsPeopleFill size={titleIconSize} />
-				<h1>Data Psikolog</h1>
+			<div className="content-top-menu">
+				<Search />
 			</div>
 			<div className="admin__content--body">
 				<div className="admin__client--content-wrapper">

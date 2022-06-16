@@ -44,4 +44,18 @@
 	background: #f4f4f4;
 	padding: 26px 30px;
 	border-radius: 10px;
+	margin-top: 50px;
+}
+
+.content-top-menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 50px 0;
+}
+
+.content-top-menu-action {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
 }

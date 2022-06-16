@@ -4,8 +4,13 @@ import reducer from './PsikologProfil.reducer';
 import '../MainPsikolog.css';
 import './PsikologProfile.css';
 import { HiUser } from 'react-icons/allIcons';
+import { PageProps } from '../../../types/interface/page/Page';
+import { useOutletContext } from 'react-router-dom';
 
-export const PsikologProfile = () => {
+export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
+	const { setTitle, setIcon } = useOutletContext<any>();
+	setTitle(pageTitle);
+	setIcon(icon);
 	const [state, dispatch] = useReducer(reducer, {
 		isSubmitted: false,
 		sending: false,
@@ -17,8 +22,8 @@ export const PsikologProfile = () => {
 			about: '',
 			birthDate: '',
 			phone: '',
-            educationalStage: '',
-            certificate: '',
+			educationalStage: '',
+			certificate: '',
 			sipp: '',
 			password: '',
 		},
@@ -33,8 +38,8 @@ export const PsikologProfile = () => {
 		about,
 		birthDate,
 		phone,
-        educationalStage,
-        certificate,
+		educationalStage,
+		certificate,
 		sipp,
 		password,
 	} = inputs;
@@ -45,10 +50,6 @@ export const PsikologProfile = () => {
 
 	return (
 		<React.Fragment>
-			<div className="content-title color-psikolog">
-				<HiUser size={60} />
-				<h1>Profil Psikolog</h1>
-			</div>
 			<div className="psikolog__content--body bg-white">
 				<div className="psikolog-content-header">
 					{/* <div className="psikolog-content-header-top"></div> */}

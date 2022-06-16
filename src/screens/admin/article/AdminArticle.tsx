@@ -1,31 +1,39 @@
 import React, { useState } from 'react';
-import { FaNewspaper } from 'react-icons/allIcons';
 import Modal from '../../../components/modal/Modal';
 import ModalConfirmation from '../../../components/modalConfirmation/ModalConfirmation';
 import Table from '../../../components/table/Table';
 import { theadData, tbodyData } from '../dataDumy/dataArticle';
-import { titleIconSize } from '../AdminConfig';
 import Button from '../../../components/button/Button';
 
 import './AdminArticle.css'
+import { PageProps } from '../../../types/interface/page/Page';
+import { useNavigate, useOutletContext } from 'react-router-dom';
+import Search from '../../../components/search/Search';
 
-const AdminArticle = () => {
+const AdminArticle: React.FC<PageProps> = ({ pageTitle, icon }) => {
+	const { setTitle, setIcon } = useOutletContext<any>();
+	setTitle(pageTitle);
+	setIcon(icon);
+
+	const navigate = useNavigate();
+
 	const [showModalConfirm, setShowModalConfirm] = useState<boolean>(false);
 	const [showModalDetail, setShowModalDetail] = useState<boolean>(false);
 
 	return (
 		<React.Fragment>
-			<div className="admin__content--title color-admin">
-				<FaNewspaper size={titleIconSize} />
-				<h1>Data Artikel</h1>
+			<div className="content-top-menu">
+				<Search />
+				<div className="content-top-menu-action">
+					<Button
+						name="+ Tambah Postingan"
+						onClick={() => navigate('/psikolog/schedule')}
+						style={{ borderRadius: 30 }}
+					/>
+				</div>
 			</div>
 			<div className="admin__content--body">
-                <div className="admin__article--content-wrapper">
-                    <div className="admin__article--button-add-article">
-                        <Button
-                            name="+ Tambah Artikel"
-                        />
-                    </div>
+				<div className="admin__article--content-wrapper">
 					<Table
 						theadData={theadData}
 						tbodyData={tbodyData}

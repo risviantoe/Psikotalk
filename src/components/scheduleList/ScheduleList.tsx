@@ -33,10 +33,10 @@ const ScheduleList: React.FC<ScheduleListProps> = ({
 					className="psikolog-item-day"
 					style={
 						type === 'schedule'
-							? { background: '#00B29D' }
+							? { background: '#009595' }
 							: type === 'history'
 							? { background: '#7E808B' }
-							: { background: '#00B29D' }
+							: { background: '#009595' }
 					}
 				>
 					<span className="item-day">{day}</span>

@@ -1,36 +1,38 @@
 import React, { useState } from 'react';
 
 import { MdHelp, MdMarkEmailRead } from 'react-icons/allIcons';
+import { useOutletContext } from 'react-router-dom';
 import Accordion from '../../../components/accordion/Accordion';
 import Button from '../../../components/button/Button';
 import Modal from '../../../components/modal/Modal';
+import { PageProps } from '../../../types/interface/page/Page';
 import { accordionData } from './AccordionData';
 
 import './PsikologHelp.css';
 
-const PsikologHelp = () => {
-	const [question, setQuestion] = useState("")
-	const [showModal, setShowModal] = useState(false)
-	const [isSubmitted, setIsSubmitted] = useState(false)
-	const [loading, setLoading] = useState(false)
+const PsikologHelp: React.FC<PageProps> = ({ pageTitle, icon }) => {
+	const { setTitle, setIcon } = useOutletContext<any>();
+	setTitle(pageTitle);
+	setIcon(icon);
+
+	const [question, setQuestion] = useState('');
+	const [showModal, setShowModal] = useState(false);
+	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	const onSubmit = () => {
 		setIsSubmitted(true);
-		if (!question) return
+		if (!question) return;
 
-		setLoading(true)
+		setLoading(true);
 		setTimeout(() => {
-			setLoading(false)
+			setLoading(false);
 		}, 2000);
-		setShowModal(true)
-	}
-	
+		setShowModal(true);
+	};
+
 	return (
 		<React.Fragment>
-			<div className="psikolog__content--title color-psikolog">
-				<MdHelp size={60} />
-				<h1>Bantuan</h1>
-			</div>
 			<div className="psikolog__content--body bg-white">
 				<div className="psikolog__help--content-wrapper">
 					<div className="psikolog__help--accordions-wrapper">

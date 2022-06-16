@@ -5,8 +5,13 @@ import { HiUser } from 'react-icons/allIcons';
 import './AdminProfile.css';
 import reducer from './AdminProfile.reducer';
 import { titleIconSize } from '../AdminConfig';
+import { useOutletContext } from 'react-router-dom';
+import { PageProps } from '../../../types/interface/page/Page';
 
-export const AdminProfile = () => {
+export const AdminProfile: React.FC<PageProps> = ({ pageTitle }) => {
+	const { setTitle } = useOutletContext<any>();
+	setTitle(pageTitle);
+
 	const [state, dispatch] = useReducer(reducer, {
 		isSubmitted: false,
 		sending: false,
