@@ -15,6 +15,7 @@ interface TableProps {
 	actionColumn?: boolean;
 	action1?: actionButton;
 	action2?: actionButton;
+	columnMaxWidth?: number
 }
 
 const Table: React.FC<TableProps> = ({
@@ -23,6 +24,7 @@ const Table: React.FC<TableProps> = ({
 	actionColumn,
 	action1,
 	action2,
+	columnMaxWidth,
 }) => {
 	const buttonStyle = {
 		borderRadius: 20,
@@ -55,11 +57,18 @@ const Table: React.FC<TableProps> = ({
 					return (
 						<tr key={item.id}>
 							{item.items.map((i: any) => {
-								return <td key={i}>{i}</td>;
+								return (
+									<td
+										key={i}
+										style={{ maxWidth: columnMaxWidth }}
+									>
+										{i}
+									</td>
+								);
 							})}
 							{actionColumn ? (
-								<td>
-									<div className="table__column-actions">
+								<td className="table__column-actions">
+									<div className="table__actions-wrapper">
 										<Button
 											color={action1?.color}
 											name={action1?.name}

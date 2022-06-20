@@ -2,7 +2,8 @@ export const theadData = [
 	'No.',
 	'Judul',
 	'Tanggal',
-	'Sumber'
+	'Kategori',
+	'Penulis'
 ];
 
 export const tbodyData = [
@@ -12,7 +13,8 @@ export const tbodyData = [
 			'1',
 			'Mengenal Lebih Jauh Arti Kesehatan Mental',
 			'27/06/2022',
-			'Kemenkes RI'
+			'Artikel',
+			'Johnathan Alex',
 		],
 	},
 	{
@@ -21,7 +23,8 @@ export const tbodyData = [
 			'2',
 			'Mengenal Lebih Jauh Arti Kesehatan Mental',
 			'27/06/2022',
-			'Kemenkes RI'
+			'Info terkini',
+			'Johnathan Alex',
 		],
 	},
 	{
@@ -30,8 +33,8 @@ export const tbodyData = [
 			'3',
 			'Mengenal Lebih Jauh Arti Kesehatan Mental',
 			'27/06/2022',
-			'Kemenkes RI'
+			'Artikel',
+			'Johnathan Alex',
 		],
 	},
-	
 ];

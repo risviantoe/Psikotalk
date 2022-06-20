@@ -8,9 +8,10 @@ import SubMenu from './SubMenu';
 
 interface sidebarData {
 	data: any[];
+	pageFor: string;
 }
 
-export const Sidebar: React.FC<sidebarData> = ({ data }) => {
+export const Sidebar: React.FC<sidebarData> = ({ data, pageFor }) => {
 	return (
 		<div className="sidebar-wrapper">
 			<div className="sidebar-logo">
@@ -23,18 +24,21 @@ export const Sidebar: React.FC<sidebarData> = ({ data }) => {
 					})}
 				</div>
 				<div className="sidebar-menus-list">
-					<NavLink
-						to="/psikolog/help"
-						className={({ isActive }) =>
-							isActive
-								? 'sidebar-menu-link sidebar-menu-active'
-								: 'sidebar-menu-link'
-						}
-					>
-						<div className="sidebar-menu-content">
-							<MdHelp size={25} /> Bantuan
-						</div>
-					</NavLink>
+					{pageFor !== 'admin' ? (
+						<NavLink
+							to="/psikolog/help"
+							className={({ isActive }) =>
+								isActive
+									? 'sidebar-menu-link sidebar-menu-active'
+									: 'sidebar-menu-link'
+							}
+						>
+							<div className="sidebar-menu-content">
+								<MdHelp size={25} /> Bantuan
+							</div>
+						</NavLink>
+					) : null}
+
 					<NavLink
 						to="!#"
 						className={({ isActive }) =>

@@ -16,7 +16,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ pageFor }) => 
 
 	return (
 		<div className="dashboard-layout-wrapper">
-			<Sidebar data={ pageFor === 'admin' ? SidebarDashboardAdmin : SidebarDashboardPsikolog} />
+			<Sidebar data={ pageFor === 'admin' ? SidebarDashboardAdmin : SidebarDashboardPsikolog} pageFor={pageFor} />
 			<NavbarDashboard title={title} icon={icon} pageFor={pageFor} />
 			<div className="dashboard-layout-content">
 				<Outlet context={{ setTitle, setIcon }} />

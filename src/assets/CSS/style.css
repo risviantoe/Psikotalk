@@ -124,7 +124,7 @@ a {
 	width: 49%;
 }
 
-.form input[type='text'],
+input[type='text'],
 input[type='email'],
 input[type='password'],
 input[type='number'],

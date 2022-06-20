@@ -50,7 +50,7 @@ export const SidebarDashboardAdmin = [
 	},
 	{
 		title: 'Bank Soal',
-		path: '/admin/question-bank',
+		path: '/admin/bank-question',
 		icon: <FaClipboardList size={25} />,
 	},
 ];

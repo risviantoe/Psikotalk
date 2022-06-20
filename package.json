@@ -19,6 +19,7 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+    "react-trix": "^0.10.0",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },

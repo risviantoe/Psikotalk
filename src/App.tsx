@@ -23,7 +23,7 @@ import PsikologLogin from './screens/psikolog/auth/PsikologLogin';
 import AdminClient from './screens/admin/client/AdminClient';
 import AdminPsikolog from './screens/admin/psikolog/AdminPsikolog';
 import AdminPayment from './screens/admin/payment/AdminPayment';
-import AdminArticle from './screens/admin/article/AdminArticle';
+import AdminPost from './screens/admin/post/AdminPost';
 import AdminPaymentHistory from './screens/admin/payment/AdminPaymentHistory';
 import { titleIconSize } from './screens/admin/AdminConfig';
 import {
@@ -38,7 +38,13 @@ import {
 	MdHelp,
 	FaMoneyCheckAlt,
 	MdNotifications,
+	FaClipboardList,
 } from 'react-icons/allIcons';
+import AdminPostCreate from './screens/admin/post/AdminPostCreate';
+import AdminPostEdit from './screens/admin/post/AdminPostEdit';
+import AdminQuestionBank from './screens/admin/questionBank/AdminQuestionBank';
+import AdminQuestionBankEdit from './screens/admin/questionBank/AdminQuestionBankEdit';
+import AdminQuestionCreate from './screens/admin/questionBank/AdminQuestionCreate';
 
 const App = () => {
 	return (
@@ -122,9 +128,54 @@ const App = () => {
 					<Route
 						path="/admin/post"
 						element={
-							<AdminArticle
+							<AdminPost
 								icon={<IoIosPaper size={titleIconSize} />}
 								pageTitle="Daftar Postingan"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/post/create"
+						element={
+							<AdminPostCreate
+								icon={<IoIosPaper size={titleIconSize} />}
+								pageTitle="Tambah Postingan"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/post/edit"
+						element={
+							<AdminPostEdit
+								icon={<IoIosPaper size={titleIconSize} />}
+								pageTitle="Edit Postingan"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/bank-question"
+						element={
+							<AdminQuestionBank
+								icon={<FaClipboardList size={titleIconSize} />}
+								pageTitle="Bank Soal"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/bank-question/edit"
+						element={
+							<AdminQuestionBankEdit
+								icon={<FaClipboardList size={titleIconSize} />}
+								pageTitle="Edit Bank Soal"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/bank-question/edit/question/create"
+						element={
+							<AdminQuestionCreate
+								icon={<FaClipboardList size={titleIconSize} />}
+								pageTitle="Edit Soal"
 							/>
 						}
 					></Route>

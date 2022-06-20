@@ -7176,7 +7176,7 @@
     "strip-ansi" "^6.0.1"
     "text-table" "^0.2.0"
 
-"react-dom@*", "react-dom@^16.x || 17.x", "react-dom@^17.0.2", "react-dom@>=16.8":
+"react-dom@*", "react-dom@^16.x || 17.x", "react-dom@^17.0.2", "react-dom@>=16.8", "react-dom@>=17.0":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -7280,7 +7280,14 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
-"react@*", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.x || 17.x", "react@^17.0.2", "react@>= 16", "react@>=16.8", "react@17.0.2":
+"react-trix@^0.10.0":
+  "integrity" "sha512-sL0acJqN9lGIJQYSkJEoGj7FfgmmgMxljumppYYMc/KA+xM0tKQbhaiBBUjAo58HVGEhra01JlntQCD3bQSegw=="
+  "resolved" "https://registry.npmjs.org/react-trix/-/react-trix-0.10.0.tgz"
+  "version" "0.10.0"
+  dependencies:
+    "trix" "^1.3.1"
+
+"react@*", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.x || 17.x", "react@^17.0.2", "react@>= 16", "react@>=16.8", "react@>=17.0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -8271,6 +8278,11 @@
   "version" "2.1.0"
   dependencies:
     "punycode" "^2.1.1"
+
+"trix@^1.3.1":
+  "integrity" "sha512-BbH6mb6gk+AV4f2as38mP6Ucc1LE3OD6XxkZnAgPIduWXYtvg2mI3cZhIZSLqmMh9OITEpOBCCk88IVmyjU7bA=="
+  "resolved" "https://registry.npmjs.org/trix/-/trix-1.3.1.tgz"
+  "version" "1.3.1"
 
 "tryer@^1.0.1":
   "integrity" "sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA=="

@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 import Button from '../../../components/button/Button';
-import reducer from './PsikologProfil.reducer';
+import reducer from '../../../reducer/PsikologProfil.reducer';
 import '../MainPsikolog.css';
 import './PsikologProfile.css';
 import { HiUser } from 'react-icons/allIcons';

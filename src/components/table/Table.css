@@ -51,7 +51,7 @@ tr:nth-child(odd):hover {
 	text-overflow: ellipsis;
 }
 
-.table__column-actions {
+.table__actions-wrapper {
     display: flex;
     flex-direction: row;
     gap: 10px;

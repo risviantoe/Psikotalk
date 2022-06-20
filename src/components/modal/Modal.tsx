@@ -8,13 +8,15 @@ interface ModalProps {
 	show: boolean
 	closeButton?: boolean
 	onClose?: () => void
+	style?: {}
 }
 
 const Modal: React.FC<ModalProps> = ({
 	children,
 	closeButton = true,
 	show = false,
-	onClose
+	onClose,
+	style
 }) => {
 
 	if (!show) {
@@ -23,7 +25,7 @@ const Modal: React.FC<ModalProps> = ({
 	
 	return (
 		<div className="modal">
-			<div className="modal-content">
+			<div className="modal-content" style={style}>
 				{
 					closeButton ? 
 						<Button
