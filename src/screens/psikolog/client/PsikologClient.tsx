@@ -4,7 +4,7 @@ import {
 	BsFillTelephoneFill,
 	BsPeopleFill,
 	MdEmail,
-} from 'react-icons/allIcons';
+} from 'react-icons/all';
 import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 import Button from '../../../components/button/Button';
 import Pagination from '../../../components/pagination/Pagination'

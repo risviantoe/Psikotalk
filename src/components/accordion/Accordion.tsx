@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import {
 	MdKeyboardArrowDown,
 	MdKeyboardArrowUp,
-} from 'react-icons/allIcons';
+} from 'react-icons/all';
 
 import './Accordion.css';
 

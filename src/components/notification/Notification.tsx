@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdNotificationsActive } from 'react-icons/allIcons';
+import { MdNotificationsActive } from 'react-icons/all';
 import { IconCalendarTime } from '@tabler/icons';
 
 import './Notification.css';
