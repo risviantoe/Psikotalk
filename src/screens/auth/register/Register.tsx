@@ -60,8 +60,6 @@ export const Register: React.FC = () => {
 		setLoading(true);
 		setStatus(0);
 
-		console.log('inputs', inputs);
-
 		try {
 			const res = await authService.register(inputs);
 			console.log('Response ', res);
@@ -79,7 +77,6 @@ export const Register: React.FC = () => {
 			<div className="auth-title">
 				<div className="auth-title-heading">
 					<h2>Selamat Datang di PsikoTalk</h2>
-					<Loading />
 				</div>
 				<div className="auth-title-subheading">
 					<h5>

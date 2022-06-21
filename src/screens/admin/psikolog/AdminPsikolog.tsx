@@ -6,6 +6,7 @@ import ModalConfirmation from '../../../components/modalConfirmation/ModalConfir
 import Search from '../../../components/search/Search';
 import Table from '../../../components/table/Table';
 import reducer from '../../../reducer/PsikologProfil.reducer';
+import { adminService } from '../../../services';
 import { PageProps } from '../../../types/interface/page/Page';
 import { theadData, tbodyData } from '../dataDumy/clientData';
 
@@ -51,8 +52,33 @@ const AdminPsikolog: React.FC<PageProps> = ({ pageTitle, icon }) => {
 		password,
 	} = inputs;
 
-	const onSubmit = () => {
+	const [loading, setLoading] = useState<boolean>(false);
+
+	const onSubmit = async () => {
 		dispatch({ name: 'SET_IS_SUBMITTED' });
+
+		if (
+			!fullname ||
+			!username ||
+			!gender ||
+			!email ||
+			!about ||
+			!birthDate ||
+			!phone ||
+			!educationalStage ||
+			!certificate ||
+			!sipp ||
+			!password
+		) return
+
+		setLoading(true);
+
+		try {
+			// const res = await adminService.psikologRegister(inputs)
+		} catch (error) {
+			
+		}
+
 	};
 
 	const [showModalConfirm, setShowModalConfirm] = useState<boolean>(false);
@@ -104,18 +130,30 @@ const AdminPsikolog: React.FC<PageProps> = ({ pageTitle, icon }) => {
 				onClose={() => setShowModalAddPsikolog(false)}
 				style={{ width: '80%', marginTop: '40vh' }}
 			>
-				<div className="psikolog-profile-form-wrapper" style={{ display: 'block' }}>
-					<div className="profile-picture-wrapper" style={{ marginBottom: 30 }}>
+				<div
+					className="psikolog-profile-form-wrapper"
+					style={{ display: 'block' }}
+				>
+					<div
+						className="profile-picture-wrapper"
+						style={{ marginBottom: 30 }}
+					>
 						<img
 							src="/assets/images/profil01.png"
 							alt="photoProfile"
 						/>
-						<Button
-							color="primary"
-							icon="icon-camera"
-							type="circle"
-							size="small"
+						<label
+							htmlFor="profile-picture-change"
+							className="button primary circle"
 							style={{ border: '5px solid #fff' }}
+						>
+							<i className="icon icon-camera" />
+						</label>
+						<input
+							type="file"
+							name="profile-picture"
+							id="profile-picture-change"
+							hidden
 						/>
 					</div>
 					<form className="form psikolog-profile-form">
@@ -413,9 +451,23 @@ const AdminPsikolog: React.FC<PageProps> = ({ pageTitle, icon }) => {
 										type="password"
 										name="password"
 										id="password"
-										disabled
 										style={{ width: '100%' }}
+										className={
+											isSubmitted && !password
+												? 'form-error'
+												: ''
+										}
+										value={state.inputs.password}
+										onChange={(e) =>
+											dispatch({
+												name: 'SET_INPUTS',
+												payload: {
+													password: e.target.value,
+												},
+											})
+										}
 									/>
+
 									<Button
 										name="Ganti password"
 										color="secondary"
@@ -429,6 +481,11 @@ const AdminPsikolog: React.FC<PageProps> = ({ pageTitle, icon }) => {
 										}}
 									/>
 								</div>
+								<div className="form-error-message">
+									{isSubmitted && !password ? (
+										<span>Password wajib diisi!</span>
+									) : null}
+								</div>
 							</div>
 
 							<Button
@@ -439,6 +496,7 @@ const AdminPsikolog: React.FC<PageProps> = ({ pageTitle, icon }) => {
 									marginTop: 30,
 									height: 48,
 								}}
+								loading={loading}
 								onClick={() => onSubmit()}
 							/>
 						</div>

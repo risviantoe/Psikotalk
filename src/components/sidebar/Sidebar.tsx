@@ -23,7 +23,7 @@ export const Sidebar: React.FC<sidebarData> = ({ data, pageFor }) => {
 						return <SubMenu item={item} key={index} />;
 					})}
 				</div>
-				<div className="sidebar-menus-list">
+				<div className="sidebar-menus-list sidebar-menus-bottom">
 					{pageFor !== 'admin' ? (
 						<NavLink
 							to="/psikolog/help"
