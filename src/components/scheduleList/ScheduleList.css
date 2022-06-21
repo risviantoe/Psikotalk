@@ -1,45 +1,45 @@
 .psikolog-schedule-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .psikolog-item-day {
-    width: 15%;
-    height: 140px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    color: #fff;
-    border-radius: 20px;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+	width: 12%;
+	height: 140px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	color: #fff;
+	border-radius: 20px;
+	box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .psikolog-item-day .item-day {
-    font-size: 24px;
-    font-weight: 700;
+	font-size: 24px;
+	font-weight: 700;
 }
 
 .psikolog-item-day .item-date {
-
 }
 
 .psikolog-item-main {
-    padding: 45px 35px 45px 45px;
-    display: flex;
-    flex-direction: row;
-    width: 85%;
-    height: 110px;
-    align-items: center;
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
-    border-radius: 0 20px 20px 0;
-    color: #555555;
-    justify-content: space-between;
+	padding: 45px 35px 45px 45px;
+	display: flex;
+	flex-direction: row;
+	width: 88%;
+	height: 110px;
+	align-items: center;
+	box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+	border-radius: 0 20px 20px 0;
+	color: #555555;
+	justify-content: space-between;
+	background: #fff;
 }
 
 .psikolog-item-main .item-name {
-    width: 200px;
+	width: 250px;
     font-size: 24px;
     white-space: nowrap;
     overflow: hidden;
@@ -47,17 +47,17 @@
 }
 
 .psikolog-item-main .item-clock {
-    width: 200px;
-    font-size: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	width: 200px;
+	font-size: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .psikolog-item-main .item-btn {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 300px;
-    justify-content: flex-end;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	width: 300px;
+	justify-content: flex-end;
 }

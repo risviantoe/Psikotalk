@@ -1,0 +1,59 @@
+tr:nth-child(even) {
+	background: #f6f5f5;
+	transition: all 0.2s;
+}
+
+tr:nth-child(even):hover {
+	background: #f1f0f0;
+}
+
+tr:nth-child(odd) {
+	background: #fcfcfc;
+	transition: all 0.2s;
+}
+
+tr:nth-child(odd):hover {
+	background: #f7f7f7;
+}
+
+.table__wrapper {
+	width: 100%;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.table__heading tr {
+	background: #d7ede8 !important;
+	font-size: 18px;
+}
+
+.table__heading th {
+	padding: 23px 22px;
+	text-align: center;
+}
+
+.table__heading td:first-child {
+	width: 1%;
+	white-space: nowrap;
+}
+
+.table__body {
+	background: #fcfcfc;
+	font-size: 17px;
+}
+
+.table__body td {
+	padding: 10px 22px;
+	text-align: center;
+	max-width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.table__actions-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}

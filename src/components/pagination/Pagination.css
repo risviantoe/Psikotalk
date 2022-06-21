@@ -1,0 +1,37 @@
+.pagination-wrapper {
+    margin: 50px 0 20px;
+}
+
+.pagination-wrapper a {
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #cbd2d9;
+	color: #009595;
+	font-weight: 600;
+	transition: all 0.2s;
+}
+
+.pagination-wrapper a:hover {
+	background: #009595;
+	color: #fff;
+}
+
+
+.pagination-corner-left{
+    border-radius: 5px 0 0 5px;
+}
+
+.pagination-corner-right{
+    border-radius: 0 5px 5px 0;
+}
+
+.pagination-disable {
+    pointer-events: none;
+    cursor: default;
+    color: #9AA5B1 !important;
+}
+
+.pagination-active {
+    background: #009595 !important;
+	color: #fff !important;
+}

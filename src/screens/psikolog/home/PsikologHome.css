@@ -1,358 +1,367 @@
 .psikolog-home-wrapper {
-    width: 75%;
-    margin-left: 28%;
-    margin-bottom: 3rem;
+	width: 75%;
+	margin-left: 28%;
+	margin-bottom: 3rem;
 }
 
 .psikolog-home-title {
-    padding: 20px 0 60px 0;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+	padding: 20px 0 60px 0;
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
 }
 
 .psikolog-home-title .icon {
-    width: 47px;
-    height: 66px;
+	width: 47px;
+	height: 66px;
 }
 
 .psikolog-home-title h1 {
-    font-size: 48px;
-    color: #00ADAC;
+	font-size: 48px;
+	color: #006161;
 }
 
 .psikolog-home-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
+	display: flex;
+	flex-direction: column;
+	gap: 45px;
 }
 
 .psikolog-content-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .psikolog-card-detailprofile {
-    background: #fff;
-    height: 210px;
-    width: 65%;
-    display: flex;
-    flex-direction: row;
-    border-radius: 20px;
-    overflow: hidden;
+	background: #fff;
+	height: 210px;
+	width: 65%;
+	display: flex;
+	flex-direction: row;
+	border-radius: 20px;
+	overflow: hidden;
+	border-top: 1px solid #f4f4f4;
 }
 
 .card-detailprofile-info-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 65px;
-    width: 80%;
-    padding: 23px 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 65px;
+	width: 80%;
+	padding: 23px 40px;
 }
 
 .card-detailprofile-info-photo {
-    width: 164px;
-    height: 164px;
+	width: 164px;
+	height: 164px;
 }
 
 .card-detailprofile-info {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .card-detailprofile-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: #555555;
+	font-size: 18px;
+	font-weight: 600;
+	color: #555555;
 }
 
 .card-detailprofile-email {
-    font-size: 16px;
-    color: #7E808B;
+	font-size: 16px;
+	color: #7e808b;
 }
 
 .card-detailprofile-education {
-    margin: 25px 0px 5px 0px;
-    font-size: 18px;
-    font-weight: 700;
-    color: #00ADAC;
+	margin: 25px 0px 5px 0px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #00adac;
 }
 
 .card-detailprofile-education-info {
-    font-size: 18px;
-    color: #555555;
+	font-size: 18px;
+	color: #555555;
 }
 
 .card-detailprofile-btn {
-    width: 20%;
-    height: 100%;
-    background: #00ADAC;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10px 0 35px;
-    color: rgba(255, 255, 255, 0.7);
-    transition: ease-in-out 0.3s;
+	width: 20%;
+	height: 100%;
+	background: #009289;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 10px 0 35px;
+	color: rgba(255, 255, 255, 0.7);
+	transition: ease-in-out 0.3s;
 }
 
 .card-detailprofile-btn-text {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .card-detailprofile-btn-text .icon-write {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.7);
-    transition: ease-in-out 0.3s;
+	width: 48px;
+	height: 48px;
+	margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.7);
+	transition: ease-in-out 0.3s;
 }
 
 .card-detailprofile-btn-text span {
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 35px;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 35px;
 }
 
 .card-detailprofile-btn-text span .icon-chevron-down {
-    background: rgba(255, 255, 255, 0.7);
-    height: 22px;
-    transition: ease-in-out 0.3s;
+	background: rgba(255, 255, 255, 0.7);
+	height: 22px;
+	transition: ease-in-out 0.3s;
 }
 
 .card-detailprofile-btn:hover {
-    color: rgba(255, 255, 255, 1);
-    background: #009090;
+	color: rgba(255, 255, 255, 1);
+	background: #03776f;
 }
 
-.card-detailprofile-btn:hover .icon-write, .icon-chevron-down {
-    background: rgba(255, 255, 255, 1);
+.card-detailprofile-btn:hover .icon-write,
+.icon-chevron-down {
+	background: rgba(255, 255, 255, 1);
 }
 
 .psikolog-home-card-income {
-    width: 32%;
-    background: #00ADAC;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
+	width: 32%;
+	background: #00adac;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
 }
 
 .card-income-text-wrapper {
-    padding: 0 10px 0 35px;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    gap: 25px;
+	padding: 0 10px 0 35px;
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	gap: 25px;
 }
 
 .card-income-text-wrapper .card-income-text-title {
-    font-size: 30px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 35px;
+	font-size: 30px;
+	font-weight: 600;
+	color: #fff;
+	line-height: 35px;
 }
 
 .psikolog-home-card-text-detail {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 18px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transition: ease-in-out 0.1s;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 18px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	transition: ease-in-out 0.1s;
 }
 
 .psikolog-home-card-icon-detail {
-    color: rgba(255, 255, 255, 0.7);
-    transition: ease-in-out 0.1s;
-    width: 30px !important;
-    height: 19px !important;
+	color: rgba(255, 255, 255, 0.7);
+	transition: ease-in-out 0.1s;
+	width: 30px !important;
+	height: 19px !important;
 }
 
 .psikolog-home-card-text-detail:hover {
-    color: rgba(255, 255, 255, 1);
+	color: rgba(255, 255, 255, 1);
 }
 
 .psikolog-home-card-text-detail:hover .psikolog-home-card-icon-detail {
-    background: rgba(255, 255, 255, 1);
+	background: rgba(255, 255, 255, 1);
 }
 
 .card-income-icon-wrapper {
-    width: 30%;
+	width: 30%;
 }
 
 .card-income-icon-wrapper .icon-payment {
-    width: 110px;
-    height: 110px;
-    background: #fff;
+	width: 110px;
+	height: 110px;
+	background: #fff;
 }
 
 .card-ornament02 {
-    background: url(/public/assets/icons/card-ornament02.svg);
-    height: 47px;
-    width: 350px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+	background: url(/public/assets/icons/card-ornament02.svg);
+	height: 47px;
+	width: 350px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
 
 /* Card Client  */
 
 .psikolog-card-client-wrapper {
-    width: 45%;
-    height: fit-content;
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
+	width: 45%;
+	height: fit-content;
+	background: #fff;
+	border-radius: 20px;
+	overflow: hidden;
 }
 
 .psikolog-card-client-header {
-    width: 100%;
-    height: 151px;
-    background: #00ADAC;
-    padding: 0 40px;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
+	width: 100%;
+	height: 151px;
+	background: #00adac;
+	padding: 0 40px;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
 }
 
 .psikolog-card-client-header-left {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    z-index: 1;
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	z-index: 1;
 }
 
 .psikolog-card-client-title {
-    font-size: 28px;
-    font-weight: 600;
+	font-size: 28px;
+	font-weight: 600;
 }
 
 .psikolog-card-client-total {
-    font-size: 48px;
-    font-weight: 700;
+	font-size: 48px;
+	font-weight: 700;
 }
 
 .psikolog-card-client-header-right {
-    width: 30%;
-    text-align: center;
-    z-index: 1;
+	width: 30%;
+	text-align: center;
+	z-index: 1;
 }
 
 .psikolog-card-client-header-right .icon {
-    background: #fff;
-    width: 110px;
-    height: 110px;
+	background: #fff;
+	width: 110px;
+	height: 110px;
 }
 
 .psikolog-card-client-content {
-    padding: 30px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+	padding: 30px 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .psikolog-card-client-photo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .psikolog-card-client-photo img {
-    width: 74px;
-    width: 74px;
+	width: 74px;
+	width: 74px;
 }
 
 .psikolog-card-client-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 18px;
-    width: 50%;
-    overflow: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 18px;
+	width: 50%;
+	overflow: auto;
 }
 
 .psikolog-card-client-name {
-    color: #555555;
-    overflow: scroll;
+	color: #555555;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .psikolog-card-client-email {
-    color: #7E808B;
-    overflow: scroll;
+	color: #7e808b;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .psikolog-card-client-action {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	align-items: center;
+}
+
+.psikolog-card-shadow {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .card-step-wrapper {
-    position: relative;
-    list-style: none;
-    padding: 0 0.5rem 0 3.5rem;
-    margin: 0;
+	position: relative;
+	list-style: none;
+	padding: 0 0.5rem 0 3.5rem;
+	margin: 0;
 }
 
 .card-step-item {
-    position: relative;
-    min-height: 84px;
-    padding-left: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+	position: relative;
+	min-height: 84px;
+	padding-left: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .card-step-item:before {
-    content: '';
-    position: absolute;
-    left: -1.9rem;
-    top: 20px;
-    height: 80%;
-    width: 1px;
-    border-left: 2px solid #555555;
+	content: '';
+	position: absolute;
+	left: -1.9rem;
+	top: 20px;
+	height: 80%;
+	width: 1px;
+	border-left: 2px solid #555555;
 }
 
 .card-step-item:after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: -2.5rem;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #00ADAC;
-    color: green;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 2rem;
-    text-align: center;
-    border: 1px solid #00ADAC;
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: -2.5rem;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #00adac;
+	color: green;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 2rem;
+	text-align: center;
+	border: 1px solid #00adac;
 }
 
 .card-step-item:last-child:before {
-    /* border: none; */
+	/* border: none; */
 }
 
 .card-step-item span {
-    font-size: 18px;
+	font-size: 18px;
+	width: 150px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .card-step-action {
-
+	display: flex;
+	gap: 15px;
+	height: 35px;
 }
-
-
-
-
-

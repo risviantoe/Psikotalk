@@ -1,0 +1,51 @@
+.psikolog__list--wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+
+.psikolog__list--item {
+	background: #fff;
+	padding: 15px 50px 15px 22px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: row;
+	gap: 100px;
+	align-items: center;
+	color: #555555;
+	font-size: 22px;
+	font-weight: 600;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.psikolog__list--picture {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.psikolog__list--picture img {
+	width: 100%;
+}
+
+.psikolog__list--name {
+	width: 200px;
+}
+
+.psikolog__list--email {
+	width: 300px;
+}
+
+.psikolog__list--gender {
+	width: 100px;
+}
+
+.psikolog__list--actions {
+	width: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}

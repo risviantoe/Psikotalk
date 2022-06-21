@@ -1,0 +1,50 @@
+.psikolog__income--content-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 100px;
+}
+
+.psikolog__income--cards-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.psikolog__income--card-item {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	background: url(/public/assets/images/card-bg02.svg);
+    background-size: cover;
+	color: #fff;
+	padding: 25px 35px;
+	width: 400px;
+	border-radius: 20px;
+}
+
+.psikolog__income--card-item .income--card-title {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.psikolog__income--card-item .income--card-total {
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.psikolog__income--card-item .income--card-desc {
+	font-size: 18px;
+}
+
+.psikolog__income--chart-wrapper {
+	width: 100%;
+	border: 2px solid #009595;
+	border-radius: 10px;
+	padding: 70px 50px;
+}
+
+.psikolog__income--chart-title {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+}

@@ -12,6 +12,8 @@
 	background: rgba(1, 71, 71, 0.58);
 	transition: all 4s;
 	z-index: 999;
+	overflow: auto;
+	padding: 5% 0;
 }
 
 .modal-content {

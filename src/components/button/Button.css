@@ -7,6 +7,10 @@
     overflow: hidden;
     position: relative;
     transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .button .icon {
@@ -22,11 +26,21 @@
 }
 
 .secondary {
-    /* border: 1px solid #CBD2D9; */
-    /* color: #2B2F50; */
     border: 1px solid #35858B;
     color: #35858B;
     background: #fff;
+}
+
+.danger {
+    background: #F36868;
+    border: 1px solid #F36868;
+    color: #fff;
+}
+
+.disable {
+    background: #C4C4C4;
+    border: 1px solid #C4C4C4;
+    color: #fff;
 }
 
 /* Button Effects */
@@ -36,11 +50,15 @@
     border: 1px solid #006161;
 }
 
-.button.secondary:hover {
-    /* border: 1px solid #35858B; */
-    /* color: #35858B; */
+.button.secondary:hover {         
     background: #006161;
     border: 1px solid #006161;
+    color: #fff;
+}
+
+.button.danger:hover {
+    background: #ec5151;
+    border: 1px solid #ec5151 ;
     color: #fff;
 }
 
