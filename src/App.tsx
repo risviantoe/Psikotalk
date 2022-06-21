@@ -39,7 +39,7 @@ import {
 	FaMoneyCheckAlt,
 	MdNotifications,
 	FaClipboardList,
-} from 'react-icons/allIcons';
+} from 'react-icons/all';
 import AdminPostCreate from './screens/admin/post/AdminPostCreate';
 import AdminPostEdit from './screens/admin/post/AdminPostEdit';
 import AdminQuestionBank from './screens/admin/questionBank/AdminQuestionBank';

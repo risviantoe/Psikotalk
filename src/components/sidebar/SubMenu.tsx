@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/allIcons';
+import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/all';
 
 interface SubMenuProps {
 	item: {

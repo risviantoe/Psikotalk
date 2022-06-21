@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './assets/Css/style.css'
-import './assets/Css/icons.css'
+import './assets/CSS/style.css'
+import './assets/CSS/icons.css'
 
 ReactDOM.render(
   <React.StrictMode>

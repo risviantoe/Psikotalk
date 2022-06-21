@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 import ScheduleList from '../../../components/scheduleList/ScheduleList';
-import { AiFillSchedule } from 'react-icons/allIcons';
+import { AiFillSchedule } from 'react-icons/all';
 
 import './PsikologSchedule.css';
 import Pagination from '../../../components/pagination/Pagination';

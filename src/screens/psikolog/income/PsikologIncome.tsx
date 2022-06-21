@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaMoneyCheckAlt } from 'react-icons/allIcons';
+import { FaMoneyCheckAlt } from 'react-icons/all';
 import { useOutletContext } from 'react-router-dom';
 import LineChart from '../../../components/lineChart/LineChart';
 import { PageProps } from '../../../types/interface/page/Page';

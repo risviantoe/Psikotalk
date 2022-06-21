@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 import Button from '../../../components/button/Button';
-import { HiUser } from 'react-icons/allIcons';
+import { HiUser } from 'react-icons/all';
 
 import './AdminProfile.css';
 import reducer from './AdminProfile.reducer';

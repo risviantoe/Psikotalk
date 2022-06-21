@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { MdLogout, MdHelp } from 'react-icons/allIcons';
+import { MdLogout, MdHelp } from 'react-icons/all';
 
 // import { sidebarData } from './SidebarData';
 import './Sidebar.css';

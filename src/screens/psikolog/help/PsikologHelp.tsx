@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { MdHelp, MdMarkEmailRead } from 'react-icons/allIcons';
+import { MdHelp, MdMarkEmailRead } from 'react-icons/all';
 import { useOutletContext } from 'react-router-dom';
 import Accordion from '../../../components/accordion/Accordion';
 import Button from '../../../components/button/Button';

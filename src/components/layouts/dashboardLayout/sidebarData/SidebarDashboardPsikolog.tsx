@@ -5,7 +5,7 @@ import {
 	BsPeopleFill,
 	BsChatDotsFill,
 	FaMoneyCheckAlt,
-} from 'react-icons/allIcons';
+} from 'react-icons/all';
 
 export const SidebarDashboardPsikolog = [
 	{

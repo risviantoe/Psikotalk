@@ -3,7 +3,7 @@ import Button from '../../../components/button/Button';
 import reducer from '../../../reducer/PsikologProfil.reducer';
 import '../MainPsikolog.css';
 import './PsikologProfile.css';
-import { HiUser } from 'react-icons/allIcons';
+import { HiUser } from 'react-icons/all';
 import { PageProps } from '../../../types/interface/page/Page';
 import { useOutletContext } from 'react-router-dom';
 

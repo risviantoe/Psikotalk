@@ -8,7 +8,7 @@ import {
 	GoChecklist,
 	IoIosPaper,
 	FaClipboardList,
-} from 'react-icons/allIcons';
+} from 'react-icons/all';
 
 export const SidebarDashboardAdmin = [
 	{
