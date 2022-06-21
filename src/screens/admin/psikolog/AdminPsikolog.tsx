@@ -17,8 +17,6 @@ const AdminPsikolog: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	setTitle(pageTitle);
 	setIcon(icon);
 
-	const navigate = useNavigate();
-
 	const [state, dispatch] = useReducer(reducer, {
 		isSubmitted: false,
 		sending: false,
