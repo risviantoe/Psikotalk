@@ -33,10 +33,6 @@ export const AdminProfile: React.FC<PageProps> = ({ pageTitle }) => {
 
 	return (
 		<React.Fragment>
-			<div className="admin__content--title color-admin">
-				<HiUser size={titleIconSize} />
-				<h1>Profil Admin</h1>
-			</div>
 			<div className="admin__content--body">
 				<div className="admin__profile--content-wrapper">
 					<div className="admin__profile--picture-container">

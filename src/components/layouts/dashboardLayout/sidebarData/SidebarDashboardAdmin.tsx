@@ -8,6 +8,7 @@ import {
 	GoChecklist,
 	IoIosPaper,
 	FaClipboardList,
+	MdPriceChange,
 } from 'react-icons/all';
 
 export const SidebarDashboardAdmin = [
@@ -52,5 +53,10 @@ export const SidebarDashboardAdmin = [
 		title: 'Bank Soal',
 		path: '/admin/bank-question',
 		icon: <FaClipboardList size={25} />,
+	},
+	{
+		title: 'Harga',
+		path: '/admin/price',
+		icon: <MdPriceChange size={25} />,
 	},
 ];

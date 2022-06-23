@@ -81,7 +81,7 @@ a {
 }
 
 .text-link {
-	color: #35858b;
+	color: #00ADAC;
 	text-decoration: none;
 	transition: 0.3s;
 	font-weight: 700;
@@ -248,4 +248,31 @@ textarea {
 
 .button.bg-white {
 	color: #555555;
+}
+
+.input-group {
+	position: relative;
+    overflow: hidden;
+}
+
+.input-group input {
+	width: 100%;
+}
+
+.input-group-append {
+	position: absolute;
+    right: 0;
+    background: #E9ECEF;
+    height: 100%;
+    top: 0;
+    width: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+	border: 1px solid #c9c9cf;
+	border-radius: 0 8px 8px 0;
 }

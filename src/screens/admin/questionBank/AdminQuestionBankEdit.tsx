@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate, useOutletContext } from 'react-router-dom';
+import { HiArrowNarrowLeft } from 'react-icons/all';
+import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 import Button from '../../../components/button/Button';
 import Modal from '../../../components/modal/Modal';
 import ModalConfirmation from '../../../components/modalConfirmation/ModalConfirmation';
@@ -19,14 +20,21 @@ const AdminQuestionBankEdit: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	return (
 		<React.Fragment>
 			<div className="content-top-menu">
-				<h2>
-					Soal Psikotes Lengkap (Spasial, aritmatika, dan Analog
-					verbal)
-				</h2>
+				<Link to="/admin/bank-question" className="quetion--title-link-wrapper text-link">
+					<HiArrowNarrowLeft size={30} />
+					<h2>
+						Soal Psikotes Lengkap (Spasial, aritmatika, dan Analog
+						verbal)
+					</h2>
+				</Link>
 				<div className="content-top-menu-action">
 					<Button
 						name="+ Tambah"
-						onClick={() => navigate('/admin/bank-question/edit/question/create')}
+						onClick={() =>
+							navigate(
+								'/admin/bank-question/edit/question/create'
+							)
+						}
 						style={{ borderRadius: 30 }}
 					/>
 				</div>
@@ -36,13 +44,16 @@ const AdminQuestionBankEdit: React.FC<PageProps> = ({ pageTitle, icon }) => {
 					<Table
 						theadData={theadData}
 						tbodyData={tbodyData}
-                        actionColumn
-                        columnMaxWidth={700}
+						actionColumn
+						columnMaxWidth={700}
 						action1={{
 							name: 'Edit soal',
 							color: 'primary',
 							icon: 'icon-edit',
-							onClick: () => navigate('/admin/bank-question/edit/question?=edit'),
+							onClick: () =>
+								navigate(
+									'/admin/bank-question/edit/question/edit'
+								),
 						}}
 						action2={{
 							name: 'Hapus',
@@ -55,7 +66,7 @@ const AdminQuestionBankEdit: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			</div>
 			<Modal show={showModal} closeButton={false}>
 				<ModalConfirmation
-					text="Apakah anda yakin ingin menghapus postingan?"
+					text="Apakah anda yakin ingin menghapus butir soal?"
 					okButtonText="Hapus"
 					onClose={() => setShowModal(false)}
 				/>
