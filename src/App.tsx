@@ -40,11 +40,14 @@ import { FaClipboardList, FaMoneyCheckAlt, FaUserMd } from 'react-icons/fa';
 import { GoChecklist } from 'react-icons/go';
 import { IoIosPaper } from 'react-icons/io';
 import { AiFillSchedule } from 'react-icons/ai';
+import ComingSoon from './screens/ComingSoon';
 
 const App = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
+				<Route path="/" element={<ComingSoon />}></Route>
+
 				<Route path="/auth" element={<AuthLayout />}>
 					<Route path="/auth/login" element={<Login />} />
 					<Route path="/auth/register" element={<Register />} />
