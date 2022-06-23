@@ -34,5 +34,5 @@ jobs:
         username: "psikotalk"
         password: "Ps1k0t4lk"
         port: 22
-        source: "./build/*"
+        source: "build/*"
         target: "/var/www/psikotalk.com/html/"
