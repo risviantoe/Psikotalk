@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-	MdSpaceDashboard,
-	MdPayments,
-	BsPeopleFill,
-	FaUserMd,
-	MdAccessTimeFilled,
-	GoChecklist,
-	IoIosPaper,
-	FaClipboardList,
-	MdPriceChange,
-} from 'react-icons/all';
+import { BsPeopleFill } from 'react-icons/bs';
+import { FaClipboardList, FaUserMd } from 'react-icons/fa';
+import { GoChecklist } from 'react-icons/go';
+import { IoIosPaper } from 'react-icons/io';
+import { MdAccessTimeFilled, MdPayments, MdPriceChange, MdSpaceDashboard } from 'react-icons/md';
 
 export const SidebarDashboardAdmin = [
 	{

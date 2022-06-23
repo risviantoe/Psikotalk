@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BsPeopleFill } from 'react-icons/all';
 import { useOutletContext } from 'react-router-dom';
 import Modal from '../../../components/modal/Modal';
 import ModalConfirmation from '../../../components/modalConfirmation/ModalConfirmation';

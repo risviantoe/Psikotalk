@@ -1,10 +1,7 @@
 import React from 'react';
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import { MdEmail } from 'react-icons/md';
 
-import {
-	BsFillTelephoneFill,
-	BsPeopleFill,
-	MdEmail,
-} from 'react-icons/all';
 import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 import Button from '../../../components/button/Button';
 import Pagination from '../../../components/pagination/Pagination'

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import Button from '../../../components/button/Button';
 import { PageProps } from '../../../types/interface/page/Page';
@@ -6,8 +6,10 @@ import './PsikologHome.css';
 
 export const PsikologHome: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const { setTitle, setIcon } = useOutletContext<any>();
-	setTitle(pageTitle);
-	setIcon(icon);
+	useEffect(() => {
+		setTitle(pageTitle);
+		setIcon(icon);
+	});
 	return (
 		<React.Fragment>
 			<div className="psikolog__content--body bg-white">

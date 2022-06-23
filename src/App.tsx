@@ -26,21 +26,6 @@ import AdminPayment from './screens/admin/payment/AdminPayment';
 import AdminPost from './screens/admin/post/AdminPost';
 import AdminPaymentHistory from './screens/admin/payment/AdminPaymentHistory';
 import { titleIconSize } from './screens/admin/AdminConfig';
-import {
-	MdSpaceDashboard,
-	BsPeopleFill,
-	FaUserMd,
-	MdAccessTimeFilled,
-	GoChecklist,
-	IoIosPaper,
-	HiUser,
-	AiFillSchedule,
-	MdHelp,
-	FaMoneyCheckAlt,
-	MdNotifications,
-	FaClipboardList,
-	MdPriceChange,
-} from 'react-icons/all';
 import AdminPostCreate from './screens/admin/post/AdminPostCreate';
 import AdminPostEdit from './screens/admin/post/AdminPostEdit';
 import AdminQuestionBank from './screens/admin/questionBank/AdminQuestionBank';
@@ -48,6 +33,13 @@ import AdminQuestionBankEdit from './screens/admin/questionBank/AdminQuestionBan
 import AdminQuestionCreate from './screens/admin/questionBank/AdminQuestionCreate';
 import AdminPrice from './screens/admin/price/AdminPrice';
 import AdminPriceCreate from './screens/admin/price/AdminPriceCreate';
+import { MdAccessTimeFilled, MdHelp, MdNotifications, MdPriceChange, MdSpaceDashboard } from 'react-icons/md';
+import { HiUser } from 'react-icons/hi';
+import { BsPeopleFill } from 'react-icons/bs';
+import { FaClipboardList, FaMoneyCheckAlt, FaUserMd } from 'react-icons/fa';
+import { GoChecklist } from 'react-icons/go';
+import { IoIosPaper } from 'react-icons/io';
+import { AiFillSchedule } from 'react-icons/ai';
 
 const App = () => {
 	return (

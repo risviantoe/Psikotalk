@@ -1,16 +1,17 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import Button from '../../../components/button/Button';
 import reducer from '../../../reducer/PsikologProfil.reducer';
 import '../MainPsikolog.css';
 import './PsikologProfile.css';
-import { HiUser } from 'react-icons/all';
 import { PageProps } from '../../../types/interface/page/Page';
 import { useOutletContext } from 'react-router-dom';
 
 export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const { setTitle, setIcon } = useOutletContext<any>();
-	setTitle(pageTitle);
-	setIcon(icon);
+	useEffect(() => {
+		setTitle(pageTitle);
+		setIcon(icon);
+	});
 	const [state, dispatch] = useReducer(reducer, {
 		isSubmitted: false,
 		sending: false,

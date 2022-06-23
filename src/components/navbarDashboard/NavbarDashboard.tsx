@@ -1,5 +1,6 @@
 import React from 'react';
-import { CgSearch, CgProfile, MdNotifications } from 'react-icons/all';
+import { CgProfile } from 'react-icons/cg';
+import { MdNotifications } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
 import './NavbarDashboard.css';

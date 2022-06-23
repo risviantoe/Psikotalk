@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-
-import {
-	MdKeyboardArrowDown,
-	MdKeyboardArrowUp,
-} from 'react-icons/all';
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 
 import './Accordion.css';
 

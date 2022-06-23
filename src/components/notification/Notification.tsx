@@ -1,8 +1,8 @@
 import React from 'react';
-import { MdNotificationsActive } from 'react-icons/all';
 import { IconCalendarTime } from '@tabler/icons';
 
 import './Notification.css';
+import { MdNotificationsActive } from 'react-icons/md';
 
 interface NotificationProps {
 	notificationType: string;

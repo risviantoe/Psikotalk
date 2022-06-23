@@ -1,6 +1,5 @@
 import React from 'react';
 import CardHome from '../../../components/cardHome/CardHome';
-import { MdSpaceDashboard } from 'react-icons/all';
 
 import '../MainAdmin.css';
 import './AdminHome.css';

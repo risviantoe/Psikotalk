@@ -1,10 +1,8 @@
 import React, { useReducer } from 'react';
 import Button from '../../../components/button/Button';
-import { HiUser } from 'react-icons/all';
 
 import './AdminProfile.css';
 import reducer from './AdminProfile.reducer';
-import { titleIconSize } from '../AdminConfig';
 import { useOutletContext } from 'react-router-dom';
 import { PageProps } from '../../../types/interface/page/Page';
 

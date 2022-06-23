@@ -1,7 +1,5 @@
 import React from 'react';
-import { MdNotifications } from 'react-icons/all';
 import { useNavigate, useOutletContext } from 'react-router-dom';
-import Button from '../../../components/button/Button';
 import Notification from '../../../components/notification/Notification';
 import Pagination from '../../../components/pagination/Pagination';
 import Search from '../../../components/search/Search';

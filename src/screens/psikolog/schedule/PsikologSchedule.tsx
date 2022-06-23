@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link, useNavigate, useOutletContext } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate, useOutletContext } from 'react-router-dom';
 import ScheduleList from '../../../components/scheduleList/ScheduleList';
-import { AiFillSchedule } from 'react-icons/all';
 
 import './PsikologSchedule.css';
 import Pagination from '../../../components/pagination/Pagination';
@@ -11,9 +10,10 @@ import Button from '../../../components/button/Button';
 
 export const PsikologSchedule: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const { setTitle, setIcon } = useOutletContext<any>();
-	setTitle(pageTitle);
-	setIcon(icon);
-
+	useEffect(() => {
+		setTitle(pageTitle);
+		setIcon(icon);
+	});
 	const navigate = useNavigate()
 
 	return (

@@ -1,11 +1,8 @@
 import React from 'react';
-import {
-	MdSpaceDashboard,
-	AiFillSchedule,
-	BsPeopleFill,
-	BsChatDotsFill,
-	FaMoneyCheckAlt,
-} from 'react-icons/all';
+import { AiFillSchedule } from 'react-icons/ai';
+import { BsChatDotsFill, BsPeopleFill } from 'react-icons/bs';
+import { FaMoneyCheckAlt } from 'react-icons/fa';
+import { MdSpaceDashboard } from 'react-icons/md';
 
 export const SidebarDashboardPsikolog = [
 	{

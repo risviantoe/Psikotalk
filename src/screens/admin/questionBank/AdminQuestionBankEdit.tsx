@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HiArrowNarrowLeft } from 'react-icons/all';
+import { HiArrowNarrowLeft } from 'react-icons/hi';
 import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 import Button from '../../../components/button/Button';
 import Modal from '../../../components/modal/Modal';
