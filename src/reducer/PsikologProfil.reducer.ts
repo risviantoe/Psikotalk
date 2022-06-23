@@ -1,29 +1,15 @@
 import React, { Reducer } from 'react';
-
-interface PsychologProfileForm {
-	fullname: string;
-	username: string;
-	gender: string;
-	email: string;
-	about: string;
-	birthDate: string;
-	phone: string;
-	educationalStage: string;
-	certificate: string;
-	sipp: string;
-	password: string;
-}
-
+import { PsikologRequest, PsikologResponse } from '../types';
 interface PsychologProfileState {
 	isSubmitted: boolean;
 	sending: boolean;
-	inputs: PsychologProfileForm;
+	inputs: PsikologRequest;
 }
 
 type PsychologProfileAction =
-	| { name: 'SET_IS_SUBMITTED' }
+	| { name: 'SET_IS_SUBMITTED', payload: boolean }
 	| { name: 'SET_SENDING'; payload: boolean }
-	| { name: 'SET_INPUTS'; payload: Partial<PsychologProfileForm> };
+	| { name: 'SET_INPUTS'; payload: Partial<PsikologRequest> };
 
 const reducer: Reducer<PsychologProfileState, PsychologProfileAction> = (
 	state,
@@ -35,7 +21,7 @@ const reducer: Reducer<PsychologProfileState, PsychologProfileAction> = (
 			break;
 
 		case 'SET_IS_SUBMITTED':
-			return { ...state, isSubmitted: true };
+			return { ...state, isSubmitted: action.payload };
 			break;
 
 		case 'SET_INPUTS':

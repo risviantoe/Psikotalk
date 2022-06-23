@@ -39,12 +39,15 @@ import {
 	FaMoneyCheckAlt,
 	MdNotifications,
 	FaClipboardList,
+	MdPriceChange,
 } from 'react-icons/all';
 import AdminPostCreate from './screens/admin/post/AdminPostCreate';
 import AdminPostEdit from './screens/admin/post/AdminPostEdit';
 import AdminQuestionBank from './screens/admin/questionBank/AdminQuestionBank';
 import AdminQuestionBankEdit from './screens/admin/questionBank/AdminQuestionBankEdit';
 import AdminQuestionCreate from './screens/admin/questionBank/AdminQuestionCreate';
+import AdminPrice from './screens/admin/price/AdminPrice';
+import AdminPriceCreate from './screens/admin/price/AdminPriceCreate';
 
 const App = () => {
 	return (
@@ -175,7 +178,43 @@ const App = () => {
 						element={
 							<AdminQuestionCreate
 								icon={<FaClipboardList size={titleIconSize} />}
-								pageTitle="Edit Soal"
+								pageTitle="Tambah Butir Soal"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/bank-question/edit/question/edit"
+						element={
+							<AdminQuestionCreate
+								icon={<FaClipboardList size={titleIconSize} />}
+								pageTitle="Edit Butir Soal"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/price"
+						element={
+							<AdminPrice
+								icon={<MdPriceChange size={titleIconSize} />}
+								pageTitle="Daftar Harga"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/price/add"
+						element={
+							<AdminPriceCreate
+								icon={<MdPriceChange size={titleIconSize} />}
+								pageTitle="Tambah Harga"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/price/edit"
+						element={
+							<AdminPriceCreate
+								icon={<MdPriceChange size={titleIconSize} />}
+								pageTitle="Edit Harga"
 							/>
 						}
 					></Route>

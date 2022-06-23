@@ -15,44 +15,43 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 		isSubmitted: false,
 		sending: false,
 		inputs: {
-			fullname: '',
+			name: '',
 			username: '',
-			gender: '',
 			email: '',
-			about: '',
-			birthDate: '',
-			phone: '',
-			educationalStage: '',
-			certificate: '',
-			sipp: '',
+			gender: '',
+			biodata: '',
+			tanggal_lahir: '',
+			nomor_hp: '',
 			password: '',
+			file_ijazah: '',
+			surat_izin: '',
+			images: '',
 		},
 	});
 
 	const { isSubmitted, inputs } = state;
 	const {
-		fullname,
+		name,
 		username,
-		gender,
 		email,
-		about,
-		birthDate,
-		phone,
-		educationalStage,
-		certificate,
-		sipp,
+		gender,
+		biodata,
+		tanggal_lahir,
+		nomor_hp,
 		password,
+		file_ijazah,
+		surat_izin,
+		images,
 	} = inputs;
 
 	const onSubmit = () => {
-		dispatch({ name: 'SET_IS_SUBMITTED' });
+		dispatch({ name: 'SET_IS_SUBMITTED', payload: true });
 	};
 
 	return (
 		<React.Fragment>
 			<div className="psikolog__content--body bg-white">
 				<div className="psikolog-content-header">
-					{/* <div className="psikolog-content-header-top"></div> */}
 					<div className="profile-picture-wrapper">
 						<img
 							src="/assets/images/profil01.png"
@@ -77,22 +76,20 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 									name="name"
 									id="fullName"
 									className={
-										isSubmitted && !fullname
-											? 'form-error'
-											: ''
+										isSubmitted && !name ? 'form-error' : ''
 									}
-									value={state.inputs.fullname}
+									value={state.inputs.name}
 									onChange={(e) =>
 										dispatch({
 											name: 'SET_INPUTS',
 											payload: {
-												fullname: e.target.value,
+												name: e.target.value,
 											},
 										})
 									}
 								/>
 								<div className="form-error-message">
-									{isSubmitted && !fullname ? (
+									{isSubmitted && !name ? (
 										<span>Nama lengkap wajib diisi!</span>
 									) : null}
 								</div>
@@ -188,20 +185,22 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 									id="about"
 									rows={15}
 									className={
-										isSubmitted && !about
+										isSubmitted && !biodata
 											? 'form-error'
 											: ''
 									}
-									value={state.inputs.about}
+									value={state.inputs.biodata}
 									onChange={(e) =>
 										dispatch({
 											name: 'SET_INPUTS',
-											payload: { about: e.target.value },
+											payload: {
+												biodata: e.target.value,
+											},
 										})
 									}
 								/>
 								<div className="form-error-message">
-									{isSubmitted && !about ? (
+									{isSubmitted && !biodata ? (
 										<span>Tentang diri wajib diisi!</span>
 									) : null}
 								</div>
@@ -216,22 +215,22 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 									name="birthDate"
 									id="birthDate"
 									className={
-										isSubmitted && !birthDate
+										isSubmitted && !tanggal_lahir
 											? 'form-error'
 											: ''
 									}
-									value={state.inputs.birthDate}
+									value={state.inputs.tanggal_lahir}
 									onChange={(e) =>
 										dispatch({
 											name: 'SET_INPUTS',
 											payload: {
-												birthDate: e.target.value,
+												tanggal_lahir: e.target.value,
 											},
 										})
 									}
 								/>
 								<div className="form-error-message">
-									{isSubmitted && !birthDate ? (
+									{isSubmitted && !tanggal_lahir ? (
 										<span>Nama lengkap wajib diisi!</span>
 									) : null}
 								</div>
@@ -244,20 +243,22 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 									name="phone"
 									id="phone"
 									className={
-										isSubmitted && !phone
+										isSubmitted && !nomor_hp
 											? 'form-error'
 											: ''
 									}
-									value={state.inputs.phone}
+									value={state.inputs.nomor_hp}
 									onChange={(e) =>
 										dispatch({
 											name: 'SET_INPUTS',
-											payload: { phone: e.target.value },
+											payload: {
+												nomor_hp: e.target.value,
+											},
 										})
 									}
 								/>
 								<div className="form-error-message">
-									{isSubmitted && !phone ? (
+									{isSubmitted && !nomor_hp ? (
 										<span>Nomor Hp wajib diisi!</span>
 									) : null}
 								</div>
@@ -270,34 +271,34 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 								<select
 									name="educational-stage"
 									id="educational-stage"
-									className={
-										isSubmitted && !educationalStage
-											? 'form-error'
-											: ''
-									}
-									value={state.inputs.educationalStage}
-									onChange={(e) =>
-										dispatch({
-											name: 'SET_INPUTS',
-											payload: {
-												educationalStage:
-													e.target.value,
-											},
-										})
-									}
+									// className={
+									// 	isSubmitted && !educationalStage
+									// 		? 'form-error'
+									// 		: ''
+									// }
+									// value={state.inputs.educationalStage}
+									// onChange={(e) =>
+									// 	dispatch({
+									// 		name: 'SET_INPUTS',
+									// 		payload: {
+									// 			educationalStage:
+									// 				e.target.value,
+									// 		},
+									// 	})
+									// }
 								>
 									<option>Pilih Jenjang Pendidikan</option>
 									<option value="S1">S1</option>
 									<option value="S2">S2</option>
 									<option value="S3">S3</option>
 								</select>
-								<div className="form-error-message">
-									{isSubmitted && !phone ? (
+								{/* <div className="form-error-message">
+									{isSubmitted && !educationalStage ? (
 										<span>
 											Jenjang pendidikan wajib diisi!
 										</span>
 									) : null}
-								</div>
+								</div> */}
 							</div>
 
 							<div className="form-input-group">
@@ -309,22 +310,22 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 									name="certificate"
 									id="certificate"
 									className={
-										isSubmitted && !certificate
+										isSubmitted && !file_ijazah
 											? 'form-error'
 											: ''
 									}
-									value={state.inputs.certificate}
+									value={state.inputs.file_ijazah}
 									onChange={(e) =>
 										dispatch({
 											name: 'SET_INPUTS',
 											payload: {
-												certificate: e.target.value,
+												file_ijazah: e.target.value,
 											},
 										})
 									}
 								/>
 								<div className="form-error-message">
-									{isSubmitted && !sipp ? (
+									{isSubmitted && !file_ijazah ? (
 										<span>Ijazah wajib diisi!</span>
 									) : null}
 								</div>
@@ -339,18 +340,22 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 									name="sipp"
 									id="sipp"
 									className={
-										isSubmitted && !sipp ? 'form-error' : ''
+										isSubmitted && !surat_izin
+											? 'form-error'
+											: ''
 									}
-									value={state.inputs.sipp}
+									value={state.inputs.surat_izin}
 									onChange={(e) =>
 										dispatch({
 											name: 'SET_INPUTS',
-											payload: { sipp: e.target.value },
+											payload: {
+												surat_izin: e.target.value,
+											},
 										})
 									}
 								/>
 								<div className="form-error-message">
-									{isSubmitted && !sipp ? (
+									{isSubmitted && !surat_izin ? (
 										<span>SIPP wajib diisi!</span>
 									) : null}
 								</div>
@@ -363,9 +368,23 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 										type="password"
 										name="password"
 										id="password"
-										disabled
 										style={{ width: '100%' }}
+										className={
+											isSubmitted && !password
+												? 'form-error'
+												: ''
+										}
+										value={state.inputs.password}
+										onChange={(e) =>
+											dispatch({
+												name: 'SET_INPUTS',
+												payload: {
+													password: e.target.value,
+												},
+											})
+										}
 									/>
+
 									<Button
 										name="Ganti password"
 										color="secondary"
@@ -378,6 +397,11 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 											fontSize: 14,
 										}}
 									/>
+								</div>
+								<div className="form-error-message">
+									{isSubmitted && !password ? (
+										<span>Password wajib diisi!</span>
+									) : null}
 								</div>
 							</div>
 

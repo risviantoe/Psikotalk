@@ -21,6 +21,7 @@
 	gap: 100px;
     position: relative;
     height: 100%;
+	overflow: hidden;
 }
 
 .sidebar-menus-list {
@@ -31,8 +32,8 @@
 
 .sidebar-menus-bottom {
 	position: absolute;
+	padding: 20px 0 10px;
 	bottom: 0;
-	padding: 52px 0 10px;
 	width: 100%;
 	background: #f4f4f4;
 }

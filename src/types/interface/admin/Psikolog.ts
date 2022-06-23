@@ -7,9 +7,9 @@ export interface PsikologRequest {
 	tanggal_lahir: string;
 	nomor_hp: string;
 	password: string;
-	file_ijazah: any[];
-	surat_izin: any[];
-	images: any[];
+	file_ijazah: string;
+	surat_izin: string;
+	images: string;
 }
 
 export interface Psikolog {
