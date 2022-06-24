@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0bce6805.css",
+    "main.js": "/static/js/main.a94e6bd1.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Nunito.ttf": "/static/media/Nunito.e832734fe3e30d1edb43.ttf",
+    "static/media/list.svg": "/static/media/list.e1c7e12bfd1bf6eff56e.svg",
+    "static/media/clock.svg": "/static/media/clock.3e327619e6396ce0bb19.svg",
+    "static/media/data.svg": "/static/media/data.bb559ab0c27982e1f550.svg",
+    "static/media/articel.svg": "/static/media/articel.45872e27b5f4cb889085.svg",
+    "static/media/chat.svg": "/static/media/chat.946e009a7b48684388b3.svg",
+    "static/media/date.svg": "/static/media/date.cf834bf6f7ac8e06fd54.svg",
+    "static/media/schedule.svg": "/static/media/schedule.edd181939b412fe4f8ae.svg",
+    "static/media/delete.svg": "/static/media/delete.c27b97759b43bdd93bae.svg",
+    "static/media/payment.svg": "/static/media/payment.0c8628adb72ea163a0a6.svg",
+    "static/media/platform.svg": "/static/media/platform.be81fde6c66c7cda8432.svg",
+    "static/media/write.svg": "/static/media/write.3cf7c600b6d087a4c863.svg",
+    "static/media/schedule02.svg": "/static/media/schedule02.2f405e4b17bbc4c0a4c7.svg",
+    "static/media/peoples.svg": "/static/media/peoples.b779fdb8c737572dc197.svg",
+    "static/media/link.svg": "/static/media/link.61b760180b978a9a4567.svg",
+    "static/media/edit.svg": "/static/media/edit.dc334143be1c946a6bfb.svg",
+    "static/media/camera.svg": "/static/media/camera.da9a2b289a16a7f2b9bc.svg",
+    "static/media/dashboard.svg": "/static/media/dashboard.10c89f33005cc4932af7.svg",
+    "static/media/card-bg02.svg": "/static/media/card-bg02.a6d7abce1ab6530129d4.svg",
+    "index.html": "/index.html",
+    "static/media/people.svg": "/static/media/people.251fa732aadbcd3e004a.svg",
+    "static/media/ornament-login01.svg": "/static/media/ornament-login01.3e7c73df6ba5c4680e02.svg",
+    "static/media/ornament-login02.svg": "/static/media/ornament-login02.4e70975855762cdce589.svg",
+    "static/media/card-ornament01.svg": "/static/media/card-ornament01.4ba4d8ac6199dbbed962.svg",
+    "static/media/card-ornament02.svg": "/static/media/card-ornament02.88603709eb77bebbbd95.svg",
+    "static/media/chevron-down.svg": "/static/media/chevron-down.7ac1ddaa393d6e08c37a.svg",
+    "static/media/cross.svg": "/static/media/cross.221cd970c26471a0b34e.svg",
+    "main.0bce6805.css.map": "/static/css/main.0bce6805.css.map",
+    "main.a94e6bd1.js.map": "/static/js/main.a94e6bd1.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0bce6805.css",
+    "static/js/main.a94e6bd1.js"
+  ]
+}
