@@ -10,7 +10,7 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			'Johnathan Alex',
+			<div style={{ textAlign: 'left' }}>Johnathan Alex</div>,
 			'Johnathan-Alex@email.com',
 			'Laki-laki',
 		],
@@ -24,7 +24,7 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			'Johnathan Alex Christine',
+			<div style={{ textAlign: 'left' }}>Johnathan Alex</div>,
 			'Johnathan-Alex@email.com',
 			'Laki-laki',
 		],
@@ -38,7 +38,9 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			'Muhammad Chandra Saputra Nugroho Pangestu Sodhikin',
+			<div style={{ textAlign: 'left' }}>
+				Muhammad Chandra Saputra Nugroho Pangestu Sodhikin
+			</div>,
 			'Johnathan-Alex@email.com',
 			'Perempuan',
 		],
