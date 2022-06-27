@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../button/Button'
 import './Navbar.css'
 
 export const Navbar: React.FC = (props) => {
@@ -26,8 +27,7 @@ export const Navbar: React.FC = (props) => {
                 </ul>
             </div>
             <div className="nav-btn">
-                <a className="secondary-btn nav-btn-signin" href="/">Masuk</a>
-                <a className="primary-btn nav-btn-signup" href="/">Daftar</a>
+                <Button name="Mulai" style={{ fontSize: 14, borderRadius: 20, padding: '8px 50px' }} />
             </div>
         </nav>
     </header>

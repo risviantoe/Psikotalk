@@ -20,6 +20,7 @@ const AdminPriceCreate: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const [showModalBack, setShowModalBack] = useState<boolean>(false);
     const onBack = () => {
 		setShowModalBack(true);
+		navigate('/admin/price')
 	};
 	return (
 		<React.Fragment>

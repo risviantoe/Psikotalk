@@ -1,0 +1,79 @@
+.landingPage__content {
+    position: relative;
+}
+
+.landingPage__ornament1 {
+    background: url('/public/assets/images/ornament-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 230px;
+    height: 700px;
+    position: absolute;
+    top: 20%;
+    left: 0;
+}
+
+.landingPage__ornament2 {
+    background: url('/public/assets/images/ornament-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 180px;
+    height: 500px;
+    position: absolute;
+    top: 35%;
+    right: 0;
+}
+
+section {
+    padding: 300px 20vh;
+}
+
+.landingPage__hero {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+    position: relative;
+}
+
+.landingPage__hero-text-wrapper {
+	width: 530px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.landingPage__hero-title {
+	font-size: 62px;
+	font-weight: 700;
+}
+
+.landingPage__hero-title1 {
+	color: #006161;
+}
+
+.landingPage__hero-title2 {
+	color: #00adac;
+}
+
+.landingPage__hero-subtitle {
+	font-size: 28px;
+	font-weight: 600;
+	color: #555555;
+    margin-bottom: 50px;
+}
+
+.landingPage__hero-cta {
+}
+
+.landingPage__hero-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.landingPage__hero-img img {
+    width: 800px;
+}

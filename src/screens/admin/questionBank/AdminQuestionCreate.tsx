@@ -238,7 +238,7 @@ const AdminQuestionCreate: React.FC<PageProps> = ({ pageTitle, icon }) => {
 					text="Apa yang sudah kamu tulis akan hilang. Apakah anda yakin untuk keluar dari halaman ini?"
 					okButtonText="Yakin"
 					cancelButtonText="Cancel"
-					onOk={() => navigate('/admin/post')}
+					onOk={() => navigate('/admin/bank-question')}
 					onClose={() => setShowModal(false)}
 				/>
 			</Modal>
