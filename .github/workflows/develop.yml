@@ -30,4 +30,4 @@ jobs:
                     password : Ps1k0t4lk
                     port : 22
                     source : build
-                    target : /var/www/psikotalk.com/html/
+                    target : /var/www/dev/dev.psikotalk.com/html/
