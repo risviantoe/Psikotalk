@@ -1,0 +1,31 @@
+on:
+    push:
+        branches:
+            -   develop
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            -   uses : actions/checkout@v2
+
+            -   name : Use NodeJS
+                uses : actions/setup-node@v1
+                with :
+                    node-version: 16.x
+                
+            -   name : Install Dependencies
+                run : npm install
+
+            -   name : Build Application
+                run : npm run build
+
+            -   name : Send to VPS
+                uses : appleboy/scp-actions@master
+                with :
+                    host : 103.179.57.31
+                    username : psikotalk
+                    password : Ps1k0t4lk
+                    port : 22
+                    source : build
+                    target : /var/www/psikotalk.com/html/
