@@ -10,7 +10,7 @@
     width: 230px;
     height: 700px;
     position: absolute;
-    top: 20%;
+    top: 45vh;
     left: 0;
 }
 
@@ -22,12 +22,26 @@
     width: 180px;
     height: 500px;
     position: absolute;
-    top: 35%;
+    top: 65vh;
     right: 0;
 }
 
+.landingPage__ornament3 {
+    background: url('/public/assets/images/ornament-3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+    left: 0;
+}
+
 section {
-    padding: 300px 20vh;
+    padding: 50px 20vh;
+    border: 1px solid black;
 }
 
 .landingPage__hero {
@@ -49,11 +63,11 @@ section {
 	font-weight: 700;
 }
 
-.landingPage__hero-title1 {
+.landingPage__title1 {
 	color: #006161;
 }
 
-.landingPage__hero-title2 {
+.landingPage__title2 {
 	color: #00adac;
 }
 
@@ -77,3 +91,84 @@ section {
 .landingPage__hero-img img {
     width: 800px;
 }
+
+.landingPage__feature {
+
+}
+
+.landingPage__feature-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.landingPage__feature-title-container {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 28px;
+}
+
+.landingPage__title-wrapper {
+    font-size: 28px;
+}
+
+.landingPage__feature-content {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.landingPage__feature-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 330px;
+    overflow: auto;
+    color: #555555;
+}
+
+.landingPage__feature-item-img {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.landingPage__feature-item-title {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: #00ADAC;
+    margin: 20px 0 5px 0;
+}
+
+.landingPage__feature-item-desc {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.landingPage__feature-item-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.landingPage__feature-item-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+
+
+
