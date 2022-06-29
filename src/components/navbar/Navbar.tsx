@@ -5,7 +5,7 @@ import './Navbar.css';
 
 export const Navbar: React.FC = () => {
 	const location = useLocation(); // once ready it returns the 'window.location' object
-	const [url, setUrl] = useState<string>('');
+	const [url, setUrl] = useState<string>('/');
 	// useEffect(() => {
 	// 	setUrl(location.pathname);
     // }, [location]);
@@ -28,13 +28,15 @@ export const Navbar: React.FC = () => {
 					<ul className="nav-links">
 						<li>
 							<a
-								className={url === 'home' ? ' active' : ''}
+								className={
+									url === 'home' || '/' ? ' active' : ''
+								}
 								href="#home"
 								onClick={(e) => navActive('home')}
 							>
 								Home
 							</a>
-							{url === 'home' ? (
+							{url === 'home' || '/' ? (
 								<div className="nav-active-bar"></div>
 							) : null}
 						</li>
