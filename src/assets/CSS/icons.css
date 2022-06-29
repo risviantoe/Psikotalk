@@ -1,114 +1,163 @@
+html {
+	scroll-behavior: smooth;
+}
+
 .icon {
-    --size: 30px;
-    display: inline-block;
-    width: var(--size);
-    height: var(--size);
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
+	--size: 30px;
+	display: inline-block;
+	width: var(--size);
+	height: var(--size);
+	-webkit-mask-size: contain;
+	-webkit-mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: center;
+	mask-repeat: no-repeat;
 }
 
 .icon-dashboard {
-    -webkit-mask-image: url(/public/assets/icons/dashboard.svg);
-    mask-image: url(/public/assets/icons/dashboard.svg);
+	-webkit-mask-image: url(/public/assets/icons/dashboard.svg);
+	mask-image: url(/public/assets/icons/dashboard.svg);
 }
 
 .icon-people {
-    -webkit-mask-image: url(/public/assets/icons/people.svg);
-    mask-image: url(/public/assets/icons/people.svg);
+	-webkit-mask-image: url(/public/assets/icons/people.svg);
+	mask-image: url(/public/assets/icons/people.svg);
 }
 
 .icon-peoples {
-    -webkit-mask-image: url(/public/assets/icons/peoples.svg);
-    mask-image: url(/public/assets/icons/peoples.svg);
+	-webkit-mask-image: url(/public/assets/icons/peoples.svg);
+	mask-image: url(/public/assets/icons/peoples.svg);
 }
 
 .icon-chevron-down {
-    -webkit-mask-image: url(/public/assets/icons/chevron-down.svg);
-    mask-image: url(/public/assets/icons/chevron-down.svg);
+	-webkit-mask-image: url(/public/assets/icons/chevron-down.svg);
+	mask-image: url(/public/assets/icons/chevron-down.svg);
 }
 
 .icon-list {
-    -webkit-mask-image: url(/public/assets/icons/list.svg);
-    mask-image: url(/public/assets/icons/list.svg);
+	-webkit-mask-image: url(/public/assets/icons/list.svg);
+	mask-image: url(/public/assets/icons/list.svg);
 }
 
 .icon-data {
-    -webkit-mask-image: url(/public/assets/icons/data.svg);
-    mask-image: url(/public/assets/icons/data.svg);
+	-webkit-mask-image: url(/public/assets/icons/data.svg);
+	mask-image: url(/public/assets/icons/data.svg);
 }
 
 .icon-articel {
-    -webkit-mask-image: url(/public/assets/icons/articel.svg);
-    mask-image: url(/public/assets/icons/articel.svg);
+	-webkit-mask-image: url(/public/assets/icons/articel.svg);
+	mask-image: url(/public/assets/icons/articel.svg);
 }
 
 .icon-write {
-    -webkit-mask-image: url(/public/assets/icons/write.svg);
-    mask-image: url(/public/assets/icons/write.svg);
+	-webkit-mask-image: url(/public/assets/icons/write.svg);
+	mask-image: url(/public/assets/icons/write.svg);
 }
 
 .icon-payment {
-    -webkit-mask-image: url(/public/assets/icons/payment.svg);
-    mask-image: url(/public/assets/icons/payment.svg);
+	-webkit-mask-image: url(/public/assets/icons/payment.svg);
+	mask-image: url(/public/assets/icons/payment.svg);
 }
 
 .icon-schedule01 {
-    background: #fff;
-    -webkit-mask-image: url(/public/assets/icons/schedule.svg);
-    mask-image: url(/public/assets/icons/schedule.svg);
+	background: #fff;
+	-webkit-mask-image: url(/public/assets/icons/schedule.svg);
+	mask-image: url(/public/assets/icons/schedule.svg);
 }
 
 .icon-schedule02 {
-    background: #fff;
-    -webkit-mask-image: url(/public/assets/icons/schedule02.svg);
-    mask-image: url(/public/assets/icons/schedule02.svg);
+	background: #fff;
+	-webkit-mask-image: url(/public/assets/icons/schedule02.svg);
+	mask-image: url(/public/assets/icons/schedule02.svg);
 }
 
 .icon-chat {
-    -webkit-mask-image: url(/public/assets/icons/chat.svg);
-    mask-image: url(/public/assets/icons/chat.svg);
+	-webkit-mask-image: url(/public/assets/icons/chat.svg);
+	mask-image: url(/public/assets/icons/chat.svg);
 }
 
 .icon-camera {
-    -webkit-mask-image: url(/public/assets/icons/camera.svg);
-    mask-image: url(/public/assets/icons/camera.svg);
+	-webkit-mask-image: url(/public/assets/icons/camera.svg);
+	mask-image: url(/public/assets/icons/camera.svg);
 }
 
 .icon-date {
-    -webkit-mask-image: url(/public/assets/icons/date.svg);
-    mask-image: url(/public/assets/icons/date.svg);
+	-webkit-mask-image: url(/public/assets/icons/date.svg);
+	mask-image: url(/public/assets/icons/date.svg);
 }
 
 .icon-clock {
-    -webkit-mask-image: url(/public/assets/icons/clock.svg);
-    mask-image: url(/public/assets/icons/clock.svg);
+	-webkit-mask-image: url(/public/assets/icons/clock.svg);
+	mask-image: url(/public/assets/icons/clock.svg);
 }
 
 .icon-platform {
-    -webkit-mask-image: url(/public/assets/icons/platform.svg);
-    mask-image: url(/public/assets/icons/platform.svg);
+	-webkit-mask-image: url(/public/assets/icons/platform.svg);
+	mask-image: url(/public/assets/icons/platform.svg);
 }
 
 .icon-link {
-    -webkit-mask-image: url(/public/assets/icons/link.svg);
-    mask-image: url(/public/assets/icons/link.svg);
+	-webkit-mask-image: url(/public/assets/icons/link.svg);
+	mask-image: url(/public/assets/icons/link.svg);
 }
 
 .icon-cross {
-    -webkit-mask-image: url(/public/assets/icons/cross.svg);
-    mask-image: url(/public/assets/icons/cross.svg);
+	-webkit-mask-image: url(/public/assets/icons/cross.svg);
+	mask-image: url(/public/assets/icons/cross.svg);
 }
 
 .icon-edit {
-    -webkit-mask-image: url(/public/assets/icons/edit.svg);
-    mask-image: url(/public/assets/icons/edit.svg);
+	-webkit-mask-image: url(/public/assets/icons/edit.svg);
+	mask-image: url(/public/assets/icons/edit.svg);
 }
 
 .icon-delete {
-    -webkit-mask-image: url(/public/assets/icons/delete.svg);
-    mask-image: url(/public/assets/icons/delete.svg);
+	-webkit-mask-image: url(/public/assets/icons/delete.svg);
+	mask-image: url(/public/assets/icons/delete.svg);
+}
+
+.icon-head-gear {
+	-webkit-mask-image: url(/public/assets/icons/head-gear.svg);
+	mask-image: url(/public/assets/icons/head-gear.svg);
+}
+
+.icon-head-lamp {
+	-webkit-mask-image: url(/public/assets/icons/head-lamp.svg);
+	mask-image: url(/public/assets/icons/head-lamp.svg);
+}
+
+.icon-brain {
+	-webkit-mask-image: url(/public/assets/icons/brain.svg);
+	mask-image: url(/public/assets/icons/brain.svg);
+}
+
+.icon-cat-palet {
+	-webkit-mask-image: url(/public/assets/icons/cat-palet.svg);
+	mask-image: url(/public/assets/icons/cat-palet.svg);
+}
+
+.icon-mbti {
+	-webkit-mask-image: url(/public/assets/icons/mbti.svg);
+	mask-image: url(/public/assets/icons/mbti.svg);
+}
+
+.icon-bag {
+	-webkit-mask-image: url(/public/assets/icons/bag.svg);
+	mask-image: url(/public/assets/icons/bag.svg);
+}
+
+.icon-fb {
+	-webkit-mask-image: url(/public/assets/icons/fb.svg);
+	mask-image: url(/public/assets/icons/fb.svg);
+}
+
+.icon-insta {
+	-webkit-mask-image: url(/public/assets/icons/insta.svg);
+	mask-image: url(/public/assets/icons/insta.svg);
+}
+
+.icon-twitter {
+	-webkit-mask-image: url(/public/assets/icons/twitter.svg);
+	mask-image: url(/public/assets/icons/twitter.svg);
 }

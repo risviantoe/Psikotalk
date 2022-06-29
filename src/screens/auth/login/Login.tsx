@@ -45,8 +45,6 @@ export const Login: React.FC = () => {
 		setLoading(true);
 		setStatus(0);
 
-		console.log('inputs', inputs);
-
 		try {
 			const res = await authService.login(inputs);
 			storageService.setToken(res.data.data.token);

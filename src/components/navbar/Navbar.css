@@ -26,6 +26,11 @@
     color: #35858B;
 }
 
+.nav-links {
+    color: #35858B;
+    font-weight: 700;
+}
+
 .nav-links .active {
     color: #35858B;
     font-weight: 700;
