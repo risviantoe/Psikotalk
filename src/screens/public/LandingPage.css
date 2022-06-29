@@ -1,40 +1,54 @@
 .landingPage__content {
-    position: relative;
+	position: relative;
 }
 
 .landingPage__ornament1 {
-    background: url('/public/assets/images/ornament-1.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 230px;
-    height: 700px;
-    position: absolute;
-    top: 20%;
-    left: 0;
+	background: url('/public/assets/images/ornament-1.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 230px;
+	height: 700px;
+	position: absolute;
+	top: 45vh;
+	left: 0;
 }
 
 .landingPage__ornament2 {
-    background: url('/public/assets/images/ornament-2.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 180px;
-    height: 500px;
-    position: absolute;
-    top: 35%;
-    right: 0;
+	background: url('/public/assets/images/ornament-2.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 180px;
+	height: 500px;
+	position: absolute;
+	top: 65vh;
+	right: 0;
+}
+
+.landingPage__ornament3 {
+	background: url('/public/assets/images/ornament-3.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: -1;
+	top: -40px;
+	left: 0;
 }
 
 section {
-    padding: 300px 20vh;
+	padding: 50px 20vh;
+	/* border: 1px solid black; */
 }
 
 .landingPage__hero {
 	height: 100vh;
 	display: flex;
 	align-items: center;
-    position: relative;
+	position: relative;
 }
 
 .landingPage__hero-text-wrapper {
@@ -49,11 +63,11 @@ section {
 	font-weight: 700;
 }
 
-.landingPage__hero-title1 {
+.landingPage__title1 {
 	color: #006161;
 }
 
-.landingPage__hero-title2 {
+.landingPage__title2 {
 	color: #00adac;
 }
 
@@ -61,19 +75,247 @@ section {
 	font-size: 28px;
 	font-weight: 600;
 	color: #555555;
-    margin-bottom: 50px;
+	margin-bottom: 50px;
 }
 
 .landingPage__hero-cta {
 }
 
 .landingPage__hero-img {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
 }
 
 .landingPage__hero-img img {
-    width: 800px;
+	width: 800px;
+}
+
+.landingPage__feature {
+	position: relative;
+	max-height: 750px;
+}
+
+.landingPage__feature-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-size: 26px;
+	font-weight: 600;
+}
+
+.landingPage__feature-title-container {
+	position: relative;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 28px;
+}
+
+.landingPage__title-wrapper {
+	font-size: 28px;
+}
+
+.landingPage__feature-content {
+	padding: 100px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.landingPage__feature-item {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: 330px;
+	overflow: auto;
+	color: #555555;
+}
+
+.landingPage__feature-item-img {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.landingPage__feature-item-img img {
+	width: 230px;
+	height: 250px;
+}
+
+.landingPage__feature-item-title {
+	font-size: 26px;
+	font-weight: 700;
+	text-align: center;
+	color: #00adac;
+	margin: 20px 0 5px 0;
+}
+
+.landingPage__feature-item-desc {
+	font-size: 18px;
+	font-weight: 600;
+	text-align: justify;
+}
+
+.landingPage__feature-item-list ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.landingPage__feature-item-list li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.landingPage__feature-list-payment-logo {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 15px;
+}
+
+.landingPage__feature-list-payment-logo img {
+	width: 45px;
+}
+
+.landingPage__ornament4 {
+	background: url(/public/assets/images/ornament-4.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 350px;
+	z-index: 1;
+	bottom: -350px;
+	left: 0;
+	position: absolute;
+	filter: drop-shadow(0px 20px 10px #c3d7d7);
+}
+
+.landingPage__ornament5 {
+	background: url(/public/assets/images/ornament-4-2.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 370px;
+	z-index: 1;
+	bottom: -5px;
+	left: 0;
+	position: absolute;
+	filter: drop-shadow(0px -20px 10px #c3d7d7);
+}
+
+.landingPage__offers {
+	position: relative;
+	background: #eaf2f2;
+	height: 900px;
+}
+
+.landingPage__offers-content {
+	display: flex;
+	flex-direction: row;
+}
+
+.landingPage__offers-content-img {
+	width: 50%;
+	padding-top: 200px;
+	z-index: 2;
+}
+
+.landingPage__offers-content-img img {
+	width: 500px;
+}
+
+.landingPage__offers-content-text {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	padding: 0 70px;
+}
+
+.landingPage__offers-content-text-title {
+	font-size: 48px;
+	font-weight: 700;
+	margin-top: 150px;
+}
+
+.landingPage__offers-content-text-desc {
+	font-size: 24px;
+	margin-bottom: 35px;
+}
+
+.landingPage__offers-content-lists {
+	font-size: 20px;
+}
+
+.landingPage__offers-content-lists ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.landingPage__offers-content-lists li {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.landingPage__cta {
+	display: flex;
+	flex-direction: row;
+}
+
+.landingPage__cta-text {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	width: 50%;
+}
+
+.landingPage__cta-text-desc {
+	font-size: 22px;
+	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.landingPage__cta-text-desc span {
+	font-size: 32px;
+	font-weight: 700;
+	color: #00adac;
+}
+
+.landingPage__cta-text-btn {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.landingPage__cta-text-btn img {
+	width: 200px;
+}
+
+.landingPage__cta-img {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+.landingPage__cta-img img {
+	width: 550px;
 }
