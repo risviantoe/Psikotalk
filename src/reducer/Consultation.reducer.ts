@@ -1,27 +1,30 @@
 import React, { Reducer } from 'react';
-import { PsikologRequest } from '../types';
-interface PsychologProfileState {
-	isSubmitted: boolean;
-	sending: boolean;
-	inputs: any;
+
+interface ConsulForm {
+	title: string;
+	category: string;
+	body: React.ReactNode;
 }
 
-type PsychologProfileAction =
-	| { name: 'SET_IS_SUBMITTED', payload: boolean }
-	| { name: 'SET_SENDING'; payload: boolean }
-	| { name: 'SET_INPUTS'; payload: Partial<PsikologRequest> };
+interface ConsulState {
+	isSubmitted: boolean;
+	sending: boolean;
+	inputs: ConsulForm;
+}
 
-const reducer: Reducer<PsychologProfileState, PsychologProfileAction> = (
-	state,
-	action
-) => {
+type Action =
+	| { name: 'SET_IS_SUBMITTED' }
+	| { name: 'SET_SENDING'; payload: boolean }
+	| { name: 'SET_INPUTS'; payload: Partial<ConsulForm> };
+
+const PostReducer: Reducer<ConsulState, Action> = (state, action) => {
 	switch (action.name) {
 		case 'SET_SENDING':
 			return { ...state, sending: action.payload };
 			break;
 
 		case 'SET_IS_SUBMITTED':
-			return { ...state, isSubmitted: action.payload };
+			return { ...state, isSubmitted: true };
 			break;
 
 		case 'SET_INPUTS':
@@ -35,4 +38,4 @@ const reducer: Reducer<PsychologProfileState, PsychologProfileAction> = (
 	return state;
 };
 
-export default reducer;
+export default PostReducer;

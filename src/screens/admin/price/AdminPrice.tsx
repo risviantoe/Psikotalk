@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
-import Button from '../../../components/button/Button'
-import Modal from '../../../components/modal/Modal'
-import ModalConfirmation from '../../../components/modalConfirmation/ModalConfirmation'
-import Search from '../../../components/search/Search'
-import Table from '../../../components/table/Table'
+import Button from '../../../components/button/Button';
+import Modal from '../../../components/modal/Modal';
+import ModalConfirmation from '../../../components/modalConfirmation/ModalConfirmation';
+import Search from '../../../components/search/Search';
+import SekeletonTable from '../../../components/sekeletonLoading/SekeletonTable';
+import Table from '../../../components/table/Table';
+import { priceService } from '../../../services';
+import { Price } from '../../../types';
 import { PageProps } from '../../../types/interface/page/Page';
 import { theadData, tbodyData } from '../dataDumy/dataPrice';
 
@@ -18,8 +21,56 @@ const AdminPrice: React.FC<PageProps> = ({ pageTitle, icon }) => {
 
 	const navigate = useNavigate();
 
-	const [showModalAdd, setShowModalAdd] = useState<boolean>(false);
+	const [prices, setPrices] = useState<Array<Price>>([]);
 	const [showModalDelete, setShowModalDelete] = useState<boolean>(false);
+	const [loading, setLoading] = useState<boolean>(false);
+
+	const getPrices = async () => {
+		setLoading(true);
+		try {
+			let res = await priceService.priceGet();
+			setPrices(res.data);
+			setLoading(false);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const onClickAction = (id: string) => {
+		navigate('/admin/price/edit/'+id)
+	}
+
+	const formatRupiah = (value: any) => {
+		return value
+			.toString()
+			.split('')
+			.reverse()
+			.join('')
+			.match(/\d{1,3}/g)
+			.join('.')
+			.split('')
+			.reverse()
+			.join('');
+	};
+
+	const theadData = ['No', 'Nama', 'Harga', 'Diskon', 'Harga setelah diskon'];
+	const tbodyData = prices
+		? prices.map((item, index) => ({
+				id: item._id,
+				items: [
+					index + 1,
+					item.opsi,
+					'Rp. ' + formatRupiah(item.normal_price),
+					item.discount + '%',
+					'Rp. ' + formatRupiah(item.fix_price),
+				],
+		  }))
+		: [];
+
+	useEffect(() => {
+		getPrices();
+	}, []);
+
 	return (
 		<React.Fragment>
 			<div className="content-top-menu">
@@ -34,25 +85,28 @@ const AdminPrice: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			</div>
 			<div className="admin__content--body">
 				<div className="admin__post--content-wrapper">
-					<Table
-						theadData={theadData}
-						tbodyData={tbodyData}
-						actionColumn
-						columnMaxWidth={500}
-						action1={{
-							name: 'Edit harga',
-							color: 'primary',
-							icon: 'icon-edit',
-							onClick: () =>
-								navigate('/admin/price/edit'),
-						}}
-						action2={{
-							name: 'Hapus',
-							color: 'danger',
-							icon: 'icon-delete',
-							onClick: () => setShowModalDelete(true),
-						}}
-					/>
+					{loading ? (
+						<SekeletonTable />
+					) : (
+						<Table
+							theadData={theadData}
+							tbodyData={tbodyData}
+							actionColumn
+							columnMaxWidth={500}
+							action1={{
+								name: 'Edit harga',
+								color: 'primary',
+								icon: 'icon-edit',
+								onClickUpdate: (e) => onClickAction(e),
+							}}
+							action2={{
+								name: 'Hapus',
+								color: 'danger',
+								icon: 'icon-delete',
+								onClick: () => setShowModalDelete(true),
+							}}
+						/>
+					)}
 				</div>
 			</div>
 			<Modal show={showModalDelete} closeButton={false}>
@@ -66,4 +120,4 @@ const AdminPrice: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	);
 };
 
-export default AdminPrice
+export default AdminPrice;

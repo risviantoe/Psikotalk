@@ -1,8 +1,8 @@
 import React from 'react';
 import { BsPeopleFill } from 'react-icons/bs';
-import { FaClipboardList, FaUserMd } from 'react-icons/fa';
+import { FaClipboardList, FaPeopleArrows, FaUserMd } from 'react-icons/fa';
 import { GoChecklist } from 'react-icons/go';
-import { IoIosPaper } from 'react-icons/io';
+import { IoIosPaper, IoIosPeople, IoMdPeople } from 'react-icons/io';
 import { MdAccessTimeFilled, MdPayments, MdPriceChange, MdSpaceDashboard } from 'react-icons/md';
 
 export const SidebarDashboardAdmin = [
@@ -35,8 +35,20 @@ export const SidebarDashboardAdmin = [
 	},
 	{
 		title: 'Psikolog',
-		path: '/admin/psikolog',
+		path: '#',
 		icon: <FaUserMd size={25} />,
+		subNav: [
+			{
+				title: 'Data Psikolog',
+				path: '/admin/psikolog',
+				icon: <IoIosPeople size={25} />,
+			},
+			{
+				title: 'Data Konsultasi',
+				path: '/admin/consultation',
+				icon: <IoMdPeople size={25} />,
+			},
+		],
 	},
 	{
 		title: 'Postingan',

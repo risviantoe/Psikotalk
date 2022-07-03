@@ -33,9 +33,7 @@ const AdminArticle: React.FC<PageProps> = ({ pageTitle, icon }) => {
 		}
 	};
 
-	console.log(post?.length);
-
-	const theadData = ['No.', 'Judul', 'Tanggal', 'Kategori', 'Penulis'];	
+	const theadData = ['No.', 'Judul', 'Tanggal', 'Kategori', 'Penulis'];
 	const tbodyData = post
 		? post?.map((item, index) => ({
 				id: index,

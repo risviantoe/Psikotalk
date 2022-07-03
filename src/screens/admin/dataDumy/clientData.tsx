@@ -10,7 +10,7 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			<div style={{ textAlign: 'left' }}>Johnathan Alex</div>,
+			<div className="table__column-name">Johnathan Alex</div>,
 			'Johnathan-Alex@email.com',
 			'Laki-laki',
 		],
@@ -24,7 +24,7 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			<div style={{ textAlign: 'left' }}>Johnathan Alex</div>,
+			<div className="table__column-name">Johnathan Alex</div>,
 			'Johnathan-Alex@email.com',
 			'Laki-laki',
 		],
@@ -38,7 +38,7 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			<div style={{ textAlign: 'left' }}>
+			<div className="table__column-name">
 				Muhammad Chandra Saputra Nugroho Pangestu Sodhikin
 			</div>,
 			'Johnathan-Alex@email.com',

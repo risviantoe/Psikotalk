@@ -14,7 +14,13 @@
 	z-index: 999;
 	overflow: auto;
 	padding: 5% 0;
+	-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+
+.modal::-webkit-scrollbar {
+  display: none;
+} 
 
 .modal-content {
 	width: 600px;

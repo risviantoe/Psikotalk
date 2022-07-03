@@ -1,17 +1,16 @@
 import axios, { AxiosRequestConfig } from "axios";
+import { storageService } from ".";
 
 const main = axios.create({
-    baseURL: 'https://ptalk-backend-api.herokuapp.com/',
+	baseURL: 'https://api.psikotalk.com/',
 });
 
 main.interceptors.request.use(
 	function (config: AxiosRequestConfig) {
 		// Do something before request is sent
-		// const userToken = storageService.getToken() || '';
-        config.headers = {
-            'Access-Control-Allow-Credentials' : 'true',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
+		const userToken = storageService.getToken() || '';
+		config.headers = {
+			Authorization: userToken,
 		};
 
 		return config;

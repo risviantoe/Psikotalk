@@ -11,9 +11,10 @@ interface ModalConfirmationProps {
 	cancelButtonText?: string
 	onOk?: () => void
 	onClose: () => void
+	loading?: boolean
 }
 
-const ModalConfirmation: React.FC<ModalConfirmationProps> = ({ onClose, text, confirm, okButtonText, cancelButtonText = 'Kembali', onOk }) => {
+const ModalConfirmation: React.FC<ModalConfirmationProps> = ({ onClose, text, confirm, okButtonText, cancelButtonText = 'Kembali', onOk, loading }) => {
   	return (
 		<div className="modal-confirmation-wrapper">
 			<div className="modal-confirmation__text-wrapper">
@@ -21,7 +22,7 @@ const ModalConfirmation: React.FC<ModalConfirmationProps> = ({ onClose, text, co
 			</div>
 			<div className="modal-confirmation__button-wrapper">
 				<Button name={cancelButtonText} color="secondary" onClick={onClose} />
-				<Button name={confirm ? 'Batalkan' : okButtonText} color="primary" onClick={onOk} />
+				<Button name={confirm ? 'Batalkan' : okButtonText} color="primary" onClick={onOk} loading={loading} />
 			</div>
 		</div>
 	);

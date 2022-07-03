@@ -27,6 +27,7 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			file_ijazah: '',
 			surat_izin: '',
 			images: '',
+			jenjang_pendidikan: ''
 		},
 	});
 
@@ -43,6 +44,7 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 		file_ijazah,
 		surat_izin,
 		images,
+		jenjang_pendidikan
 	} = inputs;
 
 	const onSubmit = () => {
@@ -272,34 +274,33 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 								<select
 									name="educational-stage"
 									id="educational-stage"
-									// className={
-									// 	isSubmitted && !educationalStage
-									// 		? 'form-error'
-									// 		: ''
-									// }
-									// value={state.inputs.educationalStage}
-									// onChange={(e) =>
-									// 	dispatch({
-									// 		name: 'SET_INPUTS',
-									// 		payload: {
-									// 			educationalStage:
-									// 				e.target.value,
-									// 		},
-									// 	})
-									// }
+									className={
+										isSubmitted && !jenjang_pendidikan
+											? 'form-error'
+											: ''
+									}
+									value={state.inputs.jenjang_pendidikan}
+									onChange={(e) =>
+										dispatch({
+											name: 'SET_INPUTS',
+											payload: {
+												jenjang_pendidikan:
+													e.target.value,
+											},
+										})
+									}
 								>
 									<option>Pilih Jenjang Pendidikan</option>
-									<option value="S1">S1</option>
-									<option value="S2">S2</option>
-									<option value="S3">S3</option>
+									<option value="Sarjana">S1</option>
+									<option value="Magister">S2</option>
 								</select>
-								{/* <div className="form-error-message">
-									{isSubmitted && !educationalStage ? (
+								<div className="form-error-message">
+									{isSubmitted && !jenjang_pendidikan ? (
 										<span>
 											Jenjang pendidikan wajib diisi!
 										</span>
 									) : null}
-								</div> */}
+								</div>
 							</div>
 
 							<div className="form-input-group">

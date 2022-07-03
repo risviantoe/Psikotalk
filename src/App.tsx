@@ -38,10 +38,11 @@ import { HiUser } from 'react-icons/hi';
 import { BsPeopleFill } from 'react-icons/bs';
 import { FaClipboardList, FaMoneyCheckAlt, FaUserMd } from 'react-icons/fa';
 import { GoChecklist } from 'react-icons/go';
-import { IoIosPaper } from 'react-icons/io';
+import { IoIosPaper, IoMdPeople } from 'react-icons/io';
 import { AiFillSchedule } from 'react-icons/ai';
 import ComingSoon from './screens/ComingSoon';
 import LandingPage from './screens/public/LandingPage';
+import AdminConsultation from './screens/admin/consultation/AdminConsultation';
 
 const App = () => {
 	return (
@@ -101,6 +102,15 @@ const App = () => {
 							<AdminPsikolog
 								icon={<FaUserMd size={titleIconSize} />}
 								pageTitle="Daftar Psikolog"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/consultation"
+						element={
+							<AdminConsultation
+								icon={<IoMdPeople size={titleIconSize} />}
+								pageTitle="Daftar Konsultasi"
 							/>
 						}
 					></Route>
@@ -206,7 +216,7 @@ const App = () => {
 						}
 					></Route>
 					<Route
-						path="/admin/price/edit"
+						path="/admin/price/edit/:id"
 						element={
 							<AdminPriceCreate
 								icon={<MdPriceChange size={titleIconSize} />}
