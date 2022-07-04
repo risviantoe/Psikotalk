@@ -3,7 +3,7 @@ import { Consultation, ConsultationRequest } from '../../types';
 import { AxiosResponse } from 'axios';
 
 export const consultationGet = async (): Promise<AxiosResponse<Consultation[]>> => {
-	return await api.get('konsultasi/admin');
+	return await api.get('konsultasi');
 };
 
 export const consultationPost = async (data: ConsultationRequest): Promise<AxiosResponse<Consultation[]>> => {
