@@ -198,17 +198,6 @@ const AdminPsikolog: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			setTimeout(() => {
 				setShowToast(false);
 			}, 3000);
-			inputs.name = '';
-			inputs.username = '';
-			inputs.email = '';
-			inputs.gender = '';
-			inputs.biodata = '';
-			inputs.tanggal_lahir = '';
-			inputs.nomor_hp = '';
-			inputs.password = '';
-			inputs.file_ijazah = '';
-			inputs.surat_izin = '';
-			inputs.images = '';
 			dispatch({ name: 'SET_IS_SUBMITTED', payload: false });
 		} catch (error) {
 			console.log('Error, ', error);

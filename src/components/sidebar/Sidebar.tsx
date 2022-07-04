@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdHelp, MdLogout } from 'react-icons/md';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { storageService } from '../../services';
 
 // import { sidebarData } from './SidebarData';
 import './Sidebar.css';
@@ -11,7 +12,23 @@ interface sidebarData {
 	pageFor: string;
 }
 
+
 export const Sidebar: React.FC<sidebarData> = ({ data, pageFor }) => {
+	const navigate = useNavigate();
+
+	const logout = (): void => {
+		try {
+			if (pageFor === 'admin') {
+				navigate('/admin/signin');
+			} else if (pageFor === 'psikolog') {
+				navigate('/psikolog/signin');
+			}
+			storageService.removeToken();
+		} catch (error) {
+			console.log(error);
+			
+		}
+	};
 	return (
 		<div className="sidebar-wrapper">
 			<div className="sidebar-logo">
@@ -39,19 +56,16 @@ export const Sidebar: React.FC<sidebarData> = ({ data, pageFor }) => {
 						</NavLink>
 					) : null}
 
-					<NavLink
-						to="!#"
-						className={({ isActive }) =>
-							isActive
-								? 'sidebar-menu-link sidebar-menu-active'
-								: 'sidebar-menu-link'
-						}
+					<div
+						className="sidebar-menu-link"
+						onClick={() => logout()}
+						style={{ cursor: 'pointer' }}
 					>
 						<div className="sidebar-menu-content">
 							<MdLogout size={25} />
 							Logout
 						</div>
-					</NavLink>
+					</div>
 				</div>
 			</div>
 		</div>

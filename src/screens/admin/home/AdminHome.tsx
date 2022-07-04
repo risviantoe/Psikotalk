@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CardHome from '../../../components/cardHome/CardHome';
 
 import '../MainAdmin.css';
@@ -8,8 +8,11 @@ import { PageProps } from '../../../types/interface/page/Page';
 
 export const AdminHome: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const { setTitle, setIcon } = useOutletContext<any>();
-	setTitle(pageTitle);
-	setIcon(icon);
+
+	useEffect(() => {
+		setTitle(pageTitle);
+		setIcon(icon);
+	});
 
 	return (
 		<React.Fragment>

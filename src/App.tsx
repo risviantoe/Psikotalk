@@ -43,6 +43,7 @@ import { AiFillSchedule } from 'react-icons/ai';
 import ComingSoon from './screens/ComingSoon';
 import LandingPage from './screens/public/LandingPage';
 import AdminConsultation from './screens/admin/consultation/AdminConsultation';
+import AdminLogin from './screens/admin/auth/AdminLogin';
 
 const App = () => {
 	return (
@@ -61,8 +62,13 @@ const App = () => {
 				</Route>
 
 				<Route
-					path="/dashboard/signin"
+					path="/psikolog/signin"
 					element={<PsikologLogin />}
+				></Route>
+
+				<Route
+					path="/admin/signin"
+					element={<AdminLogin />}
 				></Route>
 
 				<Route

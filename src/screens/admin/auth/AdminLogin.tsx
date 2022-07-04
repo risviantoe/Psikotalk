@@ -5,9 +5,9 @@ import reducer from '../../auth/login/Login.reducer';
 import Button from '../../../components/button/Button';
 import { authService, storageService } from '../../../services';
 
-import './PsikologLogin.css';
+import './AdminLogin.css';
 
-const PsikologLogin: React.FC = () => {
+const AdminLogin: React.FC = () => {
 	const navigation = useNavigate();
 
 	const [state, dispatch] = useReducer(reducer, {
@@ -44,10 +44,10 @@ const PsikologLogin: React.FC = () => {
 		setStatus(0);
 
 		try {
-			const res = await authService.loginPsikolog(inputs);
+			const res = await authService.login(inputs);
 			setLoading(false);
 			storageService.setToken(res.data.token);
-			navigation('/psikolog/dashboard');
+			navigation('/admin/dashboard');
 			setStatus(0);
 		} catch (error: any) {
 			console.log(error.response);
@@ -81,7 +81,7 @@ const PsikologLogin: React.FC = () => {
 							Masuk ke Akun Anda
 						</span>
 						<div className="auth__right-subtitle">
-							Selamat Datang di Platform PsikoTalk
+							Selamat Datang di Platform PsikoTalk untuk Admin
 						</div>
 					</div>
 					<div className="auth__login--right-form-wrapper">
@@ -182,4 +182,4 @@ const PsikologLogin: React.FC = () => {
 	);
 };
 
-export default PsikologLogin;
+export default AdminLogin;

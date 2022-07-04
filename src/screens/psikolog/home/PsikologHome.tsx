@@ -12,7 +12,7 @@ export const PsikologHome: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	});
 	return (
 		<React.Fragment>
-			<div className="psikolog__content--body bg-white">
+			<div className="psikolog__content--body bg-white" style={{ marginBottom: 100 }}>
 				<div className="psikolog-home-content-wrapper">
 					<div className="psikolog-content-row">
 						<div className="psikolog-card-detailprofile psikolog-card-shadow">

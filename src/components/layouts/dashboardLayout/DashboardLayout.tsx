@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import NavbarDashboard from '../../navbarDashboard/NavbarDashboard';
 import { Sidebar } from '../../sidebar/Sidebar';
 import { SidebarDashboardAdmin, SidebarDashboardPsikolog } from './sidebarData'
 
 import './DashboardLayout.css';
+import { storageService } from '../../../services';
 
 interface DashboardLayoutProps {
 	pageFor: string
@@ -13,6 +14,17 @@ interface DashboardLayoutProps {
 export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ pageFor }) => {
 	const [title, setTitle] = useState<string>('')
 	const [icon, setIcon] = useState<React.ReactNode>()
+
+	const location = useLocation();
+	const navigate = useNavigate()
+	
+	useEffect(() => {
+		const token = storageService.getToken();
+		if (!token) {
+			if (location.pathname === "/psikolog/dashboard") navigate('/psikolog/signin');
+			if (location.pathname === '/admin/dashboard') navigate('/admin/signin');
+		}
+	}, [])
 
 	return (
 		<div className="dashboard-layout-wrapper">

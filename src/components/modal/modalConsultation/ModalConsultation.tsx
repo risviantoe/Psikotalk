@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ConsultationContext from '../../../context/ConsultationAdmin.context';
-import { Psikolog } from '../../../types';
+import { Consultation, Psikolog } from '../../../types';
 import Button from '../../button/Button';
 import Modal from '../Modal';
 
@@ -11,6 +11,7 @@ interface ModalConsultationProps {
 	type: string
 	psikolog: Psikolog[]
 	loading?: boolean
+	detailConsul?: Consultation
 }
 
 const ModalConsultation: React.FC<ModalConsultationProps> = ({
@@ -19,8 +20,11 @@ const ModalConsultation: React.FC<ModalConsultationProps> = ({
 	onOK,
 	type,
 	psikolog,
-	loading
+	loading,
+	detailConsul
 }) => {
+	const dataCategory = ['Pendidikan', 'Pekerjaan', 'Cinta', 'Keluarga']
+	
 	return (
 		<ConsultationContext.Consumer>
 			{
@@ -36,7 +40,7 @@ const ModalConsultation: React.FC<ModalConsultationProps> = ({
 										name="question-category"
 										id="psikolog-name"
 										onChange={(e) =>
-											value.setPsikolog(e.target.value)
+											value.setPsikolog(detailConsul? detailConsul.psikolog._id : e.target.value)
 										}
 									>
 										<option>Pilih psikolog</option>
@@ -45,6 +49,7 @@ const ModalConsultation: React.FC<ModalConsultationProps> = ({
 												<option
 													key={item._id}
 													value={item._id}
+													selected={detailConsul && detailConsul?.psikolog._id === item._id}
 												>
 													{item.name}
 												</option>
@@ -63,21 +68,19 @@ const ModalConsultation: React.FC<ModalConsultationProps> = ({
 									<select
 										name="question-category"
 										id="question-category"
+										value={value.category}
 										onChange={(e) =>
 											value.setCategory(e.target.value)
 										}
 									>
 										<option>Pilih kategori</option>
-										<option value="Pendidikan">
-											Pendidikan
-										</option>
-										<option value="Pekerjaan">
-											Pekerjaan
-										</option>
-										<option value="Cinta">Cinta</option>
-										<option value="Keluarga">
-											Keluarga
-										</option>
+										{
+											dataCategory.map((item, index) => (
+												<option key={index} value={item} selected={detailConsul && detailConsul?.category === item}>
+													{item}
+												</option>
+											))
+										}
 									</select>
 								</div>
 

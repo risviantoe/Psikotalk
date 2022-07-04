@@ -8,6 +8,7 @@ import Pagination from '../../../components/pagination/Pagination';
 import Search from '../../../components/search/Search';
 import SekeletonTable from '../../../components/sekeletonLoading/SekeletonTable';
 import Table from '../../../components/table/Table';
+import Toast from '../../../components/toast/Toast';
 import ConsultationContext from '../../../context/ConsultationAdmin.context';
 import { consultationService, psikologService } from '../../../services';
 import { Consultation, ConsultationRequest, Psikolog } from '../../../types';
@@ -28,7 +29,11 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const [showModalDelete, setShowModalDelete] = useState<boolean>(false);
 	const [showModal, setShowModal] = useState<boolean>(false);
 	const [typeModal, setTypeModal] = useState<string>('add');
-	const [consulId, setConsulId] = useState<string>('')
+	const [consulId, setConsulId] = useState<string>('');
+	const [detailConsul, setDetailConsul] = useState<Consultation>();
+	const [showToastSuccess, setShowToastSuccess] = useState<boolean>(false);
+	const [showToastError, setShowToastError] = useState<boolean>(false);
+	const [toastMsg, setToastMsg] = useState<string>('');
 
 	const getConsul = async () => {
 		setLoading(true);
@@ -37,9 +42,14 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			setConsul(res.data);
 			setLoading(false);
 			console.log(res);
-		} catch (error) {
-			console.log(error);
+		} catch (error: any) {
+			console.log(error.response.statusText);
 			setLoading(false);
+			setShowToastError(true);
+			setToastMsg(error.response.statusText);
+			setTimeout(() => {
+				setShowToastError(false);
+			}, 5000);
 		}
 	};
 
@@ -47,8 +57,13 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 		try {
 			const res = await psikologService.psikologGet();
 			setPsikolog(res.data);
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error);
+			setShowToastError(true);
+			setToastMsg(error.response.statusText);
+			setTimeout(() => {
+				setShowToastError(false);
+			}, 5000);
 		}
 	};
 
@@ -68,13 +83,54 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const [inPsikolog, setInPsikolog] = useState<string>('');
 	const [inCategory, setInCategory] = useState<string>('');
 
+	const onClickUpdate = async (id: string) => {
+		setShowModal(true);
+		setTypeModal('edit');
+		setConsulId(id);
+		setLoading(true);
+		try {
+			let res = await consultationService.consultationDetail(id);
+
+			setDetailConsul(res.data);
+			setInPsikolog(res.data.psikolog._id)
+			setInCategory(res.data.category)
+			setLoading(false);
+		} catch (error: any) {
+			console.log(error);
+			setShowToastError(true);
+			setToastMsg(error.response.statusText);
+			setTimeout(() => {
+				setShowToastError(false);
+			}, 5000);
+		}
+	};
+
 	const onClickDelete = (id: string) => {
 		setShowModalDelete(true);
-		setConsulId(id)
-	}
+		setConsulId(id);
+	};
+
+	const onDelete = async () => {
+		setLoading(true);
+
+		try {
+			let res = await consultationService.consultationDelete(consulId);
+			setLoading(false);
+			setShowModalDelete(false);
+			getConsul();
+		} catch (error: any) {
+			console.log(error);
+			setLoading(false);
+			setShowToastError(true);
+			setToastMsg(error.response.statusText);
+			setTimeout(() => {
+				setShowToastError(false);
+			}, 5000);
+		}
+	};
 
 	const onSubmit = async () => {
-		setLoading(true)
+		setLoading(true);
 
 		let data: ConsultationRequest = {
 			psikolog: inPsikolog,
@@ -84,36 +140,57 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 
 		try {
 			let res = await consultationService.consultationPost(data);
-			setLoading(false)
-			setShowModal(false)
+			setLoading(false);
+			setShowModal(false);
 			getConsul();
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error);
+			setLoading(false);
+			setShowToastError(true);
+			setToastMsg(error.response.statusText);
+			setTimeout(() => {
+				setShowToastError(false);
+			}, 5000);
 		}
 	};
 
-	const onDelete = async () => {
-		setLoading(true)
+	const onUpdate = async () => {
+		setLoading(true);
+
+		if (!inPsikolog || !inCategory) return setLoading(false)
+
+		
+		let data: ConsultationRequest = {
+			psikolog: inPsikolog,
+			category: inCategory,
+			jadwal: new Date(),
+		};
+		
 
 		try {
-			let res = await consultationService.consultationDelete(consulId);
-			setLoading(false)
-			setShowModalDelete(false)
+			let res = await consultationService.consultationUpdate(
+				consulId,
+				data
+			);
+			setLoading(false);
+			setShowModal(false);
 			getConsul();
-
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error);
-			
+			setLoading(false);
+			setShowToastError(true);
+			setToastMsg(error.response.statusText);
+			setTimeout(() => {
+				setShowToastError(false);
+			}, 5000);
 		}
-
-	}
+	};
 
 	useEffect(() => {
 		getConsul();
 		getPsikolog();
 	}, []);
 
-	
 	return (
 		<ConsultationContext.Provider
 			value={{
@@ -125,6 +202,7 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			}}
 		>
 			<React.Fragment>
+				<Toast show={showToastError} message={toastMsg} type="danger" />
 				<div className="content-top-menu">
 					<Search />
 					<div className="content-top-menu-action">
@@ -152,16 +230,13 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 									name: 'Edit konsultasi',
 									color: 'primary',
 									icon: 'icon-edit',
-									onClick: () => {
-										setShowModal(true);
-										setTypeModal('edit');
-									},
+									onClickUpdate: (e) => onClickUpdate(e),
 								}}
 								action2={{
 									name: 'Hapus',
 									color: 'danger',
 									icon: 'icon-delete',
-									onClickUpdate: (e) => onClickDelete(e)
+									onClickUpdate: (e) => onClickDelete(e),
 								}}
 							/>
 						)}
@@ -179,10 +254,11 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 				<ModalConsultation
 					show={showModal}
 					onClose={() => setShowModal(false)}
-					onOK={onSubmit}
+					onOK={typeModal === 'add' ? onSubmit : onUpdate}
 					type={typeModal}
 					psikolog={psikolog}
 					loading={loading}
+					detailConsul={detailConsul}
 				/>
 			</React.Fragment>
 		</ConsultationContext.Provider>

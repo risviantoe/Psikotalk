@@ -13,3 +13,7 @@ export const register = async (data: RegisterRequest): Promise<RegisterResponse>
 export const login = async (data: LoginRequest): Promise<LoginResponse> => {
 	return await api.post('auth/login', data);
 };
+
+export const loginPsikolog = async (data: LoginRequest): Promise<LoginResponse> => {
+	return await api.post('auth/psikolog/login', data);
+};
