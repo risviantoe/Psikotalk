@@ -81,7 +81,7 @@ a {
 }
 
 .text-link {
-	color: #00ADAC;
+	color: #00adac;
 	text-decoration: none;
 	transition: 0.3s;
 	font-weight: 700;
@@ -140,9 +140,8 @@ select {
 	border: 1px solid #c9c9cf;
 }
 
-.form input:focus {
-	outline: none;
-	border: 1px solid #006161;
+input:focus {
+	outline: 1px solid #006161;
 }
 
 .form input[type='file'] {
@@ -252,7 +251,7 @@ textarea {
 
 .input-group {
 	position: relative;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .input-group input {
@@ -261,18 +260,64 @@ textarea {
 
 .input-group-append {
 	position: absolute;
-    right: 0;
-    background: #E9ECEF;
-    height: 100%;
-    top: 0;
-    width: 50px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 600;
+	right: 0;
+	background: #e9ecef;
+	height: 100%;
+	top: 0;
+	width: 50px;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	font-weight: 600;
 	border: 1px solid #c9c9cf;
 	border-radius: 0 8px 8px 0;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.color-psikotalk {
+	color: #35858b;
+}
+
+@media (min-width: 1536px) {
+	input[type='text'],
+	input[type='email'],
+	input[type='password'],
+	input[type='number'],
+	input[type='date'],
+	input[type='file'],
+	select {
+		height: 38px;
+		padding: 10px 20px;
+		border-radius: 8px;
+		box-sizing: border-box;
+		font-size: 15px;
+		color: #555555;
+		border: 1px solid #c9c9cf;
+	}
+
+	.form-input-group {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin: 5px 0 15px 0;
+	}
+
+	.form-input-inline-radio {
+		display: flex;
+		justify-content: flex-start;
+		margin-bottom: 0;
+	}
+
+	.form-input-radio label {
+		cursor: pointer;
+		font-size: 16px;
+	}
+
+	
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
-import AuthLayout from './components/layouts/authLayout/AuthLayout';
+import AuthLayout from './layouts/authLayout/AuthLayout';
+import { DashboardLayout } from './layouts/dashboardLayout/DashboardLayout';
 
 import { Login } from './screens/auth/login/Login';
 import { Register } from './screens/auth/register/Register';
@@ -15,7 +16,6 @@ import { PsikologProfile } from './screens/psikolog/profle/PsikologProfile';
 import { PsikologSchedule } from './screens/psikolog/schedule/PsikologSchedule';
 import { PsikologScheduleHistory } from './screens/psikolog/schedule/PsikologScheduleHistory';
 import { PsikologClient } from './screens/psikolog/client/PsikologClient';
-import { DashboardLayout } from './components/layouts/dashboardLayout/DashboardLayout';
 import PsikologHelp from './screens/psikolog/help/PsikologHelp';
 import PsikologIncome from './screens/psikolog/income/PsikologIncome';
 import PsikologNotification from './screens/psikolog/notification/PsikologNotification';
@@ -33,9 +33,15 @@ import AdminQuestionBankEdit from './screens/admin/questionBank/AdminQuestionBan
 import AdminQuestionCreate from './screens/admin/questionBank/AdminQuestionCreate';
 import AdminPrice from './screens/admin/price/AdminPrice';
 import AdminPriceCreate from './screens/admin/price/AdminPriceCreate';
-import { MdAccessTimeFilled, MdHelp, MdNotifications, MdPriceChange, MdSpaceDashboard } from 'react-icons/md';
+import {
+	MdAccessTimeFilled,
+	MdHelp,
+	MdNotifications,
+	MdPriceChange,
+	MdSpaceDashboard,
+} from 'react-icons/md';
 import { HiUser } from 'react-icons/hi';
-import { BsPeopleFill } from 'react-icons/bs';
+import { BsPeopleFill, BsPersonFill } from 'react-icons/bs';
 import { FaClipboardList, FaMoneyCheckAlt, FaUserMd } from 'react-icons/fa';
 import { GoChecklist } from 'react-icons/go';
 import { IoIosPaper, IoMdPeople } from 'react-icons/io';
@@ -44,12 +50,15 @@ import ComingSoon from './screens/ComingSoon';
 import LandingPage from './screens/public/LandingPage';
 import AdminConsultation from './screens/admin/consultation/AdminConsultation';
 import AdminLogin from './screens/admin/auth/AdminLogin';
+import PublicLayout from './layouts/publicLayout/PublicLayout';
 
 const App = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<LandingPage />}></Route>
+				<Route path="/" element={<PublicLayout />}>
+					<Route path="/" element={<LandingPage />}></Route>
+				</Route>
 
 				<Route path="/auth" element={<AuthLayout />}>
 					<Route path="/auth/login" element={<Login />} />
@@ -66,10 +75,7 @@ const App = () => {
 					element={<PsikologLogin />}
 				></Route>
 
-				<Route
-					path="/admin/signin"
-					element={<AdminLogin />}
-				></Route>
+				<Route path="/admin/signin" element={<AdminLogin />}></Route>
 
 				<Route
 					path="/admin"
@@ -88,8 +94,8 @@ const App = () => {
 						path="/admin/profile"
 						element={
 							<AdminProfile
-								icon={<HiUser size={titleIconSize} />}
-								pageTitle="Profile"
+								icon={<BsPersonFill size={titleIconSize} />}
+								pageTitle="Profil"
 							/>
 						}
 					></Route>
@@ -227,6 +233,15 @@ const App = () => {
 							<AdminPriceCreate
 								icon={<MdPriceChange size={titleIconSize} />}
 								pageTitle="Edit Harga"
+							/>
+						}
+					></Route>
+					<Route
+						path="/admin/notification"
+						element={
+							<PsikologNotification
+								icon={<MdNotifications size={titleIconSize} />}
+								pageTitle="Notifikasi"
 							/>
 						}
 					></Route>

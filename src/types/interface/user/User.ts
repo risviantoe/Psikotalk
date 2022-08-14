@@ -1,4 +1,4 @@
-export interface User {
+export interface DataUser {
 	name: string;
 	email: string;
 	gender: string;
@@ -9,4 +9,8 @@ export interface User {
 	createdAt: Date;
 	updatedAt: Date;
 	__v: number;
+}
+
+export interface User {
+	data: DataUser
 }

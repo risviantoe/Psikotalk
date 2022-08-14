@@ -1,19 +1,14 @@
 import React from 'react';
 import { BsFillChatDotsFill, BsFillPatchCheckFill } from 'react-icons/bs';
 import { IoMdVideocam } from 'react-icons/io';
-import { useNavigate } from 'react-router-dom';
-import Button from '../../components/button/Button';
 import Footer from '../../components/footer/Footer';
 import Icon from '../../components/icon/Icon';
 import { Navbar } from '../../components/navbar/Navbar';
 import './LandingPage.css';
 const LandingPage = () => {
-
-	const navigate = useNavigate()
 	
 	return (
 		<React.Fragment>
-			<Navbar />
 			<div className="landingPage__content">
 				<div className="landingPage__ornament1" />
 				<div className="landingPage__ornament2" />
@@ -35,7 +30,7 @@ const LandingPage = () => {
 								className="button primary"
 								style={{ borderRadius: 25 }}
 							>
-								Mulai Sekarang
+								Unduh Sekarang
 							</a>
 						</div>
 					</div>
@@ -215,7 +210,7 @@ const LandingPage = () => {
 					</div>
 					<div className="landingPage__ornament4" />
 				</section>
-				<section className="landingPage__offers" id="join">
+				<section className="landingPage__offers" id="offers">
 					<div className="landingPage__offers-content">
 						<div className="landingPage__offers-content-img">
 							<img
@@ -225,35 +220,39 @@ const LandingPage = () => {
 						</div>
 						<div className="landingPage__offers-content-text">
 							<div className="landingPage__offers-content-text-title">
-								Join di{' '}
-								<span className="landingPage__title1">
-									Psiko
-								</span>
-								<span className="landingPage__title2">
-									Talk
-								</span>
-								!
+								Atasi masalahmu dengan ahlinya!
 							</div>
 							<div className="landingPage__offers-content-text-desc">
-								Terbuka kesempatan bagi <span>Psikolog</span>{' '}
-								<br />
-								untuk bergabung bersama kami
+								Bicarakan apa yang menjadi bebanmu dan
+								kembalikan keceriaanmu
 							</div>
 							<div className="landingPage__offers-content-lists">
 								<ul>
 									<li>
 										<BsFillPatchCheckFill color="006161" />
-										Menerima Fresh Graduate
+										Membantu lebih dari{' '}
+										<span className="text-bold color-psikotalk">
+											172.000
+										</span>{' '}
+										pengguna
 									</li>
 									<li>
 										<BsFillPatchCheckFill color="006161" />
-										Kuota terbatas
+										Melakukan lebih dari{' '}
+										<span className="text-bold color-psikotalk">
+											600.000
+										</span>{' '}
+										sesi konseling
 									</li>
 									<li>
 										<BsFillPatchCheckFill color="006161" />
-										Mendapat Pengalaman Bekerja
+										Mendapatkan{' '}
+										<span className="text-bold color-psikotalk">
+											4.5 dari 5
+										</span>{' '}
+										tingkat kepuasan
 									</li>
-									<li>
+									{/* <li>
 										<BsFillPatchCheckFill color="006161" />
 										Memperoleh gaji sebagai Psikolog di{' '}
 										<span>
@@ -264,7 +263,7 @@ const LandingPage = () => {
 												Talk
 											</span>
 										</span>
-									</li>
+									</li> */}
 								</ul>
 							</div>
 						</div>
@@ -281,7 +280,7 @@ const LandingPage = () => {
 						</div>
 						<div className="landingPage__cta-text-desc">
 							<p>
-								Konsultasi Psikologi dan Psikotes salam satu
+								Konsultasi Psikologi dan Psikotes dalam satu
 								aplikasi untuk kesehatan Psikologimu
 							</p>
 							<span>Unduh Sekarang!</span>
@@ -293,7 +292,7 @@ const LandingPage = () => {
 									alt="app-store"
 								/>
 							</a>
-							<a href="http://">
+							<a href="https://play.google.com/store/apps/details?id=id.co.mka.psikotalk">
 								<img
 									src="assets/images/Google-play.png"
 									alt="app-store"
@@ -308,7 +307,6 @@ const LandingPage = () => {
 						/>
 					</div>
 				</section>
-				<Footer />
 			</div>
 		</React.Fragment>
 	);

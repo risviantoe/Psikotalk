@@ -70,6 +70,7 @@ const AdminQuestionBank: React.FC<PageProps> = ({ pageTitle, icon }) => {
 						type="text"
 						name="question-name"
 						id="question-name"
+						placeholder="Masukkan nama soal"
 					/>
 				</div>
 				<div className="form-input-group">

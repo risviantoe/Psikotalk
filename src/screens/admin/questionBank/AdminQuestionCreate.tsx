@@ -114,14 +114,16 @@ const AdminQuestionCreate: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	};
 
 	const onBack = () => {
-		if (
-			inputs.question ||
+		if (inputs.question ||
 			inputs.opsi1 ||
 			inputs.opsi2 ||
 			inputs.opsi3 ||
 			inputs.opsi4
-		)
+		) {
 			setShowModal(true);
+		} else {
+			navigate('/admin/bank-question/edit')
+		}
 	};
 	return (
 		<React.Fragment>
@@ -220,7 +222,7 @@ const AdminQuestionCreate: React.FC<PageProps> = ({ pageTitle, icon }) => {
 					</div>
 					<div className="question--input-wrapper">
 						<label htmlFor="question-point">Poin</label>
-						<input type="number" name="point" id="question-point" />
+						<input type="number" name="point" id="question-point" placeholder="Masukkan jumlah poin" />
 					</div>
 
 					<div className="question--action-wrapper">

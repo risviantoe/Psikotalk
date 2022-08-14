@@ -6,6 +6,7 @@ import * as consultationService from './admin/consultation.service'
 import * as priceService from './admin/prices.service'
 import * as psikologService from './admin/psikolog.service'
 import * as transactionService from './admin/transaction.service'
+import * as psikologConsulService from './psikolog/Consultation.service'
 
 export {
 	authService,
@@ -16,4 +17,5 @@ export {
 	priceService,
 	psikologService,
 	transactionService,
+	psikologConsulService,
 };

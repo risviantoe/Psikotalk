@@ -47,7 +47,7 @@ export const Login: React.FC = () => {
 
 		try {
 			const res = await authService.login(inputs);
-			storageService.setToken(res.data.token);
+			storageService.setToken(res.data.data.token);
 			setLoading(false);
 			navigation('/admin/dashboard');
 			setStatus(0);

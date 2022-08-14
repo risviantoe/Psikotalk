@@ -15,5 +15,5 @@ export interface LoginData {
 }
 
 export interface LoginResponse {
-	data: LoginData;
+	data: Data;
 }

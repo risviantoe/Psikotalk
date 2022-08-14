@@ -55,7 +55,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ item }) => {
 									? 'sidebar-menu-link sidebar-menu-active'
 									: 'sidebar-menu-link'
 							}
-							style={{ padding: '18px 60px', marginTop: -5 }}
+							style={{ paddingLeft: '60px' }}
 						>
 							<div className="sidebar-menu-content">
 								{item.icon} {item.title}

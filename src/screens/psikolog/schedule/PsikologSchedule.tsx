@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import ScheduleList from '../../../components/scheduleList/ScheduleList';
 
@@ -7,6 +7,9 @@ import Pagination from '../../../components/pagination/Pagination';
 import { PageProps } from '../../../types/interface/page/Page';
 import Search from '../../../components/search/Search';
 import Button from '../../../components/button/Button';
+import { psikologConsulService } from '../../../services';
+import { Consultation } from '../../../types';
+import moment from 'moment'
 
 export const PsikologSchedule: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const { setTitle, setIcon } = useOutletContext<any>();
@@ -15,6 +18,33 @@ export const PsikologSchedule: React.FC<PageProps> = ({ pageTitle, icon }) => {
 		setIcon(icon);
 	});
 	const navigate = useNavigate()
+
+	const [consul, setConsul] = useState<Array<Consultation>>([]);
+	const [loading, setLoading] = useState<boolean>(false);
+	const [showToastError, setShowToastError] = useState<boolean>(false);
+	const [toastMsg, setToastMsg] = useState<string>('');
+
+	const getConsul = async () => {
+		setLoading(true);
+		try {
+			const res = await psikologConsulService.consultationGet();
+			setConsul(res.data);
+			setLoading(false);
+			console.log(res);
+		} catch (error: any) {
+			console.log(error.response.statusText);
+			setLoading(false);
+			setShowToastError(true);
+			setToastMsg(error.response.statusText);
+			setTimeout(() => {
+				setShowToastError(false);
+			}, 5000);
+		}
+	};
+
+	useEffect(() => {
+		getConsul();
+	}, []);
 
 	return (
 		<React.Fragment>

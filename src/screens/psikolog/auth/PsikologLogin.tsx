@@ -46,7 +46,7 @@ const PsikologLogin: React.FC = () => {
 		try {
 			const res = await authService.loginPsikolog(inputs);
 			setLoading(false);
-			storageService.setToken(res.data.token);
+			storageService.setToken(res.data.data.token);
 			navigation('/psikolog/dashboard');
 			setStatus(0);
 		} catch (error: any) {

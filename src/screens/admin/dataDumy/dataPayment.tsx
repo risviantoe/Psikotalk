@@ -10,7 +10,7 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			'Johnathan Alex',
+			<div className="table__column-name">Johnathan Alex</div>,
 			'Transfer Bank',
 			'22/05/2022',
 		],
@@ -24,7 +24,7 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			'Johnathan Alex Christine',
+			<div className="table__column-name">Edwin Risvianto</div>,
 			'Transfer Bank',
 			'22/05/2022',
 		],
@@ -38,7 +38,7 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			'Muhammad Chandra Saputra Nugroho Pangestu Sodhikin',
+			<div className="table__column-name">Muhammad Chandra Saputra</div>,
 			'Transfer Bank',
 			'22/05/2022',
 		],

@@ -53,19 +53,31 @@ const AdminPrice: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			.join('');
 	};
 
-	const theadData = ['No', 'Nama', 'Harga', 'Diskon', 'Harga setelah diskon'];
-	const tbodyData = prices
-		? prices.map((item, index) => ({
-				id: item._id,
-				items: [
-					index + 1,
-					item.opsi,
-					'Rp. ' + formatRupiah(item.normal_price),
-					item.discount + '%',
-					'Rp. ' + formatRupiah(item.fix_price),
-				],
-		  }))
-		: [];
+	const theadData = ['No', 'Nama Paket', 'Harga', 'Diskon', 'Harga setelah diskon'];
+	// const tbodyData = prices
+	// 	? prices.map((item, index) => ({
+	// 			id: item._id,
+	// 			items: [
+	// 				index + 1,
+	// 				item.opsi,
+	// 				'Rp ' + formatRupiah(item.normal_price),
+	// 				item.discount + '%',
+	// 				'Rp ' + formatRupiah(item.fix_price),
+	// 			],
+	// 	  }))
+	// 	: [];
+	const tbodyData = [
+		{
+			id: '1',
+			items: [
+				'1',
+				'Konsultasi Video Meeting',
+				'Rp 10.000',
+				'10%',
+				'Rp 9.000',
+			],
+		},
+	];
 
 	useEffect(() => {
 		getPrices();

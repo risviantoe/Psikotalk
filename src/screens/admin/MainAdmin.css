@@ -16,3 +16,9 @@
 .color-admin {
     color: #00ADAC;
 }
+
+@media (min-width: 1536px) {
+    .admin__content--body {
+        margin-top: 0;
+    }
+}

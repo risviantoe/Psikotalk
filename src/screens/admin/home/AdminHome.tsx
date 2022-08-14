@@ -24,24 +24,28 @@ export const AdminHome: React.FC<PageProps> = ({ pageTitle, icon }) => {
 							total={1280}
 							icon={'icon-peoples'}
 							color={'#00ADAC'}
+							link={'/admin/client'}
 						/>
 						<CardHome
 							title={'Jumlah Bank Soal'}
 							total={28}
 							icon={'icon-list'}
 							color={'#0A6B72'}
+							link={'/admin/bank-question'}
 						/>
 						<CardHome
 							title={'Jumlah Psikolog'}
 							total={30}
 							icon={'icon-data'}
 							color={'#009289'}
+							link={'/admin/psikolog'}
 						/>
 						<CardHome
-							title={'Jumlah Artikel'}
+							title={'Jumlah Postingan'}
 							total={120}
 							icon={'icon-articel'}
 							color={'#00B29D'}
+							link={'/admin/post'}
 						/>
 					</div>
 				</div>

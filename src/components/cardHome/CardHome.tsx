@@ -7,15 +7,16 @@ interface CardHomeProps {
 	title?: string
 	icon?: string
   color?: string
+  link?: string
 }
 
-const CardHome: React.FC<CardHomeProps> = ({ total = 0, title = 'Jumlah apa gitu', color = '#00ADAC', icon = '' }) => {
+const CardHome: React.FC<CardHomeProps> = ({ total = 0, title = 'Jumlah apa gitu', color = '#00ADAC', icon = '', link = '#' }) => {
   return (
     <div className="dashboard-home-card-items" style={{background: color}}>
       <div className="dashboard-home-card-text">
         <span className="dashboard-home-card-text-title">{title}</span>
         <h1>{total}</h1>
-        <Link to='#' className="dashboard-home-card-text-detail">
+        <Link to={link} className="dashboard-home-card-text-detail">
           <span>Lihat detail</span>
           <i className="icon icon-chevron-down dashboard-home-card-icon-detail"></i>
         </Link>

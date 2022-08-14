@@ -74,3 +74,63 @@
     right: 0;
     bottom: 0;
 }
+
+@media (min-width: 1536px) {
+    .dashboard-home-card-items {
+        position: relative;
+        width: 48%;
+        height: 180px;
+        border-radius: 20px;
+        padding: 0 50px;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .dashboard-home-card-text .dashboard-home-card-text-title {
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .dashboard-home-card-text h1 {
+        font-size: 42px;
+        margin-bottom: 15px;
+    }
+
+    .dashboard-home-card-text .dashboard-home-card-text-detail {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        transition: ease-in-out 0.1s;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+
+    .dashboard-home-card-icon i {
+        background: #fff;
+        width: 85px;
+        height: 85px;
+    }
+
+    .dashboard-home-card-ornament {
+        background: url(/public/assets/icons/card-ornament01.svg);
+        height: 85px;
+        width: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .dashboard-home-card-text-detail:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .dashboard-home-card-text-detail:hover .dashboard-home-card-icon-detail {
+        background: rgba(255, 255, 255, 1);
+    }
+}

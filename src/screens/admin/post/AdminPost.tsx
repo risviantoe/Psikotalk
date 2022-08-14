@@ -33,19 +33,19 @@ const AdminArticle: React.FC<PageProps> = ({ pageTitle, icon }) => {
 		}
 	};
 
-	const theadData = ['No.', 'Judul', 'Tanggal', 'Kategori', 'Penulis'];
-	const tbodyData = post
-		? post?.map((item, index) => ({
-				id: index,
-				items: [
-					index + 1,
-					item.title,
-					item.createdAt,
-					item.category,
-					item.author,
-				],
-		  }))
-		: [];
+	const theadData = ['Judul', 'Tanggal', 'Kategori', 'Penulis'];
+	// const tbodyData = post
+	// 	? post?.map((item, index) => ({
+	// 			id: index,
+	// 			items: [
+	// 				// index + 1,
+	// 				item.title,
+	// 				item.createdAt,
+	// 				item.category,
+	// 				item.author,
+	// 			],
+	// 	  }))
+	// 	: [];
 
 	useEffect(() => {
 		setTitle(pageTitle);

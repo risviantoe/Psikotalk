@@ -6,7 +6,7 @@ import { MdNotificationsActive } from 'react-icons/md';
 
 interface NotificationProps {
 	notificationType: string;
-	text: string;
+	text: React.ReactNode;
 	time: string;
 	size?: number;
 }

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import NavbarDashboard from '../../navbarDashboard/NavbarDashboard';
-import { Sidebar } from '../../sidebar/Sidebar';
+import NavbarDashboard from '../../components/navbarDashboard/NavbarDashboard';
+import { Sidebar } from '../../components/sidebar/Sidebar';
 import { SidebarDashboardAdmin, SidebarDashboardPsikolog } from './sidebarData'
 
 import './DashboardLayout.css';
-import { storageService } from '../../../services';
+import { storageService } from '../../services';
 
 interface DashboardLayoutProps {
 	pageFor: string

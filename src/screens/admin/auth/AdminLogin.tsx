@@ -45,8 +45,10 @@ const AdminLogin: React.FC = () => {
 
 		try {
 			const res = await authService.login(inputs);
+			console.log(res);
+			
 			setLoading(false);
-			storageService.setToken(res.data.token);
+			storageService.setToken(res.data.data.token);
 			navigation('/admin/dashboard');
 			setStatus(0);
 		} catch (error: any) {
@@ -149,14 +151,14 @@ const AdminLogin: React.FC = () => {
 										) : null}
 									</div>
 								</div>
-								<div className="auth-forgot">
+								{/* <div className="auth-forgot">
 									<Link
 										to="/auth/forgot"
 										className="text-link"
 									>
 										Lupa password?
 									</Link>
-								</div>
+								</div> */}
 								{status !== 0 && status === 401 ? (
 									<div className="auth-alert">
 										<TiWarning />

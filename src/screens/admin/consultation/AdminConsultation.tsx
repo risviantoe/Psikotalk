@@ -31,9 +31,9 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const [typeModal, setTypeModal] = useState<string>('add');
 	const [consulId, setConsulId] = useState<string>('');
 	const [detailConsul, setDetailConsul] = useState<Consultation>();
-	const [showToastSuccess, setShowToastSuccess] = useState<boolean>(false);
 	const [showToastError, setShowToastError] = useState<boolean>(false);
 	const [toastMsg, setToastMsg] = useState<string>('');
+	const [filter, setFilter] = useState<string>('');
 
 	const getConsul = async () => {
 		setLoading(true);
@@ -92,8 +92,8 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			let res = await consultationService.consultationDetail(id);
 
 			setDetailConsul(res.data);
-			setInPsikolog(res.data.psikolog._id)
-			setInCategory(res.data.category)
+			setInPsikolog(res.data.psikolog._id);
+			setInCategory(res.data.category);
 			setLoading(false);
 		} catch (error: any) {
 			console.log(error);
@@ -157,15 +157,13 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const onUpdate = async () => {
 		setLoading(true);
 
-		if (!inPsikolog || !inCategory) return setLoading(false)
+		if (!inPsikolog || !inCategory) return setLoading(false);
 
-		
 		let data: ConsultationRequest = {
 			psikolog: inPsikolog,
 			category: inCategory,
 			jadwal: new Date(),
 		};
-		
 
 		try {
 			let res = await consultationService.consultationUpdate(
@@ -204,7 +202,17 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			<React.Fragment>
 				<Toast show={showToastError} message={toastMsg} type="danger" />
 				<div className="content-top-menu">
-					<Search />
+					<div style={{ display: 'flex', gap: 10, width: '80%' }}>
+						<Search />
+						<select name="category" id="category" onChange={(e) => setFilter(e.target.value)}>
+							{/* <option>Filter Kategori</option> */}
+							<option value="all">Semua</option>
+							<option value="pendidikan">Pendidikan</option>
+							<option value="pekerjaan">Pekerjaan</option>
+							<option value="cinta">Cinta</option>
+							<option value="keluarga">Keluarga</option>
+						</select>
+					</div>
 					<div className="content-top-menu-action">
 						<Button
 							name="+ Tambah"

@@ -21,6 +21,7 @@ interface TableProps {
 	columnMaxWidth?: number;
 	id?: string
 	onClick?: (arg: string) => void
+	filter?: string
 }
 
 const Table: React.FC<TableProps> = ({
@@ -31,7 +32,8 @@ const Table: React.FC<TableProps> = ({
 	action2,
 	columnMaxWidth,
 	id,
-	onClick
+	onClick,
+	filter = ""
 }) => {
 	const buttonStyle = {
 		borderRadius: 20,

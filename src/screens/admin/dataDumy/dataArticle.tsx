@@ -10,7 +10,7 @@ export const tbodyData = [
 	{
 		id: '1',
 		items: [
-			'1',
+			// '1',
 			'Mengenal Lebih Jauh Arti Kesehatan Mental',
 			'27/06/2022',
 			'Artikel',
@@ -20,7 +20,7 @@ export const tbodyData = [
 	{
 		id: '2',
 		items: [
-			'2',
+			// '2',
 			'Mengenal Lebih Jauh Arti Kesehatan Mental',
 			'27/06/2022',
 			'Info terkini',
@@ -30,7 +30,7 @@ export const tbodyData = [
 	{
 		id: '3',
 		items: [
-			'3',
+			// '3',
 			'Mengenal Lebih Jauh Arti Kesehatan Mental',
 			'27/06/2022',
 			'Artikel',

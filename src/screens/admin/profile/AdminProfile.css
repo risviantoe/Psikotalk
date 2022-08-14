@@ -24,7 +24,7 @@
     border: 10px solid #fff;
 }
 
-.admin__profile--picture-wrapper Button {
+.admin__profile--picture-wrapper label {
     position: absolute;
     bottom: 10px;
     right: 20px;
@@ -32,4 +32,52 @@
 
 .admin__profile--form-container {
     width: 65%;
+}
+
+.admin__profile--form-container button {
+	width: 100%;
+	margin-top: 30px;
+	height: 48px;
+}
+
+@media (min-width: 1536px) {
+    .admin__profile--picture-wrapper {
+        width: fit-content;
+        position: relative;
+    }
+
+    .admin__profile--picture-wrapper img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 10px solid #fff;
+    }
+
+    .admin__profile--picture-wrapper label {
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    }
+
+    .admin__profile--picture-wrapper .circle {
+        /* padding: 23% 20px; */
+        padding: 8px 9px;
+        border-radius: 50%;
+    }
+
+    .admin__profile--picture-wrapper label i {
+        width: 22px;
+        height: 22px;
+    }
+
+    .admin__profile--form-container {
+        width: 55%;
+    }
+
+    .admin__profile--form-container button {
+		width: 100%;
+		margin-top: 50px;
+		height: auto;
+        font-size: 14px;
+	}
 }

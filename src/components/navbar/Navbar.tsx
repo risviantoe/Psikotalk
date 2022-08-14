@@ -31,7 +31,7 @@ export const Navbar: React.FC = () => {
 								href="#home"
 								onClick={(e) => navActive('home')}
 							>
-								Home
+								Beranda
 							</a>
 							{url === 'home' ? (
 								<div className="nav-active-bar"></div>
@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
 								href="#feature"
 								onClick={(e) => navActive('feature')}
 							>
-								Fitur
+								Layanan
 							</a>
 							{url === 'feature' ? (
 								<div className="nav-active-bar"></div>
@@ -52,10 +52,10 @@ export const Navbar: React.FC = () => {
 						<li>
 							<a
 								className={url === 'join' ? ' active' : ''}
-								href="#join"
+								href="#offers"
 								onClick={(e) => navActive('join')}
 							>
-								Join
+								Tentang
 							</a>
 							{url === 'join' ? (
 								<div className="nav-active-bar"></div>
@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
 								href="#contact"
 								onClick={(e) => navActive('contact')}
 							>
-								Contact
+								{/* Contact */}
 							</a>
 							{url === 'contact' ? (
 								<div className="nav-active-bar"></div>

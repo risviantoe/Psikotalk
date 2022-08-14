@@ -88,7 +88,7 @@ const AdminPriceCreate: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			<div className="admin__content--body">
 				<div className="admin__price--content-wrapper">
 					<div className="form-input-group">
-						<label htmlFor="price-name">Nama</label>
+						<label htmlFor="price-name">Nama Paket</label>
 						<input
 							className={
 								isSubmitted && !priceName ? 'form-error' : ''
@@ -96,6 +96,7 @@ const AdminPriceCreate: React.FC<PageProps> = ({ pageTitle, icon }) => {
 							type="text"
 							id="price-name"
 							name="price-name"
+							placeholder="Masukkan nama paket harga"
 							value={priceName}
 							onChange={(e) => setPriceName(e.target.value)}
 						/>

@@ -36,21 +36,31 @@ export const NavbarDashboard: React.FC<NavbarDashboardProps> = ({
 							: ''
 					}
 					className={({ isActive }) =>
-						isActive ? 'navbar-action-active' : 'navbar-action'
+						isActive
+							? 'navbar-action-profile-active'
+							: 'navbar-action-profile'
 					}
 				>
-					<CgProfile size={60} />
+					<CgProfile />
 				</NavLink>
-				{pageFor === 'psikolog' ? (
-					<NavLink
-						to="/psikolog/notification"
-						className={({ isActive }) =>
-							isActive ? 'navbar-action-active' : 'navbar-action'
-						}
-					>
-						<MdNotifications size={40} />
-					</NavLink>
-				) : null}
+				{/* {pageFor === 'psikolog' ? ( */}
+				<NavLink
+					to={
+						pageFor === 'admin'
+							? '/admin/notification'
+							: pageFor === 'psikolog'
+							? '/psikolog/notification'
+							: ''
+					}
+					className={({ isActive }) =>
+						isActive
+							? 'navbar-action-notification-active'
+							: 'navbar-action-notification'
+					}
+				>
+					<MdNotifications />
+				</NavLink>
+				{/* ) : null} */}
 			</div>
 		</nav>
 	);

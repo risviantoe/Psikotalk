@@ -3,6 +3,7 @@ import {
 	RegisterResponse,
 	LoginRequest,
 	LoginResponse,
+	User,
 } from '../types';
 import api from "./api.service"
 
@@ -16,4 +17,8 @@ export const login = async (data: LoginRequest): Promise<LoginResponse> => {
 
 export const loginPsikolog = async (data: LoginRequest): Promise<LoginResponse> => {
 	return await api.post('auth/psikolog/login', data);
+};
+
+export const user = (id: string): Promise<User> => {
+	return api.get('auth/find/' + id);
 };

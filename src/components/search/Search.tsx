@@ -12,7 +12,8 @@ const Search = () => {
 					color="#006161"
 					style={{
 						position: 'absolute',
-						transform: 'translateY(50%)',
+						top: '50%',
+						transform: 'translateY(-50%)',
 						left: 10,
 					}}
 				/>

@@ -5,12 +5,33 @@ import Pagination from '../../../components/pagination/Pagination';
 import Search from '../../../components/search/Search';
 import { PageProps } from '../../../types/interface/page/Page';
 
-import './PsikologNotification.css'
+import './PsikologNotification.css';
 
 const PsikologNotification: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const { setTitle, setIcon } = useOutletContext<any>();
 	setTitle(pageTitle);
 	setIcon(icon);
+
+	const notifDumyData = [
+		{
+			notificationType: 'reminder',
+			text: (
+				<span>
+					Segera konfirmasi pembayaran dari <b>Manuel Sabari</b>
+				</span>
+			),
+			time: '20.14',
+		},
+		{
+			notificationType: 'confirmation',
+			text: (
+				<span>
+					Pembayaran baru dari <b>Manuel Sabari</b>
+				</span>
+			),
+			time: '03 Mar 2022',
+		},
+	];
 
 	return (
 		<React.Fragment>
@@ -19,16 +40,15 @@ const PsikologNotification: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			</div>
 			<div className="psikolog__content--body">
 				<div className="psikolog__notification--content-wrapper">
-					<Notification
-						notificationType="confirmation"
-						text="Segara konfirmasi Jadwal Klien"
-						time="20.14"
-					/>
-					<Notification
-						notificationType="reminder"
-						text="Pengingat Jadwal Konsultasi"
-						time="15 Jan"
-					/>
+					{notifDumyData
+						? notifDumyData.map((notif) => (
+								<Notification
+									notificationType={notif.notificationType}
+									text={notif.text}
+									time={notif.time}
+								/>
+						))
+						: ''}
 				</div>
 				<Pagination style={{ alignSelf: 'center' }} />
 			</div>

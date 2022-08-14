@@ -82,6 +82,7 @@ const AdminPostEdit: React.FC<PageProps> = ({ pageTitle, icon }) => {
 								name="post-title"
 								type="text"
 								id="post-title"
+								placeholder="Masukkan judul postingan"
 								value={state.inputs.title}
 								className={
 									isSubmitted && !title ? 'form-error' : ''
@@ -151,7 +152,7 @@ const AdminPostEdit: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			</div>
 			<Modal show={showModal} closeButton={false}>
 				<ModalConfirmation
-					text="Apa yang sudah kamu tulis akan hilang. Apakah anda yakin untuk keluar dari halaman ini?"
+					text="Postingan belum disimpan. Apakah anda yakin untuk keluar dari halaman ini?"
 					okButtonText="Yakin"
 					cancelButtonText="Cancel"
 					onOk={() => navigate('/admin/post')}

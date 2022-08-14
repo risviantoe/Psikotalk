@@ -11,7 +11,7 @@ export const tbodyData = [
 				alt="avatar"
 			/>,
 			<div className="table__column-name">Johnathan Alex</div>,
-			'Johnathan-Alex@email.com',
+			<div className="table__column-name">Johnathan-Alex@email.com</div>,
 			'Laki-laki',
 		],
 	},
@@ -24,8 +24,8 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			<div className="table__column-name">Johnathan Alex</div>,
-			'Johnathan-Alex@email.com',
+			<div className="table__column-name">Jacky Rahman</div>,
+			<div className="table__column-name">Jacky-rahman@email.com</div>,
 			'Laki-laki',
 		],
 	},
@@ -38,10 +38,8 @@ export const tbodyData = [
 				src="/assets/images/profil01.png"
 				alt="avatar"
 			/>,
-			<div className="table__column-name">
-				Muhammad Chandra Saputra Nugroho Pangestu Sodhikin
-			</div>,
-			'Johnathan-Alex@email.com',
+			<div className="table__column-name">Laili Putri Dewangga</div>,
+			<div className="table__column-name">laili@email.com</div>,
 			'Perempuan',
 		],
 	},

@@ -1,15 +1,19 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import Button from '../../../components/button/Button';
 
 import './AdminProfile.css';
 import reducer from './AdminProfile.reducer';
 import { useOutletContext } from 'react-router-dom';
 import { PageProps } from '../../../types/interface/page/Page';
+import { setMilliseconds } from 'date-fns/esm';
 
-export const AdminProfile: React.FC<PageProps> = ({ pageTitle }) => {
-	const { setTitle } = useOutletContext<any>();
-	setTitle(pageTitle);
-
+export const AdminProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
+	const { setTitle, setIcon } = useOutletContext<any>();
+	useEffect(() => {
+		setTitle(pageTitle);
+		setIcon(icon);
+	})
+	
 	const [state, dispatch] = useReducer(reducer, {
 		isSubmitted: false,
 		sending: false,
@@ -29,6 +33,13 @@ export const AdminProfile: React.FC<PageProps> = ({ pageTitle }) => {
 		dispatch({ name: 'SET_IS_SUBMITTED' });
 	};
 
+	const [imgPreviewSrc, setImgPreviewSrc] = useState<string>('');
+	const showPreview = (e: any) => {
+		if (e.target.files.length > 0) {
+			setImgPreviewSrc(URL.createObjectURL(e.target.files[0]));
+		}
+	};
+
 	return (
 		<React.Fragment>
 			<div className="admin__content--body">
@@ -36,14 +47,35 @@ export const AdminProfile: React.FC<PageProps> = ({ pageTitle }) => {
 					<div className="admin__profile--picture-container">
 						<div className="admin__profile--picture-wrapper">
 							<img
-								src="/assets/images/profil01.png"
+								src={
+									imgPreviewSrc !== ''
+										? imgPreviewSrc
+										: '/assets/images/profil01.png'
+								}
 								alt="photoProfile"
 							/>
-							<Button
+							{/* <Button
 								color="primary"
 								icon="icon-camera"
 								type="circle"
 								size="small"
+							/> */}
+							<label
+								htmlFor="profile-picture-admin"
+								className="button primary circle"
+								style={{ border: '5px solid #fff' }}
+							>
+								<i className="icon icon-camera" />
+							</label>
+							<input
+								type="file"
+								name="profile-picture-admin"
+								id="profile-picture-admin"
+								hidden
+								onChange={(e) => {
+									showPreview(e);
+									
+								}}
 							/>
 						</div>
 					</div>
@@ -192,11 +224,6 @@ export const AdminProfile: React.FC<PageProps> = ({ pageTitle }) => {
 							<Button
 								name="Simpan Perubahan"
 								color="primary"
-								style={{
-									width: '100%',
-									marginTop: 30,
-									height: 48,
-								}}
 								onClick={() => onSubmit()}
 							/>
 						</form>

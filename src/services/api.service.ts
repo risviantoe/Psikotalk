@@ -2,7 +2,8 @@ import axios, { AxiosRequestConfig } from "axios";
 import { storageService } from ".";
 
 const main = axios.create({
-	baseURL: 'https://api.psikotalk.com/',
+	// baseURL: 'https://api.psikotalk.com/',
+	baseURL: 'https://ptalk-backend-api.herokuapp.com/',
 });
 
 main.interceptors.request.use(
