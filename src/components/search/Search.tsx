@@ -15,6 +15,7 @@ const Search = () => {
 						top: '50%',
 						transform: 'translateY(-50%)',
 						left: 10,
+						zIndex: 1
 					}}
 				/>
 				<input
