@@ -51,6 +51,7 @@ import LandingPage from './screens/public/LandingPage';
 import AdminConsultation from './screens/admin/consultation/AdminConsultation';
 import AdminLogin from './screens/admin/auth/AdminLogin';
 import PublicLayout from './layouts/publicLayout/PublicLayout';
+import { storageService } from './services';
 
 const App = () => {
 	return (

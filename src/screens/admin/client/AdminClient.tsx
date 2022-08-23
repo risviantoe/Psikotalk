@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import Modal from '../../../components/modal/Modal';
 import ModalConfirmation from '../../../components/modalConfirmation/ModalConfirmation';
@@ -12,8 +12,11 @@ import './AdminClient.css';
 const AdminClient: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const [showModalConfirm, setShowModalConfirm] = useState<boolean>(false);
 	const { setTitle, setIcon } = useOutletContext<any>();
-	setTitle(pageTitle);
-	setIcon(icon)
+
+	useEffect(() => {
+		setTitle(pageTitle);
+		setIcon(icon);
+	})
 
 	return (
 		<React.Fragment>

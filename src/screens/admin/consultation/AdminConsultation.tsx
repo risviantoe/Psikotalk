@@ -41,7 +41,6 @@ const AdminConsultation: React.FC<PageProps> = ({ pageTitle, icon }) => {
 			const res = await consultationService.consultationGet();
 			setConsul(res.data);
 			setLoading(false);
-			console.log(res);
 		} catch (error: any) {
 			console.log(error.response.statusText);
 			setLoading(false);

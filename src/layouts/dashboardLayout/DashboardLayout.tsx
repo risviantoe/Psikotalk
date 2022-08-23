@@ -20,10 +20,10 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ pageFor }) => 
 	
 	useEffect(() => {
 		const token = storageService.getToken();
-		// if (!token) {
-		// 	if (location.pathname === "/psikolog/dashboard") navigate('/psikolog/signin');
-		// 	if (location.pathname === '/admin/dashboard') navigate('/admin/signin');
-		// }
+		if (!token) {
+			if (pageFor === 'psikolog') navigate('/psikolog/signin');
+			if (pageFor === 'admin') navigate('/admin/signin');
+		}
 	}, [])
 
 	return (
