@@ -1,10 +1,4 @@
-export const theadData = [
-	'No.',
-	'Judul',
-	'Tanggal',
-	'Kategori',
-	'Penulis'
-];
+export const theadData = ['Judul', 'Tanggal', 'Kategori', 'Penulis'];
 
 export const tbodyData = [
 	{

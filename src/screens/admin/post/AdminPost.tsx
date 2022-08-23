@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Modal from '../../../components/modal/Modal';
 import ModalConfirmation from '../../../components/modalConfirmation/ModalConfirmation';
 import Table from '../../../components/table/Table';
-import { tbodyData } from '../dataDumy/dataArticle';
+import { theadData, tbodyData } from '../dataDumy/dataArticle';
 import Button from '../../../components/button/Button';
-import ContentLoader from 'react-content-loader';
 import './AdminPost.css';
 import { PageProps } from '../../../types/interface/page/Page';
 import { useNavigate, useOutletContext } from 'react-router-dom';
@@ -33,7 +32,6 @@ const AdminArticle: React.FC<PageProps> = ({ pageTitle, icon }) => {
 		}
 	};
 
-	const theadData = ['Judul', 'Tanggal', 'Kategori', 'Penulis'];
 	// const tbodyData = post
 	// 	? post?.map((item, index) => ({
 	// 			id: index,
