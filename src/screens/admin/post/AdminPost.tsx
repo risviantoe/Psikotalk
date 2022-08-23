@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Modal from '../../../components/modal/Modal';
 import ModalConfirmation from '../../../components/modalConfirmation/ModalConfirmation';
 import Table from '../../../components/table/Table';
-import { theadData, tbodyData } from '../dataDumy/dataArticle';
+import { tbodyData } from '../dataDumy/dataArticle';
 import Button from '../../../components/button/Button';
 import ContentLoader from 'react-content-loader';
 import './AdminPost.css';

@@ -9,7 +9,6 @@ import Table from '../../../components/table/Table';
 import { priceService } from '../../../services';
 import { Price } from '../../../types';
 import { PageProps } from '../../../types/interface/page/Page';
-import { theadData, tbodyData } from '../dataDumy/dataPrice';
 
 const AdminPrice: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	const { setTitle, setIcon } = useOutletContext<any>();

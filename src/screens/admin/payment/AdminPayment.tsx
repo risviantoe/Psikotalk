@@ -7,7 +7,6 @@ import Table from '../../../components/table/Table';
 import { authService, transactionService } from '../../../services';
 import { Transaction } from '../../../types';
 import { PageProps } from '../../../types/interface/page/Page';
-import { theadData, tbodyData } from '../dataDumy/dataPayment';
 import moment from 'moment';
 
 import './AdminPayment.css';

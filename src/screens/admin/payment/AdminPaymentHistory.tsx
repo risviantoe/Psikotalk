@@ -3,13 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import Button from '../../../components/button/Button';
 import Modal from '../../../components/modal/Modal';
-import ModalConfirmation from '../../../components/modalConfirmation/ModalConfirmation';
 import Search from '../../../components/search/Search';
 import Table from '../../../components/table/Table';
 import { transactionService } from '../../../services';
 import { Transaction } from '../../../types';
 import { PageProps } from '../../../types/interface/page/Page';
-import { theadData, tbodyData } from '../dataDumy/dataPayment';
 
 import './AdminPayment.css';
 
@@ -21,7 +19,6 @@ const AdminPaymentHistory: React.FC<PageProps> = ({ pageTitle, icon }) => {
 	})
 	
 
-	const [showModalConfirm, setShowModalConfirm] = useState<boolean>(false);
 	const [showModalDetail, setShowModalDetail] = useState<boolean>(false);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [transactions, setTransactions] = useState<Array<Transaction>>([]);
