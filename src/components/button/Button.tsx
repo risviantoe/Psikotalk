@@ -3,6 +3,7 @@ import { Loading } from '../loading/Loading';
 import './Button.css';
 
 interface ButtonProps {
+	className?: string;
 	name?: string;
 	color?: string;
 	size?: string;
@@ -16,6 +17,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
+	className,
 	color = 'primary',
 	name,
 	size = 'medium',
@@ -29,9 +31,8 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
 	return (
 		<button
-			className={`button ${color} ${size} ${type}`}
+			className={`button ${color} ${size} ${type} ${className}`}
 			style={style}
-			type="button"
 			onClick={onClick}
 			{...buttonConfig}
 		>

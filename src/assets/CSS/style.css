@@ -33,6 +33,10 @@ input[type='number'] {
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: Nunito;
 }
@@ -293,12 +297,13 @@ textarea {
 	input[type='file'],
 	select {
 		height: 38px;
-		padding: 10px 20px;
+		padding: 10px;
 		border-radius: 8px;
 		box-sizing: border-box;
-		font-size: 15px;
+		font-size: 12px;
 		color: #555555;
 		border: 1px solid #c9c9cf;
+		position: relative;
 	}
 
 	.form-input-group {
@@ -316,7 +321,33 @@ textarea {
 
 	.form-input-radio label {
 		cursor: pointer;
-		font-size: 16px;
+		font-size: 14px;
+	}
+
+	.form-input-group label {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #555555;
+        margin-bottom: 8px;
+    }
+
+	.form input[type='file']::before {
+		content: 'Pilih file' !important;
+		padding: 5px 30px;
+		border-radius: 5px;
+		border: 1px solid #35858b;
+		color: #35858b;
+		background: #fff;
+		font-size: 12px;
+		cursor: pointer;
+		transition: 0.3s;
+		position: absolute;
+		top: 50%;
+		align-self: center;
+		width: -moz-fit-content;
+		width: fit-content;
+		transform: translateY(-50%);
 	}
 
 	

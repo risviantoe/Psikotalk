@@ -1,57 +1,110 @@
 .psikolog-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    overflow: hidden;
-    background: #fff;
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+	overflow: hidden;
+	background: #fff;
 }
 
 .psikolog-content-header {
-    position: relative;
-    margin-bottom: 50px;
+	position: relative;
+	margin-bottom: 50px;
 }
 
 .psikolog-content-header-top {
-    background: #00ADAC;
-    width: 100%;
-    height: 176px;
-    position: absolute;
+	background: #00adac;
+	width: 100%;
+	height: 176px;
+	position: absolute;
 }
 
 .profile-picture-wrapper {
-    width: 210px;
-    position: relative;
-    /* transform: translateX(60%) translateY(40%); */
+	width: 210px;
+	position: relative;
+	/* transform: translateX(60%) translateY(40%); */
 }
 
 .profile-picture-wrapper img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    /* border: 10px solid #fff; */
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	/* border: 10px solid #fff; */
 }
 
 .profile-picture-wrapper .button {
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
 }
 
 .psikolog-profile-form-wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
 }
 
 .psikolog-profile-form-wrapper .psikolog-profile-form {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 50px;
-    margin-bottom: 65px;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	gap: 50px;
+	margin-bottom: 65px;
 }
 
-.psikolog-profile-form-left, .psikolog-profile-form-right {
- width: 50%;
+.psikolog-profile-form-left,
+.psikolog-profile-form-right {
+	width: 50%;
 }
 
+.change-pwd-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+@media (min-width: 1536px) {
+	.profile-picture-wrapper {
+		width: max-content;
+		position: relative;
+		/* transform: translateX(60%) translateY(40%); */
+	}
+
+	.profile-picture-wrapper img {
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		/* border: 10px solid #fff; */
+	}
+
+	.profile-picture-wrapper .button {
+		position: absolute;
+		bottom: 10px;
+		right: -10px;
+        
+	}
+
+	.profile-picture-wrapper .button .icon {
+		--size: 20px;
+		display: inline-block;
+		width: var(--size);
+		height: var(--size);
+		-webkit-mask-size: contain;
+		-webkit-mask-position: center;
+		-webkit-mask-repeat: no-repeat;
+		mask-size: contain;
+		mask-position: center;
+		mask-repeat: no-repeat;
+	}
+
+    .change-pwd-btn {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+}

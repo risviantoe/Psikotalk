@@ -29,12 +29,12 @@ const Modal: React.FC<ModalProps> = ({
 				{
 					closeButton ? 
 						<Button
+							className="btn-close"
 							color="primary"
 							icon="icon-cross"
 							iconSize={15}
 							type="circle"
 							size="small"
-							style={{ position: 'absolute', right: -28, top: -30, border: '4px solid #fff', height: 60, width: 60, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
 							onClick={onClose}
 						/> : null
 				}

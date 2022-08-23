@@ -86,7 +86,7 @@ const ModalPsikolog: React.FC<ModalPsikologProps> = ({
 		<Modal
 			show={show}
 			onClose={onClose}
-			style={{ width: '80%', marginTop: '40vh' }}
+			style={{ width: '80%', marginTop: '30%' }}
 		>
 			<div
 				className="psikolog-profile-form-wrapper"
@@ -493,16 +493,10 @@ const ModalPsikolog: React.FC<ModalPsikologProps> = ({
 								/>
 
 								<Button
+									className="change-pwd-btn"
 									name="Ganti password"
 									color="secondary"
 									type="button"
-									style={{
-										position: 'absolute',
-										right: 20,
-										padding: '5px 15px',
-										top: 10,
-										fontSize: 14,
-									}}
 								/>
 							</div>
 							<div className="form-error-message">

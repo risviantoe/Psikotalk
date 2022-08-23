@@ -1,7 +1,3 @@
-html {
-	scroll-behavior: smooth;
-}
-
 .icon {
 	--size: 30px;
 	display: inline-block;

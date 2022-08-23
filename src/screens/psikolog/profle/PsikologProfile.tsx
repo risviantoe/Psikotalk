@@ -388,16 +388,10 @@ export const PsikologProfile: React.FC<PageProps> = ({ pageTitle, icon }) => {
 									/>
 
 									<Button
+										className="change-pwd-btn"
 										name="Ganti password"
 										color="secondary"
 										type="button"
-										style={{
-											position: 'absolute',
-											right: 20,
-											padding: '5px 15px',
-											top: 10,
-											fontSize: 14,
-										}}
 									/>
 								</div>
 								<div className="form-error-message">

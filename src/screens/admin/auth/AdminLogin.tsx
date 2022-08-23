@@ -5,7 +5,7 @@ import reducer from '../../auth/login/Login.reducer';
 import Button from '../../../components/button/Button';
 import { authService, storageService } from '../../../services';
 
-import './AdminLogin.css';
+import '../../auth.css'
 
 const AdminLogin: React.FC = () => {
 	const navigation = useNavigate();
@@ -32,7 +32,8 @@ const AdminLogin: React.FC = () => {
 	const [loading, setLoading] = useState<boolean>(false);
 	const [status, setStatus] = useState<number>(0);
 
-	const login = async () => {
+	const login = async (e: any) => {
+		e.preventDefault()
 		dispatch({ name: 'SET_IS_SUBMITTED' });
 
 		if (inputs.email === '' || inputs.password === '' || !passwordLength)
@@ -45,7 +46,6 @@ const AdminLogin: React.FC = () => {
 
 		try {
 			const res = await authService.login(inputs);
-			console.log(res);
 			
 			setLoading(false);
 			storageService.setToken(res.data.data.token);
@@ -88,7 +88,7 @@ const AdminLogin: React.FC = () => {
 					</div>
 					<div className="auth__login--right-form-wrapper">
 						<div className="form auth-form">
-							<form action="">
+							<form onSubmit={(e) => login(e)}>
 								<div className="form-input-group">
 									<label htmlFor="emailUsername">
 										Username / Email
@@ -171,8 +171,8 @@ const AdminLogin: React.FC = () => {
 									<Button
 										name="Login"
 										color="primary"
-										onClick={() => login()}
 										loading={loading}
+										buttonConfig={{ type: 'submit' }}
 									/>
 								</div>
 							</form>

@@ -28,3 +28,35 @@
     align-items: center;
     gap: 10px;
 }
+
+@media (min-width: 1536px) {
+
+    .question--input-wrapper {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .question--input-wrapper label {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .question--input-wrapper trix-editor {
+        position: relative;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 14px;
+        box-sizing: border-box;
+        align-items: center;
+        font-weight: 400;
+        padding: 1em 2em !important;
+        min-height: 200px !important;
+    }
+
+    .input-question-wrapper {
+        margin-bottom: 20px !important;
+    }
+
+}
